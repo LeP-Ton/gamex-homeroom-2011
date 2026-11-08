@@ -1,4 +1,4 @@
-import { Bug, Download, FastForward, Play } from 'lucide-react';
+import { LegacyIcon } from './LegacyIcon';
 import { useMemo, useState } from 'react';
 import { DIFFICULTIES, SUBJECTS } from '../config/game';
 import { classAnalysis } from '../sim/analytics';
@@ -64,7 +64,7 @@ export function DebugPanel({ source, close }: { source: Game; close: () => void 
   return (
     <Modal title="开发者实验室 · 隔离调试副本" close={close} wide>
       <div className="info-note">
-        <Bug size={18} />
+        <LegacyIcon name="settings" size={18} />
         <p>
           此处操作独立副本，不写入正常存档或排行榜。可检查真实属性、每日预算、教学收益与考试评分。
         </p>
@@ -89,11 +89,11 @@ export function DebugPanel({ source, close }: { source: Game; close: () => void 
           disabled={busy || game.ended}
           onClick={() => setGame(playStrategyDay(game, strategy))}
         >
-          <Play size={13} />
+          <LegacyIcon name="play" size={13} />
           推进一天
         </button>
         <button className="button" disabled={busy || game.ended} onClick={() => void fastForward()}>
-          <FastForward size={14} />
+          <LegacyIcon name="forward" size={14} />
           推进至高考
         </button>
         <button
@@ -263,7 +263,7 @@ export function DebugPanel({ source, close }: { source: Game; close: () => void 
               disabled={!batch.length}
               onClick={() => downloadText('调试批量统计.json', JSON.stringify(batch, null, 2))}
             >
-              <Download size={14} />
+              <LegacyIcon name="export" size={14} />
               导出统计
             </button>
           </div>

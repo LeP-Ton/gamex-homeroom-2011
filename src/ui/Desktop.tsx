@@ -1,5 +1,5 @@
+import { LegacyIcon, WindowsFlag, ClassicGlyph } from './LegacyIcon';
 import { useEffect, useRef, useState, type PointerEvent } from 'react';
-import { ChevronRight, Maximize2, Minus, Network, Shrink, Volume2, X } from 'lucide-react';
 import {
   DESKTOP_APPS,
   GAME_TITLE,
@@ -19,7 +19,6 @@ import { CalendarApp, ExamsApp, ReportApp } from './SupportApps';
 import { ConversationApp } from './ClassicChat';
 import { DebugPanel } from './DebugPanel';
 import { Modal, NewGame, SaveManager } from './Settings';
-import { LegacyIcon, WindowsFlag } from './LegacyIcon';
 import { ClassicFrame, type SheetCommand } from './ClassicFrame';
 import { FileExplorer } from './FileExplorer';
 
@@ -46,15 +45,15 @@ interface Shortcut {
 }
 const SHORTCUTS: Shortcut[] = [
   { id: 'computer', app: 'computer', label: '我的电脑', icon: 'computer' },
-  { id: 'documents', app: 'computer', label: '我的文档', icon: 'folder', folder: '我的文档' },
+  { id: 'documents', app: 'computer', label: '我的文档', icon: 'documents', folder: '我的文档' },
   { id: 'recycle', app: 'recycle', label: '回收站', icon: 'recycle' },
   { id: 'dashboard', app: 'dashboard', label: 'Internet Explorer', icon: 'ie' },
   { id: 'parents', app: 'parents', label: '腾讯 QQ', icon: 'qq' },
   { id: 'scores', app: 'scores', label: '班级成绩表.xls', icon: 'excel' },
   { id: 'teaching', app: 'teaching', label: '教学计划.doc', icon: 'word' },
-  { id: 'students', app: 'students', label: '学生信息管理', icon: 'school' },
-  { id: 'seating', app: 'seating', label: '班级座位表', icon: 'school' },
-  { id: 'homework', app: 'homework', label: '作业批改系统', icon: 'school' },
+  { id: 'students', app: 'students', label: '学生信息管理', icon: 'users' },
+  { id: 'seating', app: 'seating', label: '班级座位表', icon: 'seating' },
+  { id: 'homework', app: 'homework', label: '作业批改系统', icon: 'homework' },
   { id: 'observations', app: 'observations', label: '班级观察.txt', icon: 'notepad' },
 ];
 const windowInfo = (id: WindowId) =>
@@ -204,6 +203,7 @@ export function Desktop() {
     );
   }
   function open(id: WindowId, studentId?: number, folder?: string) {
+    const initial = defaultSize();
     if (id !== 'computer' && id !== 'recycle')
       setRecentApps((current) => [id, ...current.filter((item) => item !== id)].slice(0, 10));
     setLauncher(false);
@@ -228,10 +228,14 @@ export function Desktop() {
             ...current,
             {
               id,
-              ...defaultSize(),
-              x: defaultSize().x + (current.length % 4) * 18,
+              ...initial,
+              // 窄桌面级联打开时保留标题栏右侧按钮，避免新图标落到屏幕外。
+              x: Math.min(
+                initial.x + (current.length % 4) * 18,
+                Math.max(0, window.innerWidth - initial.w - 4),
+              ),
               y: 38 + (current.length % 4) * 18,
-              h: defaultSize().h - (current.length % 4) * 18,
+              h: initial.h - (current.length % 4) * 18,
               z: ++zIndex.current,
               minimized: false,
               maximized: window.innerWidth < 720,
@@ -467,7 +471,11 @@ export function Desktop() {
             }}
             title={`双击打开${shortcut.label}`}
           >
-            <LegacyIcon name={shortcut.icon} size={38} />
+            <LegacyIcon
+              name={shortcut.id === 'recycle' && trash.length ? 'recycle-full' : shortcut.icon}
+              size={32}
+              shortcut={['parents', 'students', 'seating', 'homework'].includes(shortcut.id)}
+            />
             <span>{shortcut.label}</span>
           </button>
         ))}
@@ -511,7 +519,10 @@ export function Desktop() {
                   }}
                 >
                   <div>
-                    <LegacyIcon name={app.icon} size={18} />
+                    <LegacyIcon
+                      name={win.id === 'recycle' && trash.length ? 'recycle-full' : app.icon}
+                      size={16}
+                    />
                     <strong>
                       {app.file}
                       {!['computer', 'recycle'].includes(win.id) ? ` - ${app.software}` : ''}
@@ -523,21 +534,25 @@ export function Desktop() {
                       title="最小化"
                       onClick={() => updateWindow(win.id, { minimized: true })}
                     >
-                      <Minus size={13} />
+                      <ClassicGlyph name="minimize" size={13} />
                     </button>
                     <button
                       aria-label={`缩放${app.title}`}
                       title={win.maximized ? '向下还原' : '最大化'}
                       onClick={() => updateWindow(win.id, { maximized: !win.maximized })}
                     >
-                      {win.maximized ? <Shrink size={12} /> : <Maximize2 size={11} />}
+                      {win.maximized ? (
+                        <ClassicGlyph name="restore" size={12} />
+                      ) : (
+                        <ClassicGlyph name="maximize" size={11} />
+                      )}
                     </button>
                     <button
                       aria-label={`关闭${app.title}`}
                       title="关闭"
                       onClick={() => closeWindow(win.id)}
                     >
-                      <X size={14} />
+                      <ClassicGlyph name="close" size={14} />
                     </button>
                   </div>
                 </header>
@@ -668,7 +683,7 @@ export function Desktop() {
         <div className="launcher xp-start-menu">
           <header>
             <span className="start-user-icon">
-              <LegacyIcon name="school" size={35} />
+              <LegacyIcon name="user-portrait" size={32} />
             </span>
             <strong>{game?.settings.teacher ?? '春山中学'}</strong>
           </header>
@@ -683,7 +698,7 @@ export function Desktop() {
                   )
               ).map((app) => (
                 <button key={app.id} onClick={() => open(app.id)}>
-                  <LegacyIcon name={app.icon} size={31} />
+                  <LegacyIcon name={app.icon} size={32} />
                   <span>
                     <strong>{app.short}</strong>
                     <small>{app.software}</small>
@@ -692,20 +707,20 @@ export function Desktop() {
               ))}
               <button className="all-programs-button" onClick={() => setAllPrograms(!allPrograms)}>
                 {allPrograms ? '返回常用程序' : '所有程序'}
-                <ChevronRight size={17} />
+                <ClassicGlyph name="right" size={17} />
               </button>
             </div>
             <div className="start-places">
               <button onClick={() => open('computer', undefined, '我的文档')}>
-                <LegacyIcon name="folder" size={23} />
+                <LegacyIcon name="documents" size={16} />
                 我的文档
               </button>
               <button onClick={() => open('computer', undefined, '最近的文档')}>
-                <LegacyIcon name="word" size={23} />
+                <LegacyIcon name="recent" size={16} />
                 最近的文档
               </button>
               <button onClick={() => open('computer')}>
-                <LegacyIcon name="computer" size={23} />
+                <LegacyIcon name="computer" size={16} />
                 我的电脑
               </button>
               <hr />
@@ -715,6 +730,7 @@ export function Desktop() {
                   setModal('display');
                 }}
               >
+                <LegacyIcon name="display" size={16} />
                 显示属性
               </button>
               <button
@@ -723,6 +739,7 @@ export function Desktop() {
                   setModal('save');
                 }}
               >
+                <LegacyIcon name="drive" size={16} />
                 游戏存档管理
               </button>
               <button
@@ -731,6 +748,7 @@ export function Desktop() {
                   setModal('help');
                 }}
               >
+                <LegacyIcon name="help" size={16} />
                 帮助和支持
               </button>
               <button
@@ -739,6 +757,7 @@ export function Desktop() {
                   setModal('run');
                 }}
               >
+                <LegacyIcon name="run" size={16} />
                 运行(R)...
               </button>
               <hr />
@@ -749,6 +768,7 @@ export function Desktop() {
                   setModal('debug');
                 }}
               >
+                <LegacyIcon name="settings" size={16} />
                 开发者实验室
               </button>
             </div>
@@ -763,7 +783,7 @@ export function Desktop() {
                 });
               }}
             >
-              <LegacyIcon name="help" size={24} />
+              <LegacyIcon name="logoff" size={32} />
               注销
             </button>
             <button
@@ -773,7 +793,7 @@ export function Desktop() {
                 setModal('end');
               }}
             >
-              <LegacyIcon name="shutdown" size={25} />
+              <LegacyIcon name="shutdown" size={32} />
               关闭计算机
             </button>
           </footer>
@@ -785,7 +805,7 @@ export function Desktop() {
             <LegacyIcon name="qq" size={23} />
             <strong>QQ 消息提醒</strong>
             <button aria-label="关闭消息提醒" onClick={() => setNotifications(false)}>
-              <X size={15} />
+              <ClassicGlyph name="close" size={15} />
             </button>
           </header>
           <p>{pending ? `您有 ${pending} 条班级事务需要处理。` : '暂时没有待处理的新消息。'}</p>
@@ -827,7 +847,7 @@ export function Desktop() {
               setWindows((current) => current.map((win) => ({ ...win, minimized: true })))
             }
           >
-            <LegacyIcon name="computer" size={19} />
+            <LegacyIcon name="show-desktop" size={16} />
           </button>
           <button
             title="Internet Explorer"
@@ -854,7 +874,10 @@ export function Desktop() {
                     : focus(win.id)
                 }
               >
-                <LegacyIcon name={app.icon} size={17} />
+                <LegacyIcon
+                  name={win.id === 'recycle' && trash.length ? 'recycle-full' : app.icon}
+                  size={16}
+                />
                 <span>{app.short}</span>
               </button>
             );
@@ -867,8 +890,8 @@ export function Desktop() {
         )}
         <div className="system-tray">
           <span title="简体中文输入法">CH</span>
-          <Volume2 size={14} aria-label="音量" />
-          <Network size={15} aria-label="本地连接" />
+          <LegacyIcon name="volume-tray" size={14} aria-label="音量" />
+          <LegacyIcon name="network-tray" size={15} aria-label="本地连接" />
           <button
             aria-label="系统通知"
             title="QQ 消息提醒"
@@ -890,13 +913,13 @@ export function Desktop() {
       </footer>
       {notice && (
         <div role="status" className={`toast ${notice.error ? 'error' : ''}`}>
-          <LegacyIcon name={notice.error ? 'help' : 'school'} size={22} />
+          <LegacyIcon name={notice.error ? 'error' : 'info'} size={16} />
           <div>
             <strong>{notice.error ? '操作提示' : '春山中学教务系统'}</strong>
             <p>{notice.text}</p>
           </div>
           <button aria-label="关闭通知" onClick={() => useGame.getState().clearNotice()}>
-            <X size={13} />
+            <ClassicGlyph name="close" size={13} />
           </button>
         </div>
       )}
@@ -916,7 +939,7 @@ export function Desktop() {
             </div>
             {locked ? (
               <button onClick={() => setLocked(false)}>
-                <LegacyIcon name="school" size={49} />
+                <LegacyIcon name="user-portrait" size={48} />
                 <span>
                   {game?.settings.teacher}
                   <small>单击用户名开始游戏</small>
@@ -1036,7 +1059,7 @@ export function Desktop() {
       {modal === 'run' && (
         <Modal title="运行" close={() => setModal(null)}>
           <div className="run-description">
-            <LegacyIcon name="computer" size={39} />
+            <LegacyIcon name="run" size={32} />
             <p>输入程序名称，Windows 将打开对应的教务程序。</p>
           </div>
           <form

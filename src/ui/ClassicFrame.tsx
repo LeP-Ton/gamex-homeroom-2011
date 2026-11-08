@@ -1,22 +1,10 @@
+import { LegacyIcon, ClassicGlyph } from './LegacyIcon';
 import { useEffect, useState } from 'react';
-import {
-  ChevronDown,
-  ChevronLeft,
-  ChevronRight,
-  Copy,
-  Download,
-  FolderOpen,
-  Printer,
-  Search,
-  ZoomIn,
-  ZoomOut,
-} from 'lucide-react';
 import { DESKTOP_APPS, shortGameDate, type BusinessAppId } from '../config/desktop';
 import { reportCsv, classAnalysis } from '../sim/analytics';
 import type { Game } from '../sim/types';
 import { useGame } from '../state/store';
 import { downloadText } from '../state/storage';
-import { LegacyIcon } from './LegacyIcon';
 
 export interface SheetCommand {
   type: 'ascending' | 'descending' | 'borderline' | 'all' | 'trend';
@@ -283,16 +271,16 @@ export function ClassicFrame(props: Props) {
                 title="后退到教务首页"
                 onClick={() => open('dashboard')}
               >
-                <ChevronLeft size={21} />
+                <LegacyIcon name="back" size={21} />
                 后退
               </button>
               <button title="打开学生档案" onClick={() => open('students')}>
-                <LegacyIcon name="school" size={22} />
+                <LegacyIcon name="users" size={16} />
                 学生档案
               </button>
               <span className="toolbar-separator" />
               <button title="查找学生" onClick={findStudent}>
-                <Search size={19} />
+                <LegacyIcon name="search" size={19} />
                 搜索
               </button>
               <button title="教学日历" onClick={() => open('calendar')}>
@@ -303,38 +291,38 @@ export function ClassicFrame(props: Props) {
           ) : (
             <>
               <button title="新建班级" onClick={props.newGame}>
-                <LegacyIcon name={app.icon} size={22} />
+                <LegacyIcon name="document" size={16} />
               </button>
               <button title="打开存档" onClick={props.settings}>
-                <LegacyIcon name="folder" size={22} />
+                <LegacyIcon name="office-open" size={16} />
               </button>
               <button title="保存存档" onClick={props.save}>
                 <LegacyIcon name="save" size={22} />
               </button>
               <span className="toolbar-separator" />
               <button title="打印当前文档" onClick={() => window.print()}>
-                <Printer size={18} />
+                <LegacyIcon name="printer" size={18} />
               </button>
               <button title="导出成绩表" onClick={exportScores}>
-                <Download size={18} />
+                <LegacyIcon name="export" size={18} />
               </button>
               <span className="toolbar-separator" />
               <button title="复制班级摘要" onClick={() => void copySummary()}>
-                <Copy size={17} />
+                <LegacyIcon name="copy" size={17} />
               </button>
               <button title="查找学生" onClick={findStudent}>
-                <Search size={18} />
+                <LegacyIcon name="search" size={18} />
               </button>
             </>
           )}
           <span className="toolbar-separator" />
           <span className="office-font-name">{app.kind === 'word' ? '宋体' : '宋体 / 12'}</span>
           <button title="缩小文档" disabled={zoom <= 80} onClick={() => changeZoom(-10)}>
-            <ZoomOut size={16} />
+            <ClassicGlyph name="minimize" size={12} />
           </button>
           <span className="zoom-display">{zoom}%</span>
           <button title="放大文档" disabled={zoom >= 140} onClick={() => changeZoom(10)}>
-            <ZoomIn size={16} />
+            <ClassicGlyph name="plus" size={12} />
           </button>
           <button className="toolbar-help" title="帮助" onClick={props.help}>
             <LegacyIcon name="help" size={19} />
@@ -345,9 +333,9 @@ export function ClassicFrame(props: Props) {
         <div className="ie-address">
           <span>地址(D)</span>
           <input aria-label="教务内网地址" readOnly value="http://192.168.1.8/jwgl/default.asp" />
-          <ChevronDown size={13} />
+          <ClassicGlyph name="down" size={13} />
           <button onClick={() => open('dashboard')}>
-            <ChevronRight size={14} />
+            <ClassicGlyph name="right" size={14} />
             转到
           </button>
           <span>链接</span>

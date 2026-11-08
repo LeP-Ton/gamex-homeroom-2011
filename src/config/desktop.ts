@@ -4,20 +4,7 @@ export const gameDate = (day: number) => new Date(Date.UTC(GAME_YEAR, 1, 28 + da
 export const shortGameDate = (day: number) =>
   gameDate(day).toLocaleDateString('zh-CN', { timeZone: 'UTC' });
 
-export type LegacyIconName =
-  | 'computer'
-  | 'folder'
-  | 'recycle'
-  | 'ie'
-  | 'excel'
-  | 'word'
-  | 'qq'
-  | 'school'
-  | 'calendar'
-  | 'notepad'
-  | 'save'
-  | 'help'
-  | 'shutdown';
+export type { LegacyIconName } from './icons';
 export type SoftwareKind = 'explorer' | 'ie' | 'excel' | 'word' | 'qq' | 'school' | 'notepad';
 export const DESKTOP_APPS = [
   {
@@ -36,7 +23,7 @@ export const DESKTOP_APPS = [
     short: '学生信息管理',
     software: '春山中学教务管理系统 V3.1',
     file: '学生档案管理',
-    icon: 'school',
+    icon: 'users',
     kind: 'school',
     group: '学校教务',
   },
@@ -46,7 +33,7 @@ export const DESKTOP_APPS = [
     short: '班级座位表',
     software: '春山中学教务管理系统 V3.1',
     file: '教室座位编排',
-    icon: 'school',
+    icon: 'seating',
     kind: 'school',
     group: '学校教务',
   },
@@ -66,7 +53,7 @@ export const DESKTOP_APPS = [
     short: '作业批改记录',
     software: '春山中学教务管理系统 V3.1',
     file: '作业布置与批改',
-    icon: 'school',
+    icon: 'homework',
     kind: 'school',
     group: '学校教务',
   },

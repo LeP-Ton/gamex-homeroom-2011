@@ -1,0 +1,1341 @@
+{
+  "version": 1,
+  "icons": {
+    "computer": {
+      "sourceSha256": "bb9ce1e08b2dd78edf42d7e7b1ee70f5c8b665a4342ee36832001bfda201a4fd",
+      "frames": [
+        {
+          "file": "computer-16.png",
+          "width": 16,
+          "height": 16,
+          "sha256": "32e24d0b8c5efa420cb78231b2a2066f3b20e8535ebde77f058be78bf964c340",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON16_1.ico",
+          "resource": "Windows XP/shell32.dll/16"
+        },
+        {
+          "file": "computer-24.png",
+          "width": 24,
+          "height": 24,
+          "sha256": "e7d02d091af1e5b8d4599f2c4cb96eb2ea4af87f018e7bb35cc56397af8e1526",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON16_1.ico",
+          "resource": "Windows XP/shell32.dll/16"
+        },
+        {
+          "file": "computer-32.png",
+          "width": 32,
+          "height": 32,
+          "sha256": "b67f43a26359ac51c31b8a739f2873ee91ffdeb88c339e104a86266cad64cc7b",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON16_1.ico",
+          "resource": "Windows XP/shell32.dll/16"
+        },
+        {
+          "file": "computer-48.png",
+          "width": 48,
+          "height": 48,
+          "sha256": "f6ca9cdc5b1daa6d9c04d1177bf95733a25f0102dcd0a624c84962d3bb5da27a",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON16_1.ico",
+          "resource": "Windows XP/shell32.dll/16"
+        }
+      ]
+    },
+    "documents": {
+      "sourceSha256": "65edad016e3ffd1689b18e9454748ac0cf0ac301cd9df8de9f82b489b60ee5c4",
+      "frames": [
+        {
+          "file": "documents-16.png",
+          "width": 16,
+          "height": 16,
+          "sha256": "23e0a650814e868d6cfdc22446f022bb8102fed21430d425e4bad7bfd5755d1b",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON235_1.ico",
+          "resource": "Windows XP/shell32.dll/235"
+        },
+        {
+          "file": "documents-24.png",
+          "width": 24,
+          "height": 24,
+          "sha256": "a303b9f1e9608a149e91e4a91e5699694b6e082a38cffd4b1af7cb7a1cd49b05",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON235_1.ico",
+          "resource": "Windows XP/shell32.dll/235"
+        },
+        {
+          "file": "documents-32.png",
+          "width": 32,
+          "height": 32,
+          "sha256": "66eb1c215edb2cfed6f805a5e99d2298b89089c9e9f8ff3cdcedadf8ec84d835",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON235_1.ico",
+          "resource": "Windows XP/shell32.dll/235"
+        },
+        {
+          "file": "documents-48.png",
+          "width": 48,
+          "height": 48,
+          "sha256": "706bcfffb220b30fc94b7630fd96a8592cc6946d66e81cb1c80d0f27ee47f41a",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON235_1.ico",
+          "resource": "Windows XP/shell32.dll/235"
+        }
+      ]
+    },
+    "recent": {
+      "sourceSha256": "da61c1e107d7a1520257f9f2268f704b786ceec35f7ea9f3e405331f55707b2f",
+      "frames": [
+        {
+          "file": "recent-16.png",
+          "width": 16,
+          "height": 16,
+          "sha256": "5f2540b83de39560f6f8ef83ad84999c1114708a3c213673a3f573af36719f44",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON21_1.ico",
+          "resource": "Windows XP/shell32.dll/21"
+        },
+        {
+          "file": "recent-24.png",
+          "width": 24,
+          "height": 24,
+          "sha256": "efcd63106fbcfc68af31de46339647b536c1888117752a3693b80532d5cd72d4",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON21_1.ico",
+          "resource": "Windows XP/shell32.dll/21"
+        },
+        {
+          "file": "recent-32.png",
+          "width": 32,
+          "height": 32,
+          "sha256": "432d03ccd6d6444016acdab6720de6dc651bb8a76db32a8717b77e3cca05e30b",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON21_1.ico",
+          "resource": "Windows XP/shell32.dll/21"
+        },
+        {
+          "file": "recent-48.png",
+          "width": 48,
+          "height": 48,
+          "sha256": "147c938caf33fdea228c3c694ec0225184c696f58f61f1def8dfeaab5510b15a",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON21_1.ico",
+          "resource": "Windows XP/shell32.dll/21"
+        }
+      ]
+    },
+    "folder": {
+      "sourceSha256": "c66540175143c39dd6f6fef1b255ff2ab6c6346fe16bd8f2d2d96e48cf83aac4",
+      "frames": [
+        {
+          "file": "folder-16.png",
+          "width": 16,
+          "height": 16,
+          "sha256": "16da4195d4e4ce973d1b68b544c424f32fa2661deed3b22dad1c3d84cdba082b",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON4_1.ico",
+          "resource": "Windows XP/shell32.dll/4"
+        },
+        {
+          "file": "folder-24.png",
+          "width": 24,
+          "height": 24,
+          "sha256": "f56f273661a1e188e991d7369f559abd3ce648e75bf636bf25ff2cc66529fce2",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON4_1.ico",
+          "resource": "Windows XP/shell32.dll/4"
+        },
+        {
+          "file": "folder-32.png",
+          "width": 32,
+          "height": 32,
+          "sha256": "af8927901077aeb8924ed278133ea75453d499f4126490adab2063fe27c1234b",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON4_1.ico",
+          "resource": "Windows XP/shell32.dll/4"
+        },
+        {
+          "file": "folder-48.png",
+          "width": 48,
+          "height": 48,
+          "sha256": "31d105716a3a4dc6ddacabdddaba8f21a81fce05a18dd5f0ed43f7c9ab3f60b8",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON4_1.ico",
+          "resource": "Windows XP/shell32.dll/4"
+        }
+      ]
+    },
+    "folder-open": {
+      "sourceSha256": "d181a43ae257c9510ad3cad6144b9a07719f5fd2b483ad9717dd661225d96921",
+      "frames": [
+        {
+          "file": "folder-open-16.png",
+          "width": 16,
+          "height": 16,
+          "sha256": "6e4bb4b579b3a26922df7aae209e5e369a305401118b9d1fd1fb92addd7979d2",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON5_1.ico",
+          "resource": "Windows XP/shell32.dll/5"
+        },
+        {
+          "file": "folder-open-32.png",
+          "width": 32,
+          "height": 32,
+          "sha256": "6f6d6542eaf568e8c589005e737a42fb1a20a79ee5c2889b68aec41c90d5c035",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON5_1.ico",
+          "resource": "Windows XP/shell32.dll/5"
+        },
+        {
+          "file": "folder-open-48.png",
+          "width": 48,
+          "height": 48,
+          "sha256": "f2510feb9b078bfba3ae9871a910f15b6b37964e17cbc3af4acc12db20ced5f8",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON5_1.ico",
+          "resource": "Windows XP/shell32.dll/5"
+        }
+      ]
+    },
+    "recycle": {
+      "sourceSha256": "e5fd1987abde480e45391abd68187cbfd69bd9508400bcd1bb1a13c6c92f52ac",
+      "frames": [
+        {
+          "file": "recycle-16.png",
+          "width": 16,
+          "height": 16,
+          "sha256": "5597854caf6008991751217504195b8f2de03158d837adb49946f41b5e90e8ca",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON32_1.ico",
+          "resource": "Windows XP/shell32.dll/32"
+        },
+        {
+          "file": "recycle-32.png",
+          "width": 32,
+          "height": 32,
+          "sha256": "e07faf4b9d95871bc728fd62fdafcf7c29c3887faf755da7b42e167d10fd68ce",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON32_1.ico",
+          "resource": "Windows XP/shell32.dll/32"
+        },
+        {
+          "file": "recycle-48.png",
+          "width": 48,
+          "height": 48,
+          "sha256": "9266cead7be5bc611b9556b9708123be3c422aff7d1d12440277dbb33841d7d8",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON32_1.ico",
+          "resource": "Windows XP/shell32.dll/32"
+        }
+      ]
+    },
+    "recycle-full": {
+      "sourceSha256": "89ded8e60a6e1cf61405f3944a2ae8928bf345fcbbaaa39bccfcce34f5d2fd29",
+      "frames": [
+        {
+          "file": "recycle-full-16.png",
+          "width": 16,
+          "height": 16,
+          "sha256": "c27b7bcd0f853b24f8fab3000650aa791f3d44165cc1440ee855c27c1b790450",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON33_1.ico",
+          "resource": "Windows XP/shell32.dll/33"
+        },
+        {
+          "file": "recycle-full-32.png",
+          "width": 32,
+          "height": 32,
+          "sha256": "1eab3c716bf501520f154428bfb5530704046f1658ce5bb42799ac58892d650c",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON33_1.ico",
+          "resource": "Windows XP/shell32.dll/33"
+        },
+        {
+          "file": "recycle-full-48.png",
+          "width": 48,
+          "height": 48,
+          "sha256": "f682c6d499f690ff9d96a0d55cb1c7a9c1123c5686d6108b8f0b773e832e96cf",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON33_1.ico",
+          "resource": "Windows XP/shell32.dll/33"
+        }
+      ]
+    },
+    "school": {
+      "sourceSha256": "6de01ede2a0d6365c4d85592f5449a05abeb64a16869ae56c60433c07a96d0ca",
+      "frames": [
+        {
+          "file": "school-16.png",
+          "width": 16,
+          "height": 16,
+          "sha256": "9e0758e9e1e0a99b5c04a76a05ea6af79f7108333a6f0f560f5489c25f88be6d",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON137_1.ico",
+          "resource": "Windows XP/shell32.dll/137"
+        },
+        {
+          "file": "school-24.png",
+          "width": 24,
+          "height": 24,
+          "sha256": "ecb0729606496a4dacf84c364fcc52d9c6267f1c2be9e3aeec8c25d56650a911",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON137_1.ico",
+          "resource": "Windows XP/shell32.dll/137"
+        },
+        {
+          "file": "school-32.png",
+          "width": 32,
+          "height": 32,
+          "sha256": "864b360b0620dde2d48d3d5ce622294c2372e6c17ce7437f1116b97fe814f0e8",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON137_1.ico",
+          "resource": "Windows XP/shell32.dll/137"
+        },
+        {
+          "file": "school-48.png",
+          "width": 48,
+          "height": 48,
+          "sha256": "e4576375976b9574f8812322a3cfcaadc0828eee65bbdda8be641f493f329bd5",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON137_1.ico",
+          "resource": "Windows XP/shell32.dll/137"
+        }
+      ]
+    },
+    "users": {
+      "sourceSha256": "6857f78265f40a70163b8698bafac6bd1f93253ae25ffd60ceb3812ae6984c19",
+      "frames": [
+        {
+          "file": "users-16.png",
+          "width": 16,
+          "height": 16,
+          "sha256": "f3b0a6db75f3abbcf51f5e1bdd4beeae657ee979bca778d08e1371295649d642",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON269_1.ico",
+          "resource": "Windows XP/shell32.dll/269"
+        },
+        {
+          "file": "users-32.png",
+          "width": 32,
+          "height": 32,
+          "sha256": "dd9e9116d7d43f154d058c397b848b02a7f84d29864cbcffbd901c12dfd3a709",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON269_1.ico",
+          "resource": "Windows XP/shell32.dll/269"
+        },
+        {
+          "file": "users-48.png",
+          "width": 48,
+          "height": 48,
+          "sha256": "0690c2116cbf47566c093e2ceefb7e99f8a031e6b04e952b9dfe62f020823df5",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON269_1.ico",
+          "resource": "Windows XP/shell32.dll/269"
+        }
+      ]
+    },
+    "seating": {
+      "sourceSha256": "6d308c91e93486fcd6bbac3de29719a634500056a649a43a8a759d4466d1a216",
+      "frames": [
+        {
+          "file": "seating-16.png",
+          "width": 16,
+          "height": 16,
+          "sha256": "3aa3b16aab541d64facd6c9fe0c1a446ac0979486f851e1002c3b3616345f4a6",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON19_1.ico",
+          "resource": "Windows XP/shell32.dll/19"
+        },
+        {
+          "file": "seating-32.png",
+          "width": 32,
+          "height": 32,
+          "sha256": "bdf26f5e6f100cbeb0a859c386a6b87753ce0b164ef717e2ded3781d42800664",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON19_1.ico",
+          "resource": "Windows XP/shell32.dll/19"
+        },
+        {
+          "file": "seating-48.png",
+          "width": 48,
+          "height": 48,
+          "sha256": "965487c4f6ec992f512637af246f17fc3a9b31f90dbcedf0e1d480378b430af5",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON19_1.ico",
+          "resource": "Windows XP/shell32.dll/19"
+        }
+      ]
+    },
+    "homework": {
+      "sourceSha256": "6de01ede2a0d6365c4d85592f5449a05abeb64a16869ae56c60433c07a96d0ca",
+      "frames": [
+        {
+          "file": "homework-16.png",
+          "width": 16,
+          "height": 16,
+          "sha256": "9e0758e9e1e0a99b5c04a76a05ea6af79f7108333a6f0f560f5489c25f88be6d",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON22_1.ico",
+          "resource": "Windows XP/shell32.dll/22"
+        },
+        {
+          "file": "homework-24.png",
+          "width": 24,
+          "height": 24,
+          "sha256": "ecb0729606496a4dacf84c364fcc52d9c6267f1c2be9e3aeec8c25d56650a911",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON22_1.ico",
+          "resource": "Windows XP/shell32.dll/22"
+        },
+        {
+          "file": "homework-32.png",
+          "width": 32,
+          "height": 32,
+          "sha256": "864b360b0620dde2d48d3d5ce622294c2372e6c17ce7437f1116b97fe814f0e8",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON22_1.ico",
+          "resource": "Windows XP/shell32.dll/22"
+        },
+        {
+          "file": "homework-48.png",
+          "width": 48,
+          "height": 48,
+          "sha256": "e4576375976b9574f8812322a3cfcaadc0828eee65bbdda8be641f493f329bd5",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON22_1.ico",
+          "resource": "Windows XP/shell32.dll/22"
+        }
+      ]
+    },
+    "calendar": {
+      "sourceSha256": "0090c9b811135b9136d72412188f802515147b29d0df4978499d1839f2c1a7c1",
+      "frames": [
+        {
+          "file": "calendar-16.png",
+          "width": 16,
+          "height": 16,
+          "sha256": "d0f60bd3628480005d50ef7c56a00aac80607c6438e438a4644025e958af74cf",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON276_1.ico",
+          "resource": "Windows XP/shell32.dll/276"
+        },
+        {
+          "file": "calendar-32.png",
+          "width": 32,
+          "height": 32,
+          "sha256": "3cf80a218671ef71c796f065658f9e2dccc65a21e960354d9d9968fe84ac73fc",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON276_1.ico",
+          "resource": "Windows XP/shell32.dll/276"
+        },
+        {
+          "file": "calendar-48.png",
+          "width": 48,
+          "height": 48,
+          "sha256": "c86e59c70179246182b35703c846fc42beed2c314889126a1a8c3448cfd1bb64",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON276_1.ico",
+          "resource": "Windows XP/shell32.dll/276"
+        }
+      ]
+    },
+    "save": {
+      "sourceSha256": "e19b364f4237a0f34cffa661bad2cd52c148e47c800c9ac2d645ee4f3114ea3b",
+      "frames": [
+        {
+          "file": "save-16.png",
+          "width": 16,
+          "height": 16,
+          "sha256": "13e64c9e3af9502387eee7fe491524586f4b8639969b7badb4151b3b01423a5f",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON7_1.ico",
+          "resource": "Windows XP/shell32.dll/7"
+        },
+        {
+          "file": "save-32.png",
+          "width": 32,
+          "height": 32,
+          "sha256": "07aa4d456d20023b411a0b646cb21a72884620dff5f53fdc2f32be6a9f74af3a",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON7_1.ico",
+          "resource": "Windows XP/shell32.dll/7"
+        },
+        {
+          "file": "save-48.png",
+          "width": 48,
+          "height": 48,
+          "sha256": "e69942fc38e011f1eca3ef626a818eca76c034f4ebfe38a9511055b263ed0a78",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON7_1.ico",
+          "resource": "Windows XP/shell32.dll/7"
+        }
+      ]
+    },
+    "help": {
+      "sourceSha256": "6050a70afef5607a9040099ae7a596186202c34df0cc9fd96439c9e53d199d3d",
+      "frames": [
+        {
+          "file": "help-16.png",
+          "width": 16,
+          "height": 16,
+          "sha256": "ffa1c476d34b66406f462f691a20c592293e1fe3ae0fc1f810ecef6e69d881d7",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON24_1.ico",
+          "resource": "Windows XP/shell32.dll/24"
+        },
+        {
+          "file": "help-24.png",
+          "width": 24,
+          "height": 24,
+          "sha256": "e7e477a32d95d59a5dc0edab5ff49312ade3daf4569a308076e5dd288a789578",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON24_1.ico",
+          "resource": "Windows XP/shell32.dll/24"
+        },
+        {
+          "file": "help-32.png",
+          "width": 32,
+          "height": 32,
+          "sha256": "33d5a6d5db7833aea84fb78a345bcc3033726d53657f5cb8a5f6f431924449a8",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON24_1.ico",
+          "resource": "Windows XP/shell32.dll/24"
+        },
+        {
+          "file": "help-48.png",
+          "width": 48,
+          "height": 48,
+          "sha256": "a4896084d305af55b6aec316217cf244d8d3cfa8b0215e456862d03915a3e622",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON24_1.ico",
+          "resource": "Windows XP/shell32.dll/24"
+        }
+      ]
+    },
+    "shutdown": {
+      "sourceSha256": "357786f4070c0354b9b9e7131f977dc6d5cd7bbcc201385a09269f2bf520fd1b",
+      "frames": [
+        {
+          "file": "shutdown-16.png",
+          "width": 16,
+          "height": 16,
+          "sha256": "4143bc68b3fdfddb68cac1c91b9c443666994d2cea11e72546b09cf9ce14387e",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON28_1.ico",
+          "resource": "Windows XP/shell32.dll/28"
+        },
+        {
+          "file": "shutdown-24.png",
+          "width": 24,
+          "height": 24,
+          "sha256": "b67366dba5ddd2e064823d77077f4fafbe41e2621591c3431aaefa3d1ce3ff80",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON28_1.ico",
+          "resource": "Windows XP/shell32.dll/28"
+        },
+        {
+          "file": "shutdown-32.png",
+          "width": 32,
+          "height": 32,
+          "sha256": "3c25d4a789874107c31bf107dca0fa70f498e2d55c8bf6fc9c94c60394c6cbae",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON28_1.ico",
+          "resource": "Windows XP/shell32.dll/28"
+        },
+        {
+          "file": "shutdown-48.png",
+          "width": 48,
+          "height": 48,
+          "sha256": "8d554bc2c3a33d644fb6497f25f626577c46856344055fbc025d0ce93fa8f649",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON28_1.ico",
+          "resource": "Windows XP/shell32.dll/28"
+        }
+      ]
+    },
+    "logoff": {
+      "sourceSha256": "4333476934b6af64ef46861f68b6c412601afa9580a51827fc332145ea88d93f",
+      "frames": [
+        {
+          "file": "logoff-16.png",
+          "width": 16,
+          "height": 16,
+          "sha256": "3513e28daac34e52c12c3b6fd2f2d3b7d81fc8b76fa6fc291de4181b8b55f8ce",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON45_1.ico",
+          "resource": "Windows XP/shell32.dll/45"
+        },
+        {
+          "file": "logoff-24.png",
+          "width": 24,
+          "height": 24,
+          "sha256": "0fb54185deae59fc5bb549c16efa85e6114e9430480af67d154f5580050006d5",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON45_1.ico",
+          "resource": "Windows XP/shell32.dll/45"
+        },
+        {
+          "file": "logoff-32.png",
+          "width": 32,
+          "height": 32,
+          "sha256": "689c004ce436e5f744bb1f7fe2d98d107334707afc04dfde45b5b061f2892fa5",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON45_1.ico",
+          "resource": "Windows XP/shell32.dll/45"
+        },
+        {
+          "file": "logoff-48.png",
+          "width": 48,
+          "height": 48,
+          "sha256": "dae4f7e8523f9e5e27c1a3d38d0bbc549cd7f8bb68fdb02398005bb52c8eb1f4",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON45_1.ico",
+          "resource": "Windows XP/shell32.dll/45"
+        }
+      ]
+    },
+    "display": {
+      "sourceSha256": "d50aedd33ac8d2a82aaf1ad9c3a9f449cccf3b9b98cb904c1296dc088c26b6c2",
+      "frames": [
+        {
+          "file": "display-16.png",
+          "width": 16,
+          "height": 16,
+          "sha256": "926208010da652e056ecafbe5582d13b98bee9d3f2ac0d169190d91cdf3f8484",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON40_1.ico",
+          "resource": "Windows XP/shell32.dll/40"
+        },
+        {
+          "file": "display-32.png",
+          "width": 32,
+          "height": 32,
+          "sha256": "95856671688e25458d491777a0e3443078fef7b7439537c803408530f1d19da4",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON40_1.ico",
+          "resource": "Windows XP/shell32.dll/40"
+        }
+      ]
+    },
+    "run": {
+      "sourceSha256": "49bc167269d0ddec7a3a03582f8da89308fe68d8bac7cb377c748710b714c577",
+      "frames": [
+        {
+          "file": "run-16.png",
+          "width": 16,
+          "height": 16,
+          "sha256": "9e8d80162662388f259fa0bba6349f7c061c71f1fe0cb3b9a23b62386fc80247",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON25_1.ico",
+          "resource": "Windows XP/shell32.dll/25"
+        },
+        {
+          "file": "run-24.png",
+          "width": 24,
+          "height": 24,
+          "sha256": "d2adf12d638b161d42c5c21ede5c5ee30c649a830a74ffeb4486c96f92fa6f6d",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON25_1.ico",
+          "resource": "Windows XP/shell32.dll/25"
+        },
+        {
+          "file": "run-32.png",
+          "width": 32,
+          "height": 32,
+          "sha256": "75bcc6fdae23c64eadb203eef3ccdb3f6cc4186c2b75901c3a658d9fea2b869e",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON25_1.ico",
+          "resource": "Windows XP/shell32.dll/25"
+        },
+        {
+          "file": "run-48.png",
+          "width": 48,
+          "height": 48,
+          "sha256": "6adf8c46574c9de8db94f0c41b1689a74a73b1518218845a0309a231a4d1a761",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON25_1.ico",
+          "resource": "Windows XP/shell32.dll/25"
+        }
+      ]
+    },
+    "settings": {
+      "sourceSha256": "68c12be50448a3a31f75e35f3308e17e29fc3b3977a14f16871293561a1e7d7e",
+      "frames": [
+        {
+          "file": "settings-16.png",
+          "width": 16,
+          "height": 16,
+          "sha256": "c6edef60ac52580338ed8ae896fee10f2397d9f6deb9228628aea72fa0fb4ddc",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON274_1.ico",
+          "resource": "Windows XP/shell32.dll/274"
+        },
+        {
+          "file": "settings-32.png",
+          "width": 32,
+          "height": 32,
+          "sha256": "7ef37569f1d013bd5b7019de2f601ee98f446aecc385c7fb0b11ac0eeb1ac1bd",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON274_1.ico",
+          "resource": "Windows XP/shell32.dll/274"
+        },
+        {
+          "file": "settings-48.png",
+          "width": 48,
+          "height": 48,
+          "sha256": "8e065fbaffa02f6052f78d80e74e9963d1c8429a789af6437eb5836bbb04b313",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON274_1.ico",
+          "resource": "Windows XP/shell32.dll/274"
+        }
+      ]
+    },
+    "drive": {
+      "sourceSha256": "fa035f7d96fedc422b6ed1643075630e8f5dcf9b91e3c9898b554f44a962b2a4",
+      "frames": [
+        {
+          "file": "drive-16.png",
+          "width": 16,
+          "height": 16,
+          "sha256": "b3b9ddbf2dc71ba3719370039371028d960bb72c78437e894ce9259132fffdfc",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON8_1.ico",
+          "resource": "Windows XP/shell32.dll/8"
+        },
+        {
+          "file": "drive-32.png",
+          "width": 32,
+          "height": 32,
+          "sha256": "860a225cf1055ed79936a76043eb169a50de6a1a9898893a67ba696ba9ff3c67",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON8_1.ico",
+          "resource": "Windows XP/shell32.dll/8"
+        },
+        {
+          "file": "drive-48.png",
+          "width": 48,
+          "height": 48,
+          "sha256": "35231bae6a397ba605765f7b0f18e409ba43d2ec3799ff01f242e59557805378",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON8_1.ico",
+          "resource": "Windows XP/shell32.dll/8"
+        }
+      ]
+    },
+    "search": {
+      "sourceSha256": "6f36c5ab771b8bb17ff04b3445041abe33e6dd0fee7ab1284e41776e5bd1cd0c",
+      "frames": [
+        {
+          "file": "search-16.png",
+          "width": 16,
+          "height": 16,
+          "sha256": "4c80a5abaeae3d79cfda93f912244792a406bbc1b5da54ef54b9b553eb9b5131",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON23_1.ico",
+          "resource": "Windows XP/shell32.dll/23"
+        },
+        {
+          "file": "search-24.png",
+          "width": 24,
+          "height": 24,
+          "sha256": "677aa83b166f174c125d558481367be01b621781ec7bcb348a7f122102ec2ed8",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON23_1.ico",
+          "resource": "Windows XP/shell32.dll/23"
+        },
+        {
+          "file": "search-32.png",
+          "width": 32,
+          "height": 32,
+          "sha256": "1c371486acdc6836423a376f48e56853dfd76fb99e32a8e558d98c9011cb3797",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON23_1.ico",
+          "resource": "Windows XP/shell32.dll/23"
+        },
+        {
+          "file": "search-48.png",
+          "width": 48,
+          "height": 48,
+          "sha256": "7232312eaa53b1d2072fd35ae07910414f686a9bb5ee78a71c5fcc221477e193",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON23_1.ico",
+          "resource": "Windows XP/shell32.dll/23"
+        }
+      ]
+    },
+    "printer": {
+      "sourceSha256": "f82efba87521464a17cbe52478e21b12d04544504bbace93f6d1aa2dc027e423",
+      "frames": [
+        {
+          "file": "printer-16.png",
+          "width": 16,
+          "height": 16,
+          "sha256": "2bc6a00e04383c6f7a2228d698b3c45db8dc40cfaba0e7764f6f702c1a1f1e63",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON17_1.ico",
+          "resource": "Windows XP/shell32.dll/17"
+        },
+        {
+          "file": "printer-32.png",
+          "width": 32,
+          "height": 32,
+          "sha256": "ac3839e0f2c80553a8268ca504274b83bffb4ee27d25f778e6df22b8a0893978",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON17_1.ico",
+          "resource": "Windows XP/shell32.dll/17"
+        },
+        {
+          "file": "printer-48.png",
+          "width": 48,
+          "height": 48,
+          "sha256": "fdbe532a438133f555ec035cab4ae34a1bf97b065a68262018a8fae914681de8",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON17_1.ico",
+          "resource": "Windows XP/shell32.dll/17"
+        }
+      ]
+    },
+    "copy": {
+      "sourceSha256": "5fdb0070d0c42792ae3bb77c37a2dcf72be0fb2fb70acf8b1921e71ead75651f",
+      "frames": [
+        {
+          "file": "copy-16.png",
+          "width": 16,
+          "height": 16,
+          "sha256": "1123f83fefb0a78c18f0e37746499739f0c003d00f7a82691b69cd0b4a92f30a",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON133_1.ico",
+          "resource": "Windows XP/shell32.dll/133"
+        },
+        {
+          "file": "copy-32.png",
+          "width": 32,
+          "height": 32,
+          "sha256": "302a15fbd2ddccaec94868af047606fcb9d48763f0125242b29bb0a5f45fe6c7",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON133_1.ico",
+          "resource": "Windows XP/shell32.dll/133"
+        }
+      ]
+    },
+    "export": {
+      "sourceSha256": "7f8c750395a8cfa02112a3bbc59e421aa865943deca7d1c2e837c64740547e1c",
+      "frames": [
+        {
+          "file": "export-16.png",
+          "width": 16,
+          "height": 16,
+          "sha256": "c0cc527352a6010d397fb373311767c44921715e0983beb1d73890e3ad9b1899",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON1005_1.ico",
+          "resource": "Windows XP/shell32.dll/1005"
+        }
+      ]
+    },
+    "import": {
+      "sourceSha256": "b87b4ac7aa3d1711474504552d6fb52133b01d8ae598310a53c07b36afe2ccf4",
+      "frames": [
+        {
+          "file": "import-16.png",
+          "width": 16,
+          "height": 16,
+          "sha256": "b9207ad6104c13997a16530d4b6fc9d4922d73d635a44e8104da8673dfdacba5",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON241_1.ico",
+          "resource": "Windows XP/shell32.dll/241"
+        }
+      ]
+    },
+    "document": {
+      "sourceSha256": "e261410d2ee7a7dff7ffed5d6585cfa3868263cee1097a1ae0ecd60d9647b36c",
+      "frames": [
+        {
+          "file": "document-16.png",
+          "width": 16,
+          "height": 16,
+          "sha256": "2dc43c79e6a78a1fd15816dd4b58209f7d8af3fe0d98c3ec3439426cba12ab7d",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON1_1.ico",
+          "resource": "Windows XP/shell32.dll/1"
+        },
+        {
+          "file": "document-32.png",
+          "width": 32,
+          "height": 32,
+          "sha256": "ac4102c168dabf77a9940af797492254238f3eba4893abe2ccb84fde57d3c3a7",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON1_1.ico",
+          "resource": "Windows XP/shell32.dll/1"
+        },
+        {
+          "file": "document-48.png",
+          "width": 48,
+          "height": 48,
+          "sha256": "4176561821d9ea8bff94aa58fe1e3ec5636c6fc25226fc8fe2a991019371a6fc",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON1_1.ico",
+          "resource": "Windows XP/shell32.dll/1"
+        }
+      ]
+    },
+    "check": {
+      "sourceSha256": "f0cb3b6f578b984febdeeffd1e3cb4dbdfdf18ff3ee32722186ea0038e38f4f8",
+      "frames": [
+        {
+          "file": "check-16.png",
+          "width": 16,
+          "height": 16,
+          "sha256": "e10af1440ad344352a2b5de3f97fe0716346f5599663c04620eb3d1665065eb9",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON253_1.ico",
+          "resource": "Windows XP/shell32.dll/253"
+        }
+      ]
+    },
+    "delete": {
+      "sourceSha256": "023f3169c93b03d4362b21bb914d87055b5109c1ea8860ddce6446db733a1972",
+      "frames": [
+        {
+          "file": "delete-16.png",
+          "width": 16,
+          "height": 16,
+          "sha256": "5b7146a4bcb3059046103ed0413d5e76a08573319b5b742efc675f49d251bc31",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON240_1.ico",
+          "resource": "Windows XP/shell32.dll/240"
+        },
+        {
+          "file": "delete-32.png",
+          "width": 32,
+          "height": 32,
+          "sha256": "01e7a86f7780c6f9f219cfb3d5bb267498aa3223944bb0a0f3c6422cace8eaeb",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON240_1.ico",
+          "resource": "Windows XP/shell32.dll/240"
+        },
+        {
+          "file": "delete-48.png",
+          "width": 48,
+          "height": 48,
+          "sha256": "e343cb679f4d41e6f2d0d7748f2e28bd401213e82601868d5232792717dbf141",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON240_1.ico",
+          "resource": "Windows XP/shell32.dll/240"
+        }
+      ]
+    },
+    "mail": {
+      "sourceSha256": "810ccde0b55027c657dfdb47220135400f55224211aca3f2974f1a04a8dc610d",
+      "frames": [
+        {
+          "file": "mail-16.png",
+          "width": 16,
+          "height": 16,
+          "sha256": "7e1fd0c8def4cbb89ff2ff715bf10df9a8446009c8814ed64e94933bb7305b36",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON265_1.ico",
+          "resource": "Windows XP/shell32.dll/265"
+        }
+      ]
+    },
+    "certificate": {
+      "sourceSha256": "851949462e1f36b1a96c97d14b8b4fc7b028aa5a45a9751e172c351de3037805",
+      "frames": [
+        {
+          "file": "certificate-16.png",
+          "width": 16,
+          "height": 16,
+          "sha256": "e1641f2d21744496420c778a66c00d92c75967dc8090786f65626b5d376f706f",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON153_1.ico",
+          "resource": "Windows XP/shell32.dll/153"
+        },
+        {
+          "file": "certificate-32.png",
+          "width": 32,
+          "height": 32,
+          "sha256": "b3f4cec0c13521582b805d133c9c1fcda673675ae0ea548468d3b321cad057e9",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON153_1.ico",
+          "resource": "Windows XP/shell32.dll/153"
+        }
+      ]
+    },
+    "play": {
+      "sourceSha256": "c4c98e931b7b3ac3baff8387c1b22a91d4998b6010b1b55dea1bc2ced05f103b",
+      "frames": [
+        {
+          "file": "play-16.png",
+          "width": 16,
+          "height": 16,
+          "sha256": "21164656bd94f522898834ed3641eeb4a3f5c0bfd07ce9db08efffae2c419577",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON246_1.ico",
+          "resource": "Windows XP/shell32.dll/246"
+        }
+      ]
+    },
+    "view-details": {
+      "sourceSha256": "718f65a5efe9505a62df334501e65df3f29f51489cc293fe484e0a25d94e860d",
+      "frames": [
+        {
+          "file": "view-details-32.png",
+          "width": 32,
+          "height": 32,
+          "sha256": "26310f04f9bfeab0111567e16728daf6d71919dd4a7963ab91b0c965433f147c",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON182_1.ico",
+          "resource": "Windows XP/shell32.dll/182"
+        }
+      ]
+    },
+    "show-desktop": {
+      "sourceSha256": "eb7af7cc5c6254d12ca6d539eae93c3b621bd883ad9e4b77e54d11fd82abf5e6",
+      "frames": [
+        {
+          "file": "show-desktop-16.png",
+          "width": 16,
+          "height": 16,
+          "sha256": "aea40071ac1818a65a3e1ac0f335e620f323752b6c1c392113e4097cb6d81480",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON35_1.ico",
+          "resource": "Windows XP/shell32.dll/35"
+        },
+        {
+          "file": "show-desktop-32.png",
+          "width": 32,
+          "height": 32,
+          "sha256": "09aa38950a877e79104bdbb3299e344eca2f4a2c8e47a624dba5fdae86406174",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON35_1.ico",
+          "resource": "Windows XP/shell32.dll/35"
+        },
+        {
+          "file": "show-desktop-48.png",
+          "width": 48,
+          "height": 48,
+          "sha256": "2ff1ef25bdd8b7c97254bb0c4ad4faac420ee4b0b7e34066432dcf71188b16fa",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON35_1.ico",
+          "resource": "Windows XP/shell32.dll/35"
+        }
+      ]
+    },
+    "shortcut": {
+      "sourceSha256": "75153df84292c71bac162fcc2b4bc88440a671da1010203f67683b4b6726e841",
+      "frames": [
+        {
+          "file": "shortcut-16.png",
+          "width": 16,
+          "height": 16,
+          "sha256": "b1c890be6a59fe2c44704644f9e852c808fcce6036b13e178306528421ba346c",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON30_1.ico",
+          "resource": "Windows XP/shell32.dll/30"
+        },
+        {
+          "file": "shortcut-32.png",
+          "width": 32,
+          "height": 32,
+          "sha256": "7a6b3de945f252ce0b06ca1da596b2acca738eacf8c07b64382ae685655ff006",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON30_1.ico",
+          "resource": "Windows XP/shell32.dll/30"
+        }
+      ]
+    },
+    "info": {
+      "sourceSha256": "5a928b50ed57211f3edb8c5010c2d4bd8e0dc4ba729536fc543bd9d42f6ccc7a",
+      "frames": [
+        {
+          "file": "info-16.png",
+          "width": 16,
+          "height": 16,
+          "sha256": "e4494c3d26d607a9bab277183da14c6a1d360be42abbcbdb55d2915b8ee05e60",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON1001_1.ico",
+          "resource": "Windows XP/shell32.dll/1001"
+        },
+        {
+          "file": "info-32.png",
+          "width": 32,
+          "height": 32,
+          "sha256": "8e4e77d72475a599b07beb7a36af59574034fa07f6965c0d29c9e80147ddbce6",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON1001_1.ico",
+          "resource": "Windows XP/shell32.dll/1001"
+        },
+        {
+          "file": "info-48.png",
+          "width": 48,
+          "height": 48,
+          "sha256": "9bb32aaaefe42e66cf3564997d7690db5dc3d03373ba5bdc2579bc02a3ceadf1",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON1001_1.ico",
+          "resource": "Windows XP/shell32.dll/1001"
+        }
+      ]
+    },
+    "font": {
+      "sourceSha256": "896e384c760e4dcb92cdeff7ace65014266089abf949fa90f1916ae798594aa4",
+      "frames": [
+        {
+          "file": "font-16.png",
+          "width": 16,
+          "height": 16,
+          "sha256": "0330a735573df7b6538f866a7a5bde57050693273a832f4bf2080834b4d1bcbd",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON156_1.ico",
+          "resource": "Windows XP/shell32.dll/156"
+        },
+        {
+          "file": "font-32.png",
+          "width": 32,
+          "height": 32,
+          "sha256": "c2352dfb7e32967256c89b1df27b06da8ef55cde30f3c6342a8b0f45dce8ee55",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON156_1.ico",
+          "resource": "Windows XP/shell32.dll/156"
+        },
+        {
+          "file": "font-48.png",
+          "width": 48,
+          "height": 48,
+          "sha256": "8dc36a9133f1257de1d2a3b7f06ec4fff938c9c459a667bb78531fd9ce3d6790",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON156_1.ico",
+          "resource": "Windows XP/shell32.dll/156"
+        }
+      ]
+    },
+    "history": {
+      "sourceSha256": "f7ab5b49ec9f83d91ada0b24f3624d92675b35dd4cb53331c4fded76ce149e51",
+      "frames": [
+        {
+          "file": "history-16.png",
+          "width": 16,
+          "height": 16,
+          "sha256": "5b795db573d9c15aa7fb47dec585c5a9df5c28d5c59904361c6b1c272ca84cd7",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON260_1.ico",
+          "resource": "Windows XP/shell32.dll/260"
+        }
+      ]
+    },
+    "search-document": {
+      "sourceSha256": "0cc79dbea2e46b71d0584e4071d7ef72370b8cf22d654e6762e37ba7dca56104",
+      "frames": [
+        {
+          "file": "search-document-16.png",
+          "width": 16,
+          "height": 16,
+          "sha256": "c0644c3b74ecee4570fe1d7b5b535bb09feb1d726c0776481f7b73e78917bdc9",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON134_1.ico",
+          "resource": "Windows XP/shell32.dll/134"
+        },
+        {
+          "file": "search-document-24.png",
+          "width": 24,
+          "height": 24,
+          "sha256": "2dd7a777c53ee5c8a6077bc77fada9eb110d909a80050f6f75a294f4380b9b55",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON134_1.ico",
+          "resource": "Windows XP/shell32.dll/134"
+        },
+        {
+          "file": "search-document-32.png",
+          "width": 32,
+          "height": 32,
+          "sha256": "d73d30f4b652d20db558bab1ef65da253d3511961e386e50c5ce2edff17ad1a6",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON134_1.ico",
+          "resource": "Windows XP/shell32.dll/134"
+        },
+        {
+          "file": "search-document-48.png",
+          "width": 48,
+          "height": 48,
+          "sha256": "fbf997f7ecc4274fb3e2a2030ce9019c74a249873c72a8ce260361c9089cb818",
+          "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Icons/Windows%20XP/ico/shell32.dll/ICON134_1.ico",
+          "resource": "Windows XP/shell32.dll/134"
+        }
+      ]
+    },
+    "back": {
+      "sourceSha256": "61dad80dd52b14a52a23f29bbb67f1ca44c43a178fd5dbe3b4e9396d929c34ee",
+      "frames": [
+        {
+          "file": "back-32.png",
+          "width": 32,
+          "height": 32,
+          "sha256": "ea5e5f62f8ee22b188656985f5b210f433d3ef8c0cc00e6e4502b7a424272358",
+          "source": "https://raw.githubusercontent.com/ShizukuIchi/winXP/856bb554b3667f62078010b4cee10cc2645761e1/src/assets/windowsIcons/back.png",
+          "resource": "Windows XP/back.png"
+        }
+      ]
+    },
+    "forward": {
+      "sourceSha256": "becf03ee6422cb3ed713df8e6b71f042aa462ed34c1743e548ace9619c3ed24e",
+      "frames": [
+        {
+          "file": "forward-32.png",
+          "width": 32,
+          "height": 32,
+          "sha256": "9cb2eba10bade1c9e7ab001cbe02aba7dc4e81ff6896f30256f59022202828d5",
+          "source": "https://raw.githubusercontent.com/ShizukuIchi/winXP/856bb554b3667f62078010b4cee10cc2645761e1/src/assets/windowsIcons/forward.png",
+          "resource": "Windows XP/forward.png"
+        }
+      ]
+    },
+    "up": {
+      "sourceSha256": "745a1645ea24b43817e5d0ec661f9a55b083019b725454b38fdfce4dc96a5765",
+      "frames": [
+        {
+          "file": "up-26.png",
+          "width": 26,
+          "height": 26,
+          "sha256": "0565cd6dd23a581c43b04a63dd25b3a67145666ea6c1edc00cb7ea203681ac17",
+          "source": "https://raw.githubusercontent.com/ShizukuIchi/winXP/856bb554b3667f62078010b4cee10cc2645761e1/src/assets/windowsIcons/up.png",
+          "resource": "Windows XP/up.png"
+        }
+      ]
+    },
+    "home": {
+      "sourceSha256": "77b651d0e48c7a2fee1235bb24a1680bc1ff3c297898b757e61eccfc54fc6f41",
+      "frames": [
+        {
+          "file": "home-32.png",
+          "width": 32,
+          "height": 32,
+          "sha256": "b79312c6be1401e6637accb894cba045bb780e6eed4bdd5b4f6e15d179081a80",
+          "source": "https://raw.githubusercontent.com/ShizukuIchi/winXP/856bb554b3667f62078010b4cee10cc2645761e1/src/assets/windowsIcons/home.png",
+          "resource": "Windows XP/home.png"
+        }
+      ]
+    },
+    "refresh": {
+      "sourceSha256": "e1f5ee28e69b4969f98fbc7047ab6bf74eaea172aaea90193a27733734dd55f5",
+      "frames": [
+        {
+          "file": "refresh-32.png",
+          "width": 32,
+          "height": 32,
+          "sha256": "d45bfc433a1fcf6e179512dbf39a71db720cb33e45ee3b5e41a47b93e7d6a367",
+          "source": "https://raw.githubusercontent.com/ShizukuIchi/winXP/856bb554b3667f62078010b4cee10cc2645761e1/src/assets/windowsIcons/refresh.png",
+          "resource": "Windows XP/refresh.png"
+        }
+      ]
+    },
+    "windows-logo": {
+      "sourceSha256": "b8d93e1779cc5db506c2aa21bd5fb259521501df5003b1e70644bf3863d9d0b6",
+      "frames": [
+        {
+          "file": "windows-logo-76.png",
+          "width": 76,
+          "height": 61,
+          "sha256": "09e598b24b7c44e8d967dd4b37846c7fe74d30d034f3c3f0c0156587c3c3eae9",
+          "source": "https://raw.githubusercontent.com/ShizukuIchi/winXP/856bb554b3667f62078010b4cee10cc2645761e1/src/assets/windowsIcons/windows-off.png",
+          "resource": "Windows XP/windows-off.png"
+        }
+      ]
+    },
+    "user-portrait": {
+      "sourceSha256": "b433dd05647fc0fbe7aed834cc674ea34889cde0b4c8595fd98f7afbf4524455",
+      "frames": [
+        {
+          "file": "user-portrait-53.png",
+          "width": 53,
+          "height": 53,
+          "sha256": "81febe6180cc20f40b4b19f8df2677a64b144a0833fc76539ec635c25b1b8179",
+          "source": "https://raw.githubusercontent.com/ShizukuIchi/winXP/856bb554b3667f62078010b4cee10cc2645761e1/src/assets/windowsIcons/user.png",
+          "resource": "Windows XP/user.png"
+        }
+      ]
+    },
+    "volume-tray": {
+      "sourceSha256": "9adfb8f62045cefbcef730b66803cf6f9418b18f49b835e9ee34a3f63b119927",
+      "frames": [
+        {
+          "file": "volume-tray-16.png",
+          "width": 16,
+          "height": 16,
+          "sha256": "c4551338ad7dcbba0fdc92e2a56599ef9622cdd7f83224d59204cac9704e1f40",
+          "source": "https://raw.githubusercontent.com/ShizukuIchi/winXP/856bb554b3667f62078010b4cee10cc2645761e1/src/assets/windowsIcons/690%2816x16%29.png",
+          "resource": "Windows XP/690(16x16).png"
+        }
+      ]
+    },
+    "network-tray": {
+      "sourceSha256": "d24d45e4a33f940490e4a2453ff409aa6664beda48579439d48204657ee5c99a",
+      "frames": [
+        {
+          "file": "network-tray-16.png",
+          "width": 16,
+          "height": 16,
+          "sha256": "087c51675960e178c948f68942bec4d6df0f70397ea01a18707f5baa19482870",
+          "source": "https://raw.githubusercontent.com/ShizukuIchi/winXP/856bb554b3667f62078010b4cee10cc2645761e1/src/assets/windowsIcons/404%2816x16%29.png",
+          "resource": "Windows XP/404(16x16).png"
+        }
+      ]
+    },
+    "ie": {
+      "sourceSha256": "5f02b0236a17532884cba97a5af39c927a3cdfd5052365ca7a028a51714d9460",
+      "frames": [
+        {
+          "file": "ie-32.png",
+          "width": 32,
+          "height": 32,
+          "sha256": "6ca27c8f0abb8feb2af014ae9cfc416561a0a3ddb992d9043070e1556ec4797f",
+          "source": "https://raw.githubusercontent.com/ShizukuIchi/winXP/856bb554b3667f62078010b4cee10cc2645761e1/src/assets/windowsIcons/ie.png",
+          "resource": "Windows XP/ie.png"
+        },
+        {
+          "file": "ie-16.png",
+          "width": 16,
+          "height": 16,
+          "sha256": "d1553ffe9630a0c948bef2aa777818bb5709a7fb4c313a3d044b29d6013e6957",
+          "source": "https://raw.githubusercontent.com/ShizukuIchi/winXP/856bb554b3667f62078010b4cee10cc2645761e1/src/assets/windowsIcons/896%2816x16%29.png",
+          "resource": "Windows XP/896(16x16).png"
+        }
+      ]
+    },
+    "notepad": {
+      "sourceSha256": "233239127b80c43e92ab6aee6b1c8199c8051e6567a3798f129aa23be44b17ad",
+      "frames": [
+        {
+          "file": "notepad-32.png",
+          "width": 32,
+          "height": 32,
+          "sha256": "0facabf205d5f9037ef906512d9e8b15c8198a2ca4438359376a572d24b9a205",
+          "source": "https://raw.githubusercontent.com/ShizukuIchi/winXP/856bb554b3667f62078010b4cee10cc2645761e1/src/assets/windowsIcons/327%2832x32%29.png",
+          "resource": "Windows XP/327(32x32).png"
+        },
+        {
+          "file": "notepad-16.png",
+          "width": 16,
+          "height": 16,
+          "sha256": "2eeb250f94ccb5852ab736fecb0416f2ce3fbfc5df491a6fdd9a52494a3b3c36",
+          "source": "https://raw.githubusercontent.com/ShizukuIchi/winXP/856bb554b3667f62078010b4cee10cc2645761e1/src/assets/windowsIcons/327%2816x16%29.png",
+          "resource": "Windows XP/327(16x16).png"
+        }
+      ]
+    },
+    "error": {
+      "sourceSha256": "a129766698e55a1b8d5c569c4f9b9ae7baef387940978c4dbea26028f6c54da7",
+      "frames": [
+        {
+          "file": "error-32.png",
+          "width": 32,
+          "height": 32,
+          "sha256": "138e18df1f3c94ed16fa695f6403619131cefc3808d475a85b85f257761c1894",
+          "source": "https://raw.githubusercontent.com/ShizukuIchi/winXP/856bb554b3667f62078010b4cee10cc2645761e1/src/assets/windowsIcons/897%2832x32%29.png",
+          "resource": "Windows XP/897(32x32).png"
+        },
+        {
+          "file": "error-16.png",
+          "width": 16,
+          "height": 16,
+          "sha256": "ae4c288918f1be692499ab3e892ada0be1623110166616dbebe862ebd53be78d",
+          "source": "https://raw.githubusercontent.com/ShizukuIchi/winXP/856bb554b3667f62078010b4cee10cc2645761e1/src/assets/windowsIcons/897%2816x16%29.png",
+          "resource": "Windows XP/897(16x16).png"
+        }
+      ]
+    },
+    "qq": {
+      "sourceSha256": "390836c9084d95fb4d2f0d0fea92befc097fe02f1a59dfec7f944c4a06cca5c1",
+      "frames": [
+        {
+          "file": "qq-16.png",
+          "width": 16,
+          "height": 16,
+          "sha256": "58c065c1d78a78355ebbb98374684e22b7fa011606d02a290c78d72eac5e4403",
+          "source": "https://raw.githubusercontent.com/JeanPenty/SKINUI/4c4825e1a1e947cd1ddad6cf9f63e5d227154bb4/%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%20%E6%8E%A7%E4%BB%B6%E5%BA%94%E7%94%A8/%E4%BB%BFQQ%E7%95%8C%E9%9D%A2%E8%AE%BE%E8%AE%A1%E7%AC%AC%E4%B8%89%E5%8D%81%E4%BA%8C%E8%AF%BE/SkinUI/QQ/res/QQ.ico",
+          "resource": "旧版QQ/QQ.ico"
+        },
+        {
+          "file": "qq-24.png",
+          "width": 24,
+          "height": 24,
+          "sha256": "a91485718354b8f3c7fd5187b4181794b09a04fcf3c762546e463a9a90eb45b3",
+          "source": "https://raw.githubusercontent.com/JeanPenty/SKINUI/4c4825e1a1e947cd1ddad6cf9f63e5d227154bb4/%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%20%E6%8E%A7%E4%BB%B6%E5%BA%94%E7%94%A8/%E4%BB%BFQQ%E7%95%8C%E9%9D%A2%E8%AE%BE%E8%AE%A1%E7%AC%AC%E4%B8%89%E5%8D%81%E4%BA%8C%E8%AF%BE/SkinUI/QQ/res/QQ.ico",
+          "resource": "旧版QQ/QQ.ico"
+        },
+        {
+          "file": "qq-32.png",
+          "width": 32,
+          "height": 32,
+          "sha256": "69069e23a2e908e308779a1ef2058b8caf0ad096fef8e1114377249768611eea",
+          "source": "https://raw.githubusercontent.com/JeanPenty/SKINUI/4c4825e1a1e947cd1ddad6cf9f63e5d227154bb4/%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%20%E6%8E%A7%E4%BB%B6%E5%BA%94%E7%94%A8/%E4%BB%BFQQ%E7%95%8C%E9%9D%A2%E8%AE%BE%E8%AE%A1%E7%AC%AC%E4%B8%89%E5%8D%81%E4%BA%8C%E8%AF%BE/SkinUI/QQ/res/QQ.ico",
+          "resource": "旧版QQ/QQ.ico"
+        },
+        {
+          "file": "qq-48.png",
+          "width": 48,
+          "height": 48,
+          "sha256": "5a198fe002a9e58d9ae504efb4457a61505956a2453626628e0dab22e47e6a34",
+          "source": "https://raw.githubusercontent.com/JeanPenty/SKINUI/4c4825e1a1e947cd1ddad6cf9f63e5d227154bb4/%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%20%E6%8E%A7%E4%BB%B6%E5%BA%94%E7%94%A8/%E4%BB%BFQQ%E7%95%8C%E9%9D%A2%E8%AE%BE%E8%AE%A1%E7%AC%AC%E4%B8%89%E5%8D%81%E4%BA%8C%E8%AF%BE/SkinUI/QQ/res/QQ.ico",
+          "resource": "旧版QQ/QQ.ico"
+        }
+      ]
+    },
+    "qq-boy": {
+      "sourceSha256": "23b7352c76a6808d44517e691a915edbc5831cdc10becc80713885648dcb9d40",
+      "frames": [
+        {
+          "file": "qq-boy-16.png",
+          "width": 16,
+          "height": 16,
+          "sha256": "c6938bede5fb7afe388c76491381f7f2dd3a5f2b3cd0a567387016e7dd5aa62e",
+          "source": "https://raw.githubusercontent.com/JeanPenty/SKINUI/4c4825e1a1e947cd1ddad6cf9f63e5d227154bb4/%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%20%E6%8E%A7%E4%BB%B6%E5%BA%94%E7%94%A8/%E4%BB%BFQQ%E7%95%8C%E9%9D%A2%E8%AE%BE%E8%AE%A1%E7%AC%AC%E4%B8%89%E5%8D%81%E4%BA%8C%E8%AF%BE/SkinUI/Bin/QQ/BuddyList/trad_boy.png",
+          "resource": "旧版QQ/trad_boy.png"
+        }
+      ]
+    },
+    "qq-girl": {
+      "sourceSha256": "65c766fa6db9271a9be619b7a18f1fcdcf42d6d03b33fea2f5fbacc760814e0c",
+      "frames": [
+        {
+          "file": "qq-girl-16.png",
+          "width": 16,
+          "height": 16,
+          "sha256": "dc410e17d0d20d551218730f5d9371d19dd4e241f2d556990bdf488ea835a0b5",
+          "source": "https://raw.githubusercontent.com/JeanPenty/SKINUI/4c4825e1a1e947cd1ddad6cf9f63e5d227154bb4/%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%20%E6%8E%A7%E4%BB%B6%E5%BA%94%E7%94%A8/%E4%BB%BFQQ%E7%95%8C%E9%9D%A2%E8%AE%BE%E8%AE%A1%E7%AC%AC%E4%B8%89%E5%8D%81%E4%BA%8C%E8%AF%BE/SkinUI/Bin/QQ/BuddyList/trad_girl.png",
+          "resource": "旧版QQ/trad_girl.png"
+        }
+      ]
+    },
+    "word": {
+      "sourceSha256": "21ccd6ee59f7cc66efd4ae8fc8c23f230dcdcfc36a4a2c09f547415d4315c9c2",
+      "frames": [
+        {
+          "file": "word-48.png",
+          "width": 48,
+          "height": 48,
+          "sha256": "a9d216cafa7657f9a8d4a44da32404ace1e52835fdaccbf8b823018800fd2c9e",
+          "source": "https://www.rw-designer.com/icon-downloadset/msoff03.zip",
+          "resource": "Office 2003/word.ico"
+        }
+      ]
+    },
+    "excel": {
+      "sourceSha256": "f0cd411eaa727e3904cd98b580006ad573c5ce2f2a4816fb952407d10ddb8bd0",
+      "frames": [
+        {
+          "file": "excel-16.png",
+          "width": 16,
+          "height": 16,
+          "sha256": "c7d4c71e1b36befaef32b97608fd13347559f204be89ba2d70422d338427cf20",
+          "source": "https://1214119.sites.myregisteredsite.com/lessons/numbers/icon-excel2003.gif",
+          "resource": "Excel 2003原始教学图标/16像素"
+        }
+      ]
+    },
+    "office-open": {
+      "sourceSha256": "c0e2c20cd0f6da696c772aa5a55ec8fcde8d383c0167d699071d5703d5ea0219",
+      "frames": [
+        {
+          "file": "office-open-21.png",
+          "width": 21,
+          "height": 20,
+          "sha256": "963f95c1b0fcdc86e4a67d5cf467fc0d102a549d258a77cdd21a912976dcda94",
+          "source": "https://1214119.sites.myregisteredsite.com/lessons/numbers/intro/button-open.gif",
+          "resource": "Office 2003/打开文件按钮"
+        }
+      ]
+    }
+  }
+}

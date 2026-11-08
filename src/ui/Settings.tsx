@@ -1,8 +1,7 @@
-import { Download, FolderOpen, HardDrive, Plus, Save, Trash2, Upload, X } from 'lucide-react';
+import { LegacyIcon, ClassicGlyph } from './LegacyIcon';
 import { useEffect, useRef, useState } from 'react';
 import { DIFFICULTIES, SUBJECTS } from '../config/game';
 import { GAME_TITLE, shortGameDate } from '../config/desktop';
-import { LegacyIcon } from './LegacyIcon';
 import { DEFAULT_SETTINGS } from '../sim/generate';
 import { deserializeGame, serializeGame } from '../sim/save';
 import type { Game, GameSettings } from '../sim/types';
@@ -44,7 +43,7 @@ export function Modal({
         <header>
           <h2>{title}</h2>
           <button aria-label="关闭对话框" className="icon-button" onClick={close}>
-            <X size={18} />
+            <ClassicGlyph name="close" size={18} />
           </button>
         </header>
         <div className="modal-content">{children}</div>
@@ -162,7 +161,7 @@ export function NewGame({
         </p>
         {error && <p className="error-text">{error}</p>}
         <button className="button wide" type="submit">
-          <Plus size={16} />
+          <ClassicGlyph name="plus" size={16} />
           {existing ? '创建新班级' : '开启百日同行'}
         </button>
       </form>
@@ -207,7 +206,7 @@ export function SaveManager({
   return (
     <Modal title="存档与设置" close={close} wide>
       <div className="save-manager-top">
-        <HardDrive size={30} strokeWidth={1.4} />
+        <LegacyIcon name="drive" size={30} />
         <div>
           <strong>选择游戏存档</strong>
           <p>每次结束今日会自动保存，提供 3 个手动存档槽。导出文件可独立备份。</p>
@@ -219,7 +218,7 @@ export function SaveManager({
           return (
             <article key={slot}>
               <div className="save-slot-icon">
-                <Save size={20} />
+                <LegacyIcon name="save" size={20} />
               </div>
               <div>
                 <h3>
@@ -284,7 +283,7 @@ export function SaveManager({
                         else setDeletePending(slot);
                       }}
                     >
-                      <Trash2 size={15} />
+                      <LegacyIcon name="delete" size={15} />
                     </button>
                   </>
                 )}
@@ -308,11 +307,11 @@ export function SaveManager({
               );
           }}
         >
-          <Download size={15} />
+          <LegacyIcon name="export" size={15} />
           导出当前存档
         </button>
         <button className="button subtle" disabled={busy} onClick={() => fileRef.current?.click()}>
-          <Upload size={15} />
+          <LegacyIcon name="import" size={15} />
           导入存档文件
         </button>
         <button
@@ -322,7 +321,7 @@ export function SaveManager({
             newGame();
           }}
         >
-          <Plus size={15} />
+          <ClassicGlyph name="plus" size={15} />
           新建班级
         </button>
       </div>

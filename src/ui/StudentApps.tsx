@@ -1,4 +1,4 @@
-import { ArrowUpDown, BookOpen, MessageCircle, Users } from 'lucide-react';
+import { LegacyIcon, ClassicGlyph } from './LegacyIcon';
 import { useEffect, useState } from 'react';
 import type { SheetCommand } from './ClassicFrame';
 import { SUBJECTS } from '../config/game';
@@ -84,7 +84,7 @@ export function StudentsApp({
                   setSort(sort === 'id' ? 'total' : sort === 'total' ? 'improvement' : 'id')
                 }
               >
-                <ArrowUpDown size={15} />
+                <ClassicGlyph name="sort" size={15} />
               </button>
             </div>
             <small>当前按{sort === 'id' ? '学号' : sort === 'total' ? '总分' : '进步'}排序</small>
@@ -149,15 +149,15 @@ export function StudentsApp({
             </div>
             <div className="button-row">
               <button className="button" onClick={() => open('talk', current)}>
-                <MessageCircle size={14} />
+                <LegacyIcon name="qq" size={14} />
                 发起谈话
               </button>
               <button className="button subtle" onClick={() => open('teaching', current)}>
-                <BookOpen size={14} />
+                <LegacyIcon name="notepad" size={14} />
                 安排个别辅导
               </button>
               <button className="button subtle" onClick={() => open('parents', current)}>
-                <Users size={14} />
+                <LegacyIcon name="users" size={14} />
                 联系家长
               </button>
             </div>
@@ -348,20 +348,20 @@ export function ScoresApp({
                   <th key={item.id}>
                     <button onClick={() => sortBy(item.id)}>
                       {item.name}
-                      <ArrowUpDown size={11} />
+                      <ClassicGlyph name="sort" size={11} />
                     </button>
                   </th>
                 ))}
                 <th>
                   <button onClick={() => sortBy('total')}>
                     总分
-                    <ArrowUpDown size={11} />
+                    <ClassicGlyph name="sort" size={11} />
                   </button>
                 </th>
                 <th>
                   <button onClick={() => sortBy('progress')}>
                     较对比
-                    <ArrowUpDown size={11} />
+                    <ClassicGlyph name="sort" size={11} />
                   </button>
                 </th>
                 <th>成绩估计区间</th>

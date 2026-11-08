@@ -15,6 +15,7 @@
 - `src/ui/`：桌面窗口、应用、可观察信息展示。
 - `src/config/desktop.ts`：名称、2011年日期、软件映射。`ClassicFrame.tsx`管理年代化菜单/工具栏，`legacy.css`覆盖基础布局，`ClassicChat.tsx`实现QQ式沟通。
 - `public/wallpapers/`：随生产资源打包的桌面背景；来源记录在`docs/界面参考与素材.md`。
+- `src/assets/xp-icons/`：XP与年代软件的原始位图、尺寸和来源清单；`src/config/icons.ts`统一类型，`LegacyIcon.tsx`按原生帧渲染。不要重新混入现代线框图标。
 - `scripts/`：批量平衡测试及统计导出。
 - `docs/`：架构、玩法和验收说明。
 
@@ -23,6 +24,7 @@
 - 安装：`npm install`
 - 开发：`npm run dev`；生产：`npm run build`、`npm run preview`
 - 自动化验证：`npm test`
+- 图标资源验证：`npm run check:icons`，检查PNG尺寸、来源登记和SHA-256；生产构建自动执行。
 - 平衡工具：`npm run balance -- --seeds=8 --out=.local/balance.json`
 - 发布：`main` 推送触发 `.github/workflows/pages.yml`，Node.js 24 运行 `npm ci`、测试和构建后部署 GitHub Pages；`vite.config.ts` 使用相对路径兼容仓库子目录。
 - 源码仓库：`https://github.com/LeP-Ton/gamex-homeroom-2011`；游戏入口：`https://lep-ton.github.io/gamex-homeroom-2011/`。

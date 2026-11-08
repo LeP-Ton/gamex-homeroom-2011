@@ -1,15 +1,4 @@
-import {
-  ArrowRight,
-  BookOpen,
-  CheckCheck,
-  CircleHelp,
-  FileCheck2,
-  GripVertical,
-  LayoutGrid,
-  Plus,
-  Send,
-  Users,
-} from 'lucide-react';
+import { LegacyIcon, ClassicGlyph } from './LegacyIcon';
 import { useEffect, useState } from 'react';
 import { ACTIONS, ERROR_LABELS, MEETING_STYLES, SUBJECT_MAP } from '../config/game';
 import { studentAnalysis } from '../sim/analytics';
@@ -171,7 +160,7 @@ export function TeachingApp({ game, selectedId }: { game: Game; selectedId?: num
             )}
           </div>
           <div className="info-note">
-            <CircleHelp size={17} />
+            <LegacyIcon name="help" size={17} />
             <p>{config.hint} 所有方式都存在时间成本，重复训练会逐渐降低额外收益。</p>
           </div>
           <div className="cost-preview">
@@ -186,7 +175,7 @@ export function TeachingApp({ game, selectedId }: { game: Game; selectedId?: num
             </span>
           </div>
           <button className="button wide" onClick={submit} disabled={game.ended}>
-            <Plus size={15} />
+            <ClassicGlyph name="plus" size={15} />
             确认安排
           </button>
         </Panel>
@@ -215,7 +204,7 @@ export function TeachingApp({ game, selectedId }: { game: Game; selectedId?: num
                 {game.actions.map((action) => (
                   <div key={action.id}>
                     <span className="schedule-icon">
-                      <BookOpen size={17} />
+                      <LegacyIcon name="notepad" size={17} />
                     </span>
                     <div>
                       <strong>{ACTIONS[action.kind].name}</strong>
@@ -279,15 +268,15 @@ export function HomeworkApp({ game, open }: { game: Game; open: OpenApp }) {
       />
       <div className="tab-row">
         <button className={tab === 'assign' ? 'active' : ''} onClick={() => setTab('assign')}>
-          <Plus size={14} />
+          <ClassicGlyph name="plus" size={14} />
           布置作业
         </button>
         <button className={tab === 'review' ? 'active' : ''} onClick={() => setTab('review')}>
-          <FileCheck2 size={14} />
+          <LegacyIcon name="homework" size={14} />
           提交与诊断<Tag>{game.submissions.filter((item) => !item.reviewed).length}</Tag>
         </button>
         <button className={tab === 'stats' ? 'active' : ''} onClick={() => setTab('stats')}>
-          <LayoutGrid size={14} />
+          <LegacyIcon name="view-details" size={14} />
           知识点统计
         </button>
       </div>
@@ -337,7 +326,7 @@ export function HomeworkApp({ game, open }: { game: Game; open: OpenApp }) {
               </label>
             </div>
             <div className="info-note">
-              <CircleHelp size={17} />
+              <LegacyIcon name="help" size={17} />
               <p>
                 约占学生 {quantity * 2}{' '}
                 分钟。大量作业会挤占其他学科与恢复时间，难度过高也可能降低完成率。
@@ -362,7 +351,7 @@ export function HomeworkApp({ game, open }: { game: Game; open: OpenApp }) {
                   setTab('review');
               }}
             >
-              <Send size={15} />
+              <LegacyIcon name="mail" size={15} />
               布置作业
             </button>
           </Panel>
@@ -383,7 +372,7 @@ export function HomeworkApp({ game, open }: { game: Game; open: OpenApp }) {
                       }}
                     >
                       <span className="schedule-icon">
-                        <BookOpen size={17} />
+                        <LegacyIcon name="notepad" size={17} />
                       </span>
                       <div>
                         <strong>
@@ -456,7 +445,11 @@ export function HomeworkApp({ game, open }: { game: Game; open: OpenApp }) {
                           D{submission.day} · 正确 {submission.correct}/{submission.completed}
                         </span>
                       </div>
-                      {submission.reviewed ? <CheckCheck size={16} /> : <ArrowRight size={14} />}
+                      {submission.reviewed ? (
+                        <LegacyIcon name="check" size={16} />
+                      ) : (
+                        <ClassicGlyph name="right" size={14} />
+                      )}
                     </button>
                   );
                 })}
@@ -498,7 +491,7 @@ export function HomeworkApp({ game, open }: { game: Game; open: OpenApp }) {
                   </div>
                 </div>
                 <div className="info-note">
-                  <CircleHelp size={18} />
+                  <LegacyIcon name="help" size={18} />
                   <p>可观察线索：{active.clue}</p>
                 </div>
                 <label className="field-label">
@@ -517,7 +510,7 @@ export function HomeworkApp({ game, open }: { game: Game; open: OpenApp }) {
                 </label>
                 {active.reviewed ? (
                   <div className="gentle-note">
-                    <CheckCheck size={17} />
+                    <LegacyIcon name="check" size={17} />
                     <p>
                       {active.diagnosis
                         ? `已记录推测：${ERROR_LABELS[active.diagnosis]}。通过后续讲评与作业验证。`
@@ -677,7 +670,7 @@ export function SeatingApp({ game, open }: { game: Game; open: OpenApp }) {
               >
                 <span className="seat-number">
                   {Math.floor(index / 10) + 1}-{(index % 10) + 1}
-                  <GripVertical size={10} />
+                  <ClassicGlyph name="grip" size={10} />
                 </span>
                 <span className={`seat-monogram tone-${student.id % 5}`}>
                   {student.name.slice(-1)}
@@ -720,7 +713,7 @@ export function SeatingApp({ game, open }: { game: Game; open: OpenApp }) {
         </Panel>
       )}
       <div className="info-note">
-        <Users size={18} />
+        <LegacyIcon name="users" size={18} />
         <p>
           距离、视力、同桌互助、闲聊与关系摩擦会共同影响日常学习。换座位后的效果会逐步体现在观察记录和成绩变化中。
         </p>

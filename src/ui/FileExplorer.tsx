@@ -1,7 +1,6 @@
-import { useState } from 'react';
-import { ChevronLeft, ChevronUp } from 'lucide-react';
-import { DESKTOP_APPS, GAME_TITLE, type BusinessAppId } from '../config/desktop';
 import { LegacyIcon } from './LegacyIcon';
+import { useState } from 'react';
+import { DESKTOP_APPS, GAME_TITLE, type BusinessAppId } from '../config/desktop';
 import type { Game } from '../sim/types';
 
 export function FileExplorer({
@@ -38,11 +37,11 @@ export function FileExplorer({
       </div>
       <div className="explorer-tools">
         <button disabled={folder === '我的电脑'} onClick={() => setFolder('我的电脑')}>
-          <ChevronLeft size={20} />
+          <LegacyIcon name="back" size={20} />
           后退
         </button>
         <button disabled={folder === '我的电脑'} onClick={() => setFolder('我的电脑')}>
-          <ChevronUp size={20} />
+          <LegacyIcon name="up" size={20} />
           向上
         </button>
         <label>
@@ -103,7 +102,12 @@ export function FileExplorer({
                   if (event.key === 'Enter') setFolder(value);
                 }}
               >
-                <LegacyIcon name={value.includes('磁盘') ? 'computer' : 'folder'} size={38} />
+                <LegacyIcon
+                  name={
+                    value.includes('磁盘') ? 'drive' : value === '我的文档' ? 'documents' : 'folder'
+                  }
+                  size={32}
+                />
                 <span>{value}</span>
               </button>
             ))}

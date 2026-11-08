@@ -1,4 +1,4 @@
-import { ArrowDown, ArrowUp, ArrowUpRight, ChevronRight, Search } from 'lucide-react';
+import { LegacyIcon, ClassicGlyph } from './LegacyIcon';
 import type { ReactNode } from 'react';
 import { SUBJECTS } from '../config/game';
 import { gameDate } from '../config/desktop';
@@ -28,8 +28,8 @@ export const dayDate = (day: number) =>
   });
 export function Avatar({ student, small = false }: { student: Student; small?: boolean }) {
   return (
-    <span className={`avatar ${small ? 'small' : ''} tone-${student.id % 5}`}>
-      {student.name.slice(-2)}
+    <span className={`avatar ${small ? 'small' : ''}`} title={student.name}>
+      <LegacyIcon name={student.gender === '男' ? 'qq-boy' : 'qq-girl'} size={small ? 16 : 32} />
     </span>
   );
 }
@@ -39,7 +39,7 @@ export function Tag({ children, tone = '' }: { children: ReactNode; tone?: strin
 export function Empty({ children, action }: { children: ReactNode; action?: ReactNode }) {
   return (
     <div className="empty">
-      <span className="empty-mark">✦</span>
+      <LegacyIcon name="info" size={32} />
       <p>{children}</p>
       {action}
     </div>
@@ -122,7 +122,7 @@ export function Metric({
 export function Delta({ value }: { value: number }) {
   return (
     <span className={`delta ${value < 0 ? 'negative' : ''}`}>
-      {value < 0 ? <ArrowDown size={12} /> : <ArrowUp size={12} />}
+      {value < 0 ? <ClassicGlyph name="down" size={12} /> : <ClassicGlyph name="up" size={12} />}
       {Math.abs(value).toFixed(1)}
     </span>
   );
@@ -171,7 +171,7 @@ export function StudentRow({
         {analysis.latest.total.toFixed(1)}
         <small> 分</small>
       </span>
-      <ChevronRight size={15} />
+      <ClassicGlyph name="right" size={15} />
     </button>
   );
 }
@@ -186,7 +186,7 @@ export function SearchBox({
 }) {
   return (
     <label className="search-box">
-      <Search size={15} />
+      <LegacyIcon name="search" size={15} />
       <input
         aria-label={placeholder}
         value={value}
@@ -302,7 +302,7 @@ export function TextButton({ children, onClick }: { children: ReactNode; onClick
   return (
     <button className="text-button" onClick={onClick}>
       {children}
-      <ArrowUpRight size={14} />
+      <ClassicGlyph name="external" size={14} />
     </button>
   );
 }

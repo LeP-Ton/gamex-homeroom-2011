@@ -77,8 +77,169 @@
   color: #000;
 }
 .era-2011 .legacy-icon {
-  filter: drop-shadow(1px 1px 0 #fff5);
+  display: inline-block;
+  vertical-align: middle;
+  object-fit: contain;
+  filter: none;
   flex-shrink: 0;
+  pointer-events: none;
+  user-select: none;
+}
+.native-upscaled {
+  image-rendering: pixelated;
+}
+.windows-flag {
+  display: inline-block;
+  vertical-align: middle;
+  object-fit: contain;
+  flex-shrink: 0;
+  pointer-events: none;
+}
+.xp-shortcut-icon {
+  position: relative;
+  display: inline-block;
+  flex-shrink: 0;
+  padding: 0 !important;
+}
+.xp-shortcut-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  pointer-events: none;
+}
+.classic-glyph {
+  display: inline-block;
+  position: relative;
+  flex-shrink: 0;
+  vertical-align: middle;
+  color: inherit;
+  pointer-events: none;
+}
+.classic-glyph::before,
+.classic-glyph::after {
+  content: '';
+  position: absolute;
+  box-sizing: border-box;
+}
+.glyph-close::before,
+.glyph-close::after {
+  width: 12px;
+  height: 2px;
+  background: currentColor;
+  top: calc(50% - 1px);
+  left: calc(50% - 6px);
+  transform: rotate(45deg);
+}
+.glyph-close::after {
+  transform: rotate(-45deg);
+}
+.glyph-minimize::before {
+  width: 8px;
+  height: 3px;
+  background: currentColor;
+  bottom: 2px;
+  left: 2px;
+}
+.glyph-maximize::before {
+  width: 10px;
+  height: 9px;
+  border: 1px solid currentColor;
+  border-top-width: 2px;
+  left: 1px;
+  top: 1px;
+}
+.glyph-restore::before,
+.glyph-restore::after {
+  width: 8px;
+  height: 7px;
+  border: 1px solid currentColor;
+  border-top-width: 2px;
+  top: 1px;
+  right: 0;
+}
+.glyph-restore::after {
+  top: 5px;
+  left: 0;
+  background: var(--xp-main);
+}
+.glyph-right::before,
+.glyph-left::before {
+  top: calc(50% - 4px);
+  left: calc(50% - 2px);
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-left: 4px solid currentColor;
+}
+.glyph-left::before {
+  border-left: 0;
+  border-right: 4px solid currentColor;
+}
+.glyph-up::before,
+.glyph-down::before {
+  left: calc(50% - 4px);
+  top: calc(50% - 2px);
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-bottom: 4px solid currentColor;
+}
+.glyph-down::before {
+  border-bottom: 0;
+  border-top: 4px solid currentColor;
+}
+.glyph-sort::before,
+.glyph-sort::after {
+  left: calc(50% - 3px);
+  top: calc(50% - 5px);
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+  border-bottom: 3px solid currentColor;
+}
+.glyph-sort::after {
+  top: calc(50% + 2px);
+  border-bottom: 0;
+  border-top: 3px solid currentColor;
+}
+.glyph-plus::before,
+.glyph-plus::after {
+  width: 10px;
+  height: 2px;
+  background: currentColor;
+  left: calc(50% - 5px);
+  top: calc(50% - 1px);
+}
+.glyph-plus::after {
+  transform: rotate(90deg);
+}
+.glyph-grip::before {
+  width: 2px;
+  height: 2px;
+  left: 2px;
+  top: 1px;
+  background: #888;
+  box-shadow:
+    0 4px #888,
+    0 8px #888,
+    4px 0 #888,
+    4px 4px #888,
+    4px 8px #888;
+}
+.glyph-external::before {
+  width: 7px;
+  height: 7px;
+  border-top: 1px solid currentColor;
+  border-right: 1px solid currentColor;
+  left: 4px;
+  top: 2px;
+}
+.glyph-external::after {
+  width: 10px;
+  height: 1px;
+  background: currentColor;
+  left: 2px;
+  top: 6px;
+  transform: rotate(-45deg);
 }
 .desktop-space {
   position: absolute;
@@ -174,7 +335,7 @@
   min-width: 0;
   user-select: none;
 }
-.era-2011 .desktop-icons > button > span {
+.era-2011 .desktop-icons > button > span:not(.xp-shortcut-icon) {
   padding: 1px 3px;
 }
 .era-2011 .desktop-icons > button:hover {
@@ -185,7 +346,7 @@
   background: #255bc433;
   border: 1px dotted #c2dcff;
 }
-.era-2011 .desktop-icons > button.selected > span {
+.era-2011 .desktop-icons > button.selected > span:not(.xp-shortcut-icon) {
   background: #0b56ba;
 }
 .era-2011 .app-window {
@@ -481,7 +642,7 @@
   padding: 0 7px;
   height: 22px;
 }
-.ie-address > button > svg {
+.ie-address > button > .classic-glyph {
   background: #4aab3c;
   color: #fff;
   border-radius: 2px;
@@ -1411,7 +1572,7 @@
   font: 12px/1.7 SimSun;
   margin: 12px 0;
 }
-.era-2011 .info-note svg {
+.era-2011 .info-note .legacy-icon {
   color: #2c5ca7;
 }
 .era-2011 .muted,
@@ -3164,7 +3325,7 @@
     box-shadow: none;
   }
   .system-tray > span,
-  .system-tray > svg {
+  .system-tray > .legacy-icon {
     display: none;
   }
   .system-tray .tray-clock {
@@ -3188,8 +3349,8 @@
     gap: 6px;
   }
   .start-programs > button .legacy-icon {
-    width: 28px;
-    height: 28px;
+    width: 32px;
+    height: 32px;
   }
   .start-programs strong {
     font-size: 11px;
@@ -3203,8 +3364,8 @@
     gap: 5px;
   }
   .start-places .legacy-icon {
-    width: 20px;
-    height: 20px;
+    width: 16px;
+    height: 16px;
   }
   .era-2011 .launcher > header {
     height: 54px;

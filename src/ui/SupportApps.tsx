@@ -1,15 +1,4 @@
-import {
-  ArrowRight,
-  CalendarDays,
-  Check,
-  Download,
-  FileText,
-  Mail,
-  MessageCircle,
-  Phone,
-  Send,
-  Trophy,
-} from 'lucide-react';
+import { LegacyIcon, ClassicGlyph } from './LegacyIcon';
 import { useEffect, useState } from 'react';
 import {
   DIFFICULTIES,
@@ -116,7 +105,7 @@ export function ExamsApp({ game, open }: { game: Game; open: OpenApp }) {
               if (dispatch({ type: 'quiz', difficulty })) setExamIndex(game.exams.length);
             }}
           >
-            <FileText size={15} />
+            <LegacyIcon name="document" size={15} />
             生成试卷并组织测验
           </button>
         </Panel>
@@ -182,7 +171,7 @@ export function ExamsApp({ game, open }: { game: Game; open: OpenApp }) {
           </span>
           <button className="button subtle" onClick={() => open('scores')}>
             查看完整成绩
-            <ArrowRight size={14} />
+            <ClassicGlyph name="right" size={14} />
           </button>
         </div>
       </Panel>
@@ -202,7 +191,7 @@ export function CalendarApp({ game }: { game: Game }) {
         description="统一考试按教学日自动执行。点击日期查看真实管理记录或未来考试日程。"
         action={
           <button className="button subtle" onClick={() => setDay(game.day)}>
-            <CalendarDays size={15} />
+            <LegacyIcon name="calendar" size={15} />
             回到今日
           </button>
         }
@@ -317,13 +306,13 @@ export function ReportApp({
               )
             }
           >
-            <Download size={15} />
+            <LegacyIcon name="export" size={15} />
             导出成绩
           </button>
         }
       />
       <div className="report-banner">
-        <Trophy size={40} strokeWidth={1.2} />
+        <LegacyIcon name="certificate" size={40} />
         <div>
           <span>
             {game.ended ? '高考本科参考线上线率' : `${stats.lastExam.name} · 本科参考线上线率`}
@@ -430,7 +419,7 @@ export function ReportApp({
       <div className="button-row">
         <button className="button" onClick={replay}>
           重新挑战相同种子
-          <ArrowRight size={15} />
+          <ClassicGlyph name="right" size={15} />
         </button>
         <button className="button subtle" onClick={newGame}>
           创建新的班级
@@ -448,7 +437,7 @@ export function ReportApp({
             )
           }
         >
-          <Download size={15} />
+          <LegacyIcon name="export" size={15} />
           导出教学记录
         </button>
       </div>
