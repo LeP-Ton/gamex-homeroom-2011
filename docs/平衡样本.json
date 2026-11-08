@@ -1,0 +1,765 @@
+{
+  "规则": "虚构750分制，本科参考线450，仅本地规则模拟，不写入游戏存档或排行榜",
+  "种子数": 3,
+  "耗时秒": 61.4,
+  "aggregates": [
+    {
+      "难度": "普通",
+      "策略": "仅常规教学",
+      "班级数": 3,
+      "平均分": 522.1,
+      "上线率": 88.7,
+      "平均进步": 80.5,
+      "平均疲劳": 0
+    },
+    {
+      "难度": "普通",
+      "策略": "均衡教学与恢复",
+      "班级数": 3,
+      "平均分": 532.6,
+      "上线率": 95.3,
+      "平均进步": 91,
+      "平均疲劳": 0
+    },
+    {
+      "难度": "普通",
+      "策略": "高负荷重复训练",
+      "班级数": 3,
+      "平均分": 455.6,
+      "上线率": 54,
+      "平均进步": 14,
+      "平均疲劳": 1
+    },
+    {
+      "难度": "普通",
+      "策略": "只关注临界生",
+      "班级数": 3,
+      "平均分": 521.5,
+      "上线率": 88.7,
+      "平均进步": 79.9,
+      "平均疲劳": 0.001
+    },
+    {
+      "难度": "挑战",
+      "策略": "仅常规教学",
+      "班级数": 3,
+      "平均分": 495.6,
+      "上线率": 66.7,
+      "平均进步": 89.1,
+      "平均疲劳": 0
+    },
+    {
+      "难度": "挑战",
+      "策略": "均衡教学与恢复",
+      "班级数": 3,
+      "平均分": 507.6,
+      "上线率": 71.3,
+      "平均进步": 101.1,
+      "平均疲劳": 0.001
+    },
+    {
+      "难度": "挑战",
+      "策略": "高负荷重复训练",
+      "班级数": 3,
+      "平均分": 426.9,
+      "上线率": 43.3,
+      "平均进步": 20.4,
+      "平均疲劳": 1
+    },
+    {
+      "难度": "挑战",
+      "策略": "只关注临界生",
+      "班级数": 3,
+      "平均分": 497.1,
+      "上线率": 66,
+      "平均进步": 90.6,
+      "平均疲劳": 0.002
+    },
+    {
+      "难度": "困难",
+      "策略": "仅常规教学",
+      "班级数": 3,
+      "平均分": 465.7,
+      "上线率": 55.3,
+      "平均进步": 99.2,
+      "平均疲劳": 0
+    },
+    {
+      "难度": "困难",
+      "策略": "均衡教学与恢复",
+      "班级数": 3,
+      "平均分": 478.4,
+      "上线率": 62,
+      "平均进步": 111.9,
+      "平均疲劳": 0.003
+    },
+    {
+      "难度": "困难",
+      "策略": "高负荷重复训练",
+      "班级数": 3,
+      "平均分": 433.6,
+      "上线率": 46.7,
+      "平均进步": 67.1,
+      "平均疲劳": 0.617
+    },
+    {
+      "难度": "困难",
+      "策略": "只关注临界生",
+      "班级数": 3,
+      "平均分": 464.9,
+      "上线率": 55.3,
+      "平均进步": 98.5,
+      "平均疲劳": 0.002
+    }
+  ],
+  "rows": [
+    {
+      "seed": "春山-平衡-0",
+      "difficulty": "normal",
+      "strategy": "observe",
+      "average": 517,
+      "rate": 0.92,
+      "improvement": 78.9,
+      "subjects": {
+        "chinese": 100.4,
+        "math": 96.7,
+        "english": 103.7,
+        "physics": 72.7,
+        "chemistry": 71.8,
+        "biology": 71.7
+      },
+      "fatigue": 0,
+      "stress": 0.09465094437521858
+    },
+    {
+      "seed": "春山-平衡-0",
+      "difficulty": "normal",
+      "strategy": "balanced",
+      "average": 526.6,
+      "rate": 1,
+      "improvement": 88.5,
+      "subjects": {
+        "chinese": 100.6,
+        "math": 107.6,
+        "english": 103.3,
+        "physics": 72,
+        "chemistry": 71.6,
+        "biology": 71.6
+      },
+      "fatigue": 0.0002753509433678117,
+      "stress": 0.035914954149769515
+    },
+    {
+      "seed": "春山-平衡-0",
+      "difficulty": "normal",
+      "strategy": "cram",
+      "average": 451,
+      "rate": 0.52,
+      "improvement": 12.9,
+      "subjects": {
+        "chinese": 87.6,
+        "math": 88,
+        "english": 90.9,
+        "physics": 62.5,
+        "chemistry": 61.6,
+        "biology": 60.5
+      },
+      "fatigue": 1,
+      "stress": 0.8364088278749047
+    },
+    {
+      "seed": "春山-平衡-0",
+      "difficulty": "normal",
+      "strategy": "borderline",
+      "average": 516,
+      "rate": 0.92,
+      "improvement": 77.9,
+      "subjects": {
+        "chinese": 100.3,
+        "math": 96.8,
+        "english": 104.2,
+        "physics": 71.5,
+        "chemistry": 72.8,
+        "biology": 70.5
+      },
+      "fatigue": 0.00028465099997233373,
+      "stress": 0.09468094437521858
+    },
+    {
+      "seed": "春山-平衡-1",
+      "difficulty": "normal",
+      "strategy": "observe",
+      "average": 518.4,
+      "rate": 0.86,
+      "improvement": 84.3,
+      "subjects": {
+        "chinese": 102.9,
+        "math": 98.5,
+        "english": 103.6,
+        "physics": 72.3,
+        "chemistry": 71.2,
+        "biology": 69.9
+      },
+      "fatigue": 0,
+      "stress": 0.07347206729358988
+    },
+    {
+      "seed": "春山-平衡-1",
+      "difficulty": "normal",
+      "strategy": "balanced",
+      "average": 532.1,
+      "rate": 0.94,
+      "improvement": 98,
+      "subjects": {
+        "chinese": 103.4,
+        "math": 109.8,
+        "english": 103.3,
+        "physics": 72.4,
+        "chemistry": 72.3,
+        "biology": 70.9
+      },
+      "fatigue": 0.00026183085341023566,
+      "stress": 0.024191510718264624
+    },
+    {
+      "seed": "春山-平衡-1",
+      "difficulty": "normal",
+      "strategy": "cram",
+      "average": 451.5,
+      "rate": 0.48,
+      "improvement": 17.4,
+      "subjects": {
+        "chinese": 89.3,
+        "math": 91.3,
+        "english": 87.7,
+        "physics": 61.4,
+        "chemistry": 61.5,
+        "biology": 60.2
+      },
+      "fatigue": 1,
+      "stress": 0.7535369704102247
+    },
+    {
+      "seed": "春山-平衡-1",
+      "difficulty": "normal",
+      "strategy": "borderline",
+      "average": 518.1,
+      "rate": 0.86,
+      "improvement": 84,
+      "subjects": {
+        "chinese": 102.9,
+        "math": 98.9,
+        "english": 102.1,
+        "physics": 72,
+        "chemistry": 71.8,
+        "biology": 70.4
+      },
+      "fatigue": 0.00016850095024783282,
+      "stress": 0.07349606729358987
+    },
+    {
+      "seed": "春山-平衡-2",
+      "difficulty": "normal",
+      "strategy": "observe",
+      "average": 531,
+      "rate": 0.88,
+      "improvement": 78.3,
+      "subjects": {
+        "chinese": 104.1,
+        "math": 102.4,
+        "english": 103,
+        "physics": 75.4,
+        "chemistry": 73.1,
+        "biology": 73.1
+      },
+      "fatigue": 0,
+      "stress": 0.09848376414147184
+    },
+    {
+      "seed": "春山-平衡-2",
+      "difficulty": "normal",
+      "strategy": "balanced",
+      "average": 539.1,
+      "rate": 0.92,
+      "improvement": 86.4,
+      "subjects": {
+        "chinese": 104.1,
+        "math": 112.5,
+        "english": 102.5,
+        "physics": 74.2,
+        "chemistry": 72.7,
+        "biology": 73.2
+      },
+      "fatigue": 0.00023486939184661008,
+      "stress": 0.02729060661227429
+    },
+    {
+      "seed": "春山-平衡-2",
+      "difficulty": "normal",
+      "strategy": "cram",
+      "average": 464.3,
+      "rate": 0.62,
+      "improvement": 11.6,
+      "subjects": {
+        "chinese": 92,
+        "math": 93.4,
+        "english": 87.3,
+        "physics": 65.6,
+        "chemistry": 62.6,
+        "biology": 63.5
+      },
+      "fatigue": 1,
+      "stress": 0.81861527726725
+    },
+    {
+      "seed": "春山-平衡-2",
+      "difficulty": "normal",
+      "strategy": "borderline",
+      "average": 530.5,
+      "rate": 0.88,
+      "improvement": 77.8,
+      "subjects": {
+        "chinese": 103.9,
+        "math": 102.2,
+        "english": 102.9,
+        "physics": 74.4,
+        "chemistry": 73,
+        "biology": 74.1
+      },
+      "fatigue": 0.0011256235551374686,
+      "stress": 0.09882576414147186
+    },
+    {
+      "seed": "春山-平衡-0",
+      "difficulty": "challenge",
+      "strategy": "observe",
+      "average": 488.5,
+      "rate": 0.6,
+      "improvement": 88.1,
+      "subjects": {
+        "chinese": 96.2,
+        "math": 89,
+        "english": 97.4,
+        "physics": 68.8,
+        "chemistry": 68.7,
+        "biology": 68.4
+      },
+      "fatigue": 0,
+      "stress": 0.2936370092587453
+    },
+    {
+      "seed": "春山-平衡-0",
+      "difficulty": "challenge",
+      "strategy": "balanced",
+      "average": 503.9,
+      "rate": 0.66,
+      "improvement": 103.5,
+      "subjects": {
+        "chinese": 95.7,
+        "math": 102.2,
+        "english": 99.4,
+        "physics": 69.2,
+        "chemistry": 69.2,
+        "biology": 68.2
+      },
+      "fatigue": 0.0013908125747566238,
+      "stress": 0.16362940852180136
+    },
+    {
+      "seed": "春山-平衡-0",
+      "difficulty": "challenge",
+      "strategy": "cram",
+      "average": 418.4,
+      "rate": 0.38,
+      "improvement": 18,
+      "subjects": {
+        "chinese": 79.9,
+        "math": 82.6,
+        "english": 83.3,
+        "physics": 57.9,
+        "chemistry": 57.6,
+        "biology": 57.1
+      },
+      "fatigue": 1,
+      "stress": 0.9315554166159862
+    },
+    {
+      "seed": "春山-平衡-0",
+      "difficulty": "challenge",
+      "strategy": "borderline",
+      "average": 488.1,
+      "rate": 0.58,
+      "improvement": 87.7,
+      "subjects": {
+        "chinese": 94.9,
+        "math": 89.6,
+        "english": 97.3,
+        "physics": 69.2,
+        "chemistry": 68.9,
+        "biology": 68.1
+      },
+      "fatigue": 0.004406550707041437,
+      "stress": 0.29370300925874526
+    },
+    {
+      "seed": "春山-平衡-1",
+      "difficulty": "challenge",
+      "strategy": "observe",
+      "average": 492.5,
+      "rate": 0.64,
+      "improvement": 94.3,
+      "subjects": {
+        "chinese": 98.3,
+        "math": 91.6,
+        "english": 98.4,
+        "physics": 69,
+        "chemistry": 68,
+        "biology": 67.1
+      },
+      "fatigue": 0,
+      "stress": 0.2505330171495254
+    },
+    {
+      "seed": "春山-平衡-1",
+      "difficulty": "challenge",
+      "strategy": "balanced",
+      "average": 501.7,
+      "rate": 0.68,
+      "improvement": 103.5,
+      "subjects": {
+        "chinese": 97.3,
+        "math": 104,
+        "english": 96.6,
+        "physics": 68.8,
+        "chemistry": 67.7,
+        "biology": 67.2
+      },
+      "fatigue": 0.0011703009805182885,
+      "stress": 0.1272711153764609
+    },
+    {
+      "seed": "春山-平衡-1",
+      "difficulty": "challenge",
+      "strategy": "cram",
+      "average": 423.3,
+      "rate": 0.42,
+      "improvement": 25.1,
+      "subjects": {
+        "chinese": 83.4,
+        "math": 87,
+        "english": 82.5,
+        "physics": 56.9,
+        "chemistry": 58.1,
+        "biology": 55.4
+      },
+      "fatigue": 1,
+      "stress": 0.8544281654287631
+    },
+    {
+      "seed": "春山-平衡-1",
+      "difficulty": "challenge",
+      "strategy": "borderline",
+      "average": 492.9,
+      "rate": 0.64,
+      "improvement": 94.7,
+      "subjects": {
+        "chinese": 97.7,
+        "math": 92.8,
+        "english": 96.7,
+        "physics": 67.9,
+        "chemistry": 69.6,
+        "biology": 68.2
+      },
+      "fatigue": 0.0024452791368951067,
+      "stress": 0.25064701714952536
+    },
+    {
+      "seed": "春山-平衡-2",
+      "difficulty": "challenge",
+      "strategy": "observe",
+      "average": 505.7,
+      "rate": 0.76,
+      "improvement": 84.8,
+      "subjects": {
+        "chinese": 100.8,
+        "math": 96,
+        "english": 97.1,
+        "physics": 72.1,
+        "chemistry": 69.3,
+        "biology": 70.5
+      },
+      "fatigue": 0,
+      "stress": 0.3015279802464781
+    },
+    {
+      "seed": "春山-平衡-2",
+      "difficulty": "challenge",
+      "strategy": "balanced",
+      "average": 517.3,
+      "rate": 0.8,
+      "improvement": 96.4,
+      "subjects": {
+        "chinese": 99.1,
+        "math": 109.4,
+        "english": 96.1,
+        "physics": 71.9,
+        "chemistry": 69.9,
+        "biology": 71
+      },
+      "fatigue": 0.0008762909098636025,
+      "stress": 0.1729365611352208
+    },
+    {
+      "seed": "春山-平衡-2",
+      "difficulty": "challenge",
+      "strategy": "cram",
+      "average": 439.1,
+      "rate": 0.5,
+      "improvement": 18.2,
+      "subjects": {
+        "chinese": 86.1,
+        "math": 90.5,
+        "english": 83.1,
+        "physics": 61.2,
+        "chemistry": 58.7,
+        "biology": 59.5
+      },
+      "fatigue": 1,
+      "stress": 0.9186182630832006
+    },
+    {
+      "seed": "春山-平衡-2",
+      "difficulty": "challenge",
+      "strategy": "borderline",
+      "average": 510.2,
+      "rate": 0.76,
+      "improvement": 89.3,
+      "subjects": {
+        "chinese": 101.4,
+        "math": 98.9,
+        "english": 96.8,
+        "physics": 72.3,
+        "chemistry": 70.1,
+        "biology": 70.7
+      },
+      "fatigue": 0.00034763962855890367,
+      "stress": 0.30168998024647814
+    },
+    {
+      "seed": "春山-平衡-0",
+      "difficulty": "hard",
+      "strategy": "observe",
+      "average": 456.1,
+      "rate": 0.5,
+      "improvement": 97.4,
+      "subjects": {
+        "chinese": 88.6,
+        "math": 82.3,
+        "english": 92,
+        "physics": 64.8,
+        "chemistry": 64.2,
+        "biology": 64.2
+      },
+      "fatigue": 0,
+      "stress": 0.4680342381631254
+    },
+    {
+      "seed": "春山-平衡-0",
+      "difficulty": "hard",
+      "strategy": "balanced",
+      "average": 469.9,
+      "rate": 0.54,
+      "improvement": 111.2,
+      "subjects": {
+        "chinese": 88.8,
+        "math": 97,
+        "english": 92.6,
+        "physics": 64.5,
+        "chemistry": 63.7,
+        "biology": 63.3
+      },
+      "fatigue": 0.0035255029129885236,
+      "stress": 0.312393706032815
+    },
+    {
+      "seed": "春山-平衡-0",
+      "difficulty": "hard",
+      "strategy": "cram",
+      "average": 423.7,
+      "rate": 0.44,
+      "improvement": 65,
+      "subjects": {
+        "chinese": 80.8,
+        "math": 82.1,
+        "english": 84.5,
+        "physics": 59.3,
+        "chemistry": 58.5,
+        "biology": 58.5
+      },
+      "fatigue": 0.6269305460387005,
+      "stress": 0.4680342381631254
+    },
+    {
+      "seed": "春山-平衡-0",
+      "difficulty": "hard",
+      "strategy": "borderline",
+      "average": 456.3,
+      "rate": 0.5,
+      "improvement": 97.6,
+      "subjects": {
+        "chinese": 88.4,
+        "math": 83.9,
+        "english": 90.8,
+        "physics": 64.8,
+        "chemistry": 64.6,
+        "biology": 63.9
+      },
+      "fatigue": 0.0022363714076999125,
+      "stress": 0.4680942381631254
+    },
+    {
+      "seed": "春山-平衡-1",
+      "difficulty": "hard",
+      "strategy": "observe",
+      "average": 463.4,
+      "rate": 0.52,
+      "improvement": 104.9,
+      "subjects": {
+        "chinese": 91.8,
+        "math": 84.8,
+        "english": 92,
+        "physics": 64.9,
+        "chemistry": 64.9,
+        "biology": 65
+      },
+      "fatigue": 0,
+      "stress": 0.42586064018795744
+    },
+    {
+      "seed": "春山-平衡-1",
+      "difficulty": "hard",
+      "strategy": "balanced",
+      "average": 476.2,
+      "rate": 0.6,
+      "improvement": 117.7,
+      "subjects": {
+        "chinese": 92.3,
+        "math": 99.3,
+        "english": 90.1,
+        "physics": 64.9,
+        "chemistry": 65.4,
+        "biology": 64.2
+      },
+      "fatigue": 0.002146762625355943,
+      "stress": 0.26405447103079865
+    },
+    {
+      "seed": "春山-平衡-1",
+      "difficulty": "hard",
+      "strategy": "cram",
+      "average": 430.6,
+      "rate": 0.42,
+      "improvement": 72.1,
+      "subjects": {
+        "chinese": 84.2,
+        "math": 85,
+        "english": 84.3,
+        "physics": 59.2,
+        "chemistry": 59,
+        "biology": 58.9
+      },
+      "fatigue": 0.6221699791681946,
+      "stress": 0.42586064018795744
+    },
+    {
+      "seed": "春山-平衡-1",
+      "difficulty": "hard",
+      "strategy": "borderline",
+      "average": 461.5,
+      "rate": 0.52,
+      "improvement": 103,
+      "subjects": {
+        "chinese": 91.4,
+        "math": 86.6,
+        "english": 89.9,
+        "physics": 64.5,
+        "chemistry": 65.4,
+        "biology": 63.7
+      },
+      "fatigue": 0.0028942439070398186,
+      "stress": 0.42586664018795745
+    },
+    {
+      "seed": "春山-平衡-2",
+      "difficulty": "hard",
+      "strategy": "observe",
+      "average": 477.5,
+      "rate": 0.64,
+      "improvement": 95.3,
+      "subjects": {
+        "chinese": 94.4,
+        "math": 89.7,
+        "english": 91.3,
+        "physics": 67.5,
+        "chemistry": 67.1,
+        "biology": 67.4
+      },
+      "fatigue": 0,
+      "stress": 0.47738550561265997
+    },
+    {
+      "seed": "春山-平衡-2",
+      "difficulty": "hard",
+      "strategy": "balanced",
+      "average": 489.1,
+      "rate": 0.72,
+      "improvement": 106.9,
+      "subjects": {
+        "chinese": 93.3,
+        "math": 103.4,
+        "english": 91.5,
+        "physics": 67.4,
+        "chemistry": 66.5,
+        "biology": 67
+      },
+      "fatigue": 0.0018732277100854946,
+      "stress": 0.32142255198573216
+    },
+    {
+      "seed": "春山-平衡-2",
+      "difficulty": "hard",
+      "strategy": "cram",
+      "average": 446.5,
+      "rate": 0.54,
+      "improvement": 64.3,
+      "subjects": {
+        "chinese": 87.3,
+        "math": 89.3,
+        "english": 83.8,
+        "physics": 62.5,
+        "chemistry": 61.5,
+        "biology": 62
+      },
+      "fatigue": 0.6017541102925776,
+      "stress": 0.47738550561265997
+    },
+    {
+      "seed": "春山-平衡-2",
+      "difficulty": "hard",
+      "strategy": "borderline",
+      "average": 477,
+      "rate": 0.64,
+      "improvement": 94.8,
+      "subjects": {
+        "chinese": 93.5,
+        "math": 92.9,
+        "english": 90.5,
+        "physics": 67.8,
+        "chemistry": 65.9,
+        "biology": 66.3
+      },
+      "fatigue": 0.0013399999100282077,
+      "stress": 0.47740350561265993
+    }
+  ]
+}

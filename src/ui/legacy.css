@@ -1,0 +1,3661 @@
+/* 2011年校园电脑：Luna窗口、Office 2003工具栏、教务表格与QQ通讯界面。 */
+.era-2011 {
+  --xp-main: #245edb;
+  --xp-dark: #003caa;
+  --xp-light: #79a4f8;
+  --xp-bar: #1261db;
+  --paper: #ece9d8;
+  --ink: #000;
+  --line: #aaa;
+  --green: #316ac5;
+  --muted: #555;
+  font-family: Tahoma, '宋体', SimSun, sans-serif;
+  font-size: 12px;
+  color: #000;
+  background: #3a6ea5;
+}
+.era-2011.xp-olive {
+  --xp-main: #749045;
+  --xp-dark: #4b6130;
+  --xp-light: #bccb8a;
+  --xp-bar: #718a43;
+}
+.era-2011.xp-silver {
+  --xp-main: #8b8fa3;
+  --xp-dark: #5b5e70;
+  --xp-light: #e1e2ed;
+  --xp-bar: #9498ac;
+}
+.era-2011 button {
+  font-family: Tahoma, '宋体', SimSun, sans-serif;
+  transition: none;
+  color: inherit;
+}
+.era-2011 button:active {
+  transform: none;
+}
+.era-2011 button:focus-visible {
+  outline: 1px dotted #111;
+  outline-offset: -4px;
+}
+.era-2011 input,
+.era-2011 select,
+.era-2011 textarea {
+  font:
+    12px Tahoma,
+    '宋体',
+    SimSun,
+    sans-serif;
+  border: 1px solid #7f9db9;
+  border-radius: 0;
+  background: white;
+  color: #000;
+  min-height: 22px;
+  padding: 3px 5px;
+  box-shadow: inset 1px 1px 1px #7772;
+}
+.era-2011 select {
+  padding: 2px 4px;
+  cursor: default;
+}
+.era-2011 input[type='range'] {
+  accent-color: #316ac5;
+  box-shadow: none;
+  border: 0;
+}
+.era-2011 input[type='checkbox'] {
+  min-height: 0;
+  accent-color: #316ac5;
+  width: 13px;
+  height: 13px;
+}
+.era-2011 h1,
+.era-2011 h2,
+.era-2011 h3 {
+  font-family: Tahoma, '宋体', SimSun, sans-serif;
+  letter-spacing: 0;
+  color: #000;
+}
+.era-2011 .legacy-icon {
+  filter: drop-shadow(1px 1px 0 #fff5);
+  flex-shrink: 0;
+}
+.desktop-space {
+  position: absolute;
+  inset: 0 0 30px;
+  overflow: hidden;
+}
+.xp-wallpaper {
+  position: absolute;
+  inset: 0;
+  background: #4f91d9 url('/wallpapers/bliss.jpg') center center/cover no-repeat;
+}
+.wallpaper-blue .xp-wallpaper {
+  background: #004e98;
+}
+.desktop-watermark {
+  position: absolute;
+  right: 28px;
+  bottom: 32px;
+  text-align: right;
+  color: white;
+  text-shadow: 1px 2px 3px #173d6c;
+  pointer-events: none;
+}
+.desktop-watermark > span {
+  font: italic bold 17px Tahoma;
+  opacity: 0.9;
+}
+.desktop-watermark h1 {
+  font-size: 23px;
+  color: #fff;
+  font-weight: normal;
+  margin: 6px 0;
+}
+.desktop-watermark h1 span {
+  font-weight: bold;
+  font-size: 25px;
+}
+.desktop-watermark p {
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+.desktop-countdown {
+  position: absolute;
+  top: 28px;
+  right: 35px;
+  color: white;
+  text-shadow: 1px 1px 3px #264268;
+  text-align: right;
+  pointer-events: none;
+}
+.desktop-countdown > strong {
+  display: block;
+  font-size: 16px;
+  font-weight: normal;
+}
+.desktop-countdown b {
+  font: italic bold 34px Arial;
+  color: #fff5b6;
+}
+.desktop-countdown > span {
+  display: block;
+  margin-top: 6px;
+  font-size: 12px;
+}
+.era-2011 .desktop-icons {
+  left: 7px;
+  top: 7px;
+  bottom: 42px;
+  width: auto;
+  max-width: 200px;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(7, 78px);
+  grid-auto-columns: 86px;
+  gap: 4px 0;
+  align-content: start;
+}
+.era-2011 .desktop-icons > button {
+  font:
+    12px Tahoma,
+    '宋体',
+    SimSun,
+    sans-serif;
+  border: 1px solid transparent;
+  border-radius: 0;
+  gap: 4px;
+  justify-content: center;
+  padding: 4px 2px;
+  color: white;
+  text-shadow: 1px 1px 2px #143776;
+  line-height: 1.3;
+  white-space: normal;
+  min-width: 0;
+  user-select: none;
+}
+.era-2011 .desktop-icons > button > span {
+  padding: 1px 3px;
+}
+.era-2011 .desktop-icons > button:hover {
+  background: #4285cc22;
+  border-color: transparent;
+}
+.era-2011 .desktop-icons > button.selected {
+  background: #255bc433;
+  border: 1px dotted #c2dcff;
+}
+.era-2011 .desktop-icons > button.selected > span {
+  background: #0b56ba;
+}
+.era-2011 .app-window {
+  background: #ece9d8;
+  border: 3px solid var(--xp-main);
+  border-radius: 8px 8px 0 0;
+  box-shadow: 1px 2px 5px #0006;
+  opacity: 1;
+  min-width: 620px;
+  min-height: 360px;
+  max-width: 100vw;
+  max-height: calc(100dvh - 31px);
+  resize: both;
+  animation: none;
+  overflow: hidden;
+}
+.era-2011 .app-window:not(.focused) {
+  border-color: #7893c5;
+}
+.era-2011 .app-window.maximized {
+  border-radius: 0;
+  resize: none;
+}
+.era-2011 .window-titlebar {
+  height: 27px;
+  min-height: 27px;
+  padding: 0 2px 0 2px;
+  color: #fff;
+  border: 0;
+  background: linear-gradient(
+    to bottom,
+    var(--xp-light) 0,
+    var(--xp-main) 10%,
+    var(--xp-main) 68%,
+    var(--xp-dark) 100%
+  );
+  border-radius: 4px 4px 0 0;
+}
+.era-2011 .app-window:not(.focused) .window-titlebar {
+  background: linear-gradient(#9fb6d8, #7c9ad0 20%, #809bcb 80%, #718bbb);
+}
+.era-2011 .window-titlebar > div:first-child {
+  gap: 5px;
+  min-width: 0;
+  overflow: hidden;
+}
+.era-2011 .window-titlebar strong {
+  color: white;
+  font:
+    bold 12px Tahoma,
+    '宋体',
+    sans-serif;
+  text-shadow: 1px 1px #15418d;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 24px;
+}
+.era-2011 .window-controls {
+  gap: 2px;
+  align-items: center;
+  align-self: center;
+  height: 23px;
+  margin-left: 6px;
+  flex-shrink: 0;
+}
+.era-2011 .window-controls button {
+  width: 22px;
+  height: 22px;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  background: linear-gradient(130deg, #9db6ee, #3270df 35%, #1953bc);
+  box-shadow: inset 0 0 1px 1px #2f60c2;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+.era-2011 .window-controls button:hover {
+  filter: brightness(1.2);
+}
+.era-2011 .window-controls button:last-child {
+  background: linear-gradient(130deg, #f6b291, #dc7354 30%, #b6290c);
+  box-shadow: inset 0 0 1px 1px #bf422a;
+}
+.era-2011 .window-layout {
+  background: #ece9d8;
+  min-height: 0;
+  flex: 1;
+}
+.era-2011 .app-content {
+  padding: 12px 14px;
+  background: #ece9d8;
+  color: #000;
+  --document-zoom: 1;
+  font-size: calc(12px * var(--document-zoom));
+  overflow: auto;
+  scroll-behavior: auto;
+}
+.era-2011 .window-statusbar {
+  height: 21px;
+  min-height: 21px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #333;
+  background: #ece9d8;
+  border-top: 1px solid #fff;
+  padding: 0 3px;
+  font-size: 11px;
+  gap: 8px;
+}
+.era-2011 .window-statusbar > span {
+  border: 1px solid;
+  border-color: #aca899 #fff #fff #aca899;
+  padding: 2px 6px;
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 18px;
+  min-width: 0;
+}
+.window-statusbar i {
+  display: inline-block;
+  width: 1px;
+  height: 10px;
+  background: #b9b5a6;
+}
+.classic-chrome {
+  background: #ece9d8;
+  flex-shrink: 0;
+  font-size: 12px;
+  color: #000;
+}
+.classic-menubar {
+  height: 23px;
+  border-bottom: 1px solid #d5d2c4;
+  display: flex;
+  align-items: stretch;
+  padding-left: 2px;
+  position: relative;
+  gap: 0;
+}
+.classic-menu {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+}
+.classic-menu > button {
+  padding: 1px 8px;
+  font-size: 12px;
+  border: 1px solid transparent;
+}
+.classic-menu > button:hover,
+.classic-menu > button.active {
+  border: 1px solid #316ac5;
+  background: #c1d2ee;
+}
+.menubar-brand {
+  margin-left: auto;
+  background: white;
+  padding: 3px 9px;
+  color: #666;
+  font-size: 11px;
+  border-left: 1px solid #c7c4b7;
+  white-space: nowrap;
+}
+.menu-dismiss {
+  position: fixed;
+  inset: 0;
+  z-index: 30001;
+  background: transparent !important;
+  cursor: default;
+}
+.classic-menu-popup {
+  position: absolute;
+  left: 0;
+  top: 22px;
+  min-width: 215px;
+  background: #fffef7;
+  border: 1px solid #7f9db9;
+  box-shadow: 2px 2px 2px #0005;
+  padding: 3px;
+  z-index: 30002;
+}
+.classic-menu-popup > button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  width: 100%;
+  text-align: left;
+  padding: 5px 9px 5px 22px;
+  white-space: nowrap;
+  font-size: 12px;
+}
+.classic-menu-popup > button:hover {
+  background: #316ac5;
+  color: white;
+}
+.classic-menu-popup small {
+  font-size: 11px;
+  color: inherit;
+}
+.classic-toolbar {
+  min-height: 32px;
+  display: flex;
+  align-items: center;
+  padding: 1px 5px;
+  gap: 2px;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #aca899;
+  background: linear-gradient(#fffdf0, #e3dfcc);
+  overflow-x: auto;
+  scrollbar-width: none;
+  white-space: nowrap;
+}
+.classic-toolbar > button {
+  height: 27px;
+  min-width: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  padding: 1px 4px;
+  font-size: 12px;
+  color: #314e63;
+}
+.classic-toolbar > button:hover:not(:disabled) {
+  background: #ffe5a3;
+  border: 1px solid #c38926;
+}
+.classic-toolbar > button:disabled {
+  opacity: 0.3;
+}
+.toolbar-separator {
+  height: 23px;
+  width: 1px;
+  min-width: 1px;
+  background: #b2ae9e;
+  border-right: 1px solid white;
+  margin: 0 4px;
+}
+.office-font-name {
+  background: #fff;
+  border: 1px solid #a7a7a7;
+  padding: 2px 9px;
+  font:
+    12px SimSun,
+    serif;
+  color: black;
+  min-width: 60px;
+  height: 21px;
+}
+.zoom-display {
+  font: 11px Tahoma;
+  color: #000;
+}
+.toolbar-help {
+  margin-left: auto;
+}
+.ie-address {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  height: 28px;
+  background: #ece9d8;
+  padding: 3px 6px;
+  border-bottom: 1px solid #a9a7a0;
+  font-size: 12px;
+}
+.era-2011 .ie-address input {
+  flex: 1;
+  min-width: 0;
+  height: 22px;
+  min-height: 22px;
+  padding: 2px 7px;
+  font:
+    12px Tahoma,
+    sans-serif;
+  box-shadow: none;
+}
+.ie-address > button {
+  display: flex;
+  align-items: center;
+  gap: 1px;
+  padding: 0 7px;
+  height: 22px;
+}
+.ie-address > button > svg {
+  background: #4aab3c;
+  color: #fff;
+  border-radius: 2px;
+}
+.ie-address > span:last-child {
+  border-left: 1px solid #bbb;
+  padding: 0 3px 0 8px;
+  color: #777;
+}
+.excel-formula {
+  height: 25px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 2px;
+  background: #ece9d8;
+  border-bottom: 1px solid #929895;
+}
+.excel-formula > span {
+  width: 78px;
+  align-self: stretch;
+  background: white;
+  border: 1px inset #aaa;
+  padding-left: 6px;
+  font: 12px Arial;
+  display: flex;
+  align-items: center;
+}
+.excel-formula > b {
+  width: 32px;
+  text-align: center;
+  font: italic 17px Georgia;
+  color: #555;
+  border-right: 1px solid #bbb;
+}
+.era-2011 .excel-formula input {
+  flex: 1;
+  min-height: 20px;
+  height: 20px;
+  border: 0;
+  box-shadow: none;
+  font: 12px SimSun;
+  background: #fff;
+}
+.word-ruler {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 23px;
+  background: #b5b5b5;
+  padding: 2px 35px;
+  gap: 0;
+  overflow: hidden;
+}
+.word-ruler > i {
+  width: 37px;
+  min-width: 20px;
+  background:
+    linear-gradient(90deg, transparent 90%, #777 90%) repeat-x,
+    white;
+  background-size: 7px 3px;
+  background-position: center bottom;
+  background-repeat: repeat-x;
+  height: 19px;
+  font: 10px Tahoma;
+  font-style: normal;
+  text-align: center;
+  color: #333;
+}
+.word-ruler > span {
+  height: 19px;
+  width: 20px;
+  background: #deded3;
+}
+.era-2011 .taskbar {
+  height: 31px;
+  background: linear-gradient(to bottom, #4892f5 0, #225fdf 12%, #2665df 70%, #1a4fbe 100%);
+  border-top: 1px solid #0052bf;
+  padding: 0;
+  display: flex;
+  gap: 0;
+  box-shadow: none;
+  backdrop-filter: none;
+  z-index: 25000;
+  justify-content: flex-start;
+}
+.era-2011 .start-button {
+  height: 30px;
+  width: 98px;
+  min-width: 98px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  margin: 0;
+  border-radius: 0 12px 12px 0;
+  background: linear-gradient(#a4ce80 0, #529c40 10%, #34872e 55%, #4b983b 82%, #246424 100%);
+  box-shadow:
+    inset -2px 0 3px #1a4d19,
+    1px 0 3px #1744a3;
+  border: 0;
+  border-right: 1px solid #358036;
+  color: white;
+  text-shadow: 1px 1px 2px #1e561c;
+  font:
+    italic bold 17px Tahoma,
+    '黑体',
+    sans-serif;
+  padding: 0 8px;
+}
+.era-2011 .start-button:hover {
+  filter: brightness(1.12);
+}
+.era-2011 .start-button.active {
+  box-shadow: inset 1px 1px 6px #194d1d;
+  background: linear-gradient(#367b2e, #499139, #2e6d29);
+}
+.quick-launch {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  border-right: 1px solid #103a9e;
+  box-shadow: 1px 0 #75a0f1;
+  height: 25px;
+  padding: 0 7px;
+  margin-right: 8px;
+}
+.quick-launch button {
+  height: 24px;
+  width: 23px;
+  border: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+.quick-launch button:hover {
+  border-color: #9bc4f9;
+  background: #ffffff22;
+}
+.taskbar-apps {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  overflow: auto;
+  scrollbar-width: none;
+  height: 31px;
+  padding: 2px 3px 2px 0;
+}
+.era-2011 .taskbar-app {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex: 0 1 158px;
+  min-width: 60px;
+  height: 25px;
+  padding: 1px 7px;
+  color: white;
+  background: linear-gradient(#5c91ec, #3a80ec 12%, #3473df 80%, #2c65cc);
+  box-shadow:
+    inset 1px 1px 1px #9dc6ff,
+    1px 1px 1px #0d45aa;
+  border: 1px solid #1855be;
+  border-radius: 3px;
+  font:
+    11px Tahoma,
+    '宋体';
+  white-space: nowrap;
+  text-shadow: none;
+}
+.era-2011 .taskbar-app > span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block !important;
+}
+.era-2011 .taskbar-app:after {
+  display: none;
+}
+.era-2011 .taskbar-app.active {
+  background: #1855b8;
+  box-shadow: inset 1px 1px 3px #103f8e;
+  font-weight: bold;
+}
+.era-2011 .taskbar-app:hover {
+  background: #4e8ff4;
+}
+.era-2011 .end-day-button {
+  font:
+    11px '宋体',
+    SimSun,
+    sans-serif;
+  border: 1px solid #d9e4fc;
+  border-radius: 2px;
+  padding: 3px 7px;
+  background: linear-gradient(#fff8cf, #f0db91);
+  color: #3d3900;
+  text-shadow: none;
+  box-shadow: 1px 1px #194aaa;
+  margin: 0 8px 0 4px;
+  height: 23px;
+  min-height: 23px;
+  white-space: nowrap;
+}
+.era-2011 .end-day-button:hover:not(:disabled) {
+  background: #fff2bc;
+}
+.system-tray {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+  padding: 0 9px 0 13px;
+  background: linear-gradient(#26a2ee, #0b8ad9 12%, #1396dd 80%, #1484cd);
+  border-left: 1px solid #064d9b;
+  box-shadow: inset 1px 0 1px #8bc4f2;
+  color: white;
+  font-size: 11px;
+  flex-shrink: 0;
+}
+.system-tray > button {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.system-tray .tray-clock {
+  font: 11px Tahoma;
+  color: white;
+  min-width: 37px;
+}
+.has-messages > i {
+  height: 6px;
+  width: 6px;
+  position: absolute;
+  right: -2px;
+  top: -2px;
+  border-radius: 50%;
+  background: #ffe550;
+  border: 1px solid #a66f00;
+}
+.era-2011 .launcher {
+  left: 0;
+  bottom: 31px;
+  top: auto;
+  width: 412px;
+  padding: 0;
+  background: #fff;
+  border: 2px solid #2562ce;
+  border-radius: 6px 6px 0 0;
+  backdrop-filter: none;
+  box-shadow: 2px -1px 5px #0005;
+  z-index: 26000;
+  animation: none;
+  overflow: hidden;
+  color: black;
+}
+.era-2011 .launcher > header {
+  height: 58px;
+  margin: 0;
+  padding: 6px 9px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(#2766cb, #1f65cd 70%, #4590ec);
+  border-bottom: 2px solid #e69a37;
+  color: white;
+}
+.start-user-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #d7e7f7;
+  border: 2px solid white;
+  border-radius: 6px;
+  box-shadow: 1px 1px 3px #1e4482;
+  width: 43px;
+  height: 43px;
+}
+.era-2011 .launcher > header strong {
+  font:
+    bold 14px Tahoma,
+    '宋体';
+  color: white;
+  text-shadow: 1px 1px #124694;
+}
+.start-menu-columns {
+  display: grid;
+  grid-template-columns: 235px 1fr;
+  max-height: calc(100dvh - 160px);
+  min-height: 325px;
+}
+.start-programs {
+  padding: 4px 4px 0;
+  overflow: auto;
+  background: white;
+}
+.start-programs > button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-align: left;
+  padding: 6px 4px;
+  font:
+    12px Tahoma,
+    '宋体';
+  color: black;
+  min-height: 45px;
+}
+.start-programs > button:hover,
+.start-places > button:hover {
+  background: #316ac5;
+  color: white;
+}
+.start-programs > button > span {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.start-programs strong {
+  font-size: 12px;
+  font-weight: bold;
+}
+.start-programs small {
+  font-size: 10px;
+  color: #777;
+}
+.start-programs > button:hover small {
+  color: #d6e6ff;
+}
+.start-programs .all-programs-button {
+  height: 33px;
+  min-height: 33px;
+  justify-content: center;
+  border-top: 1px solid #ccc;
+  margin-top: 7px;
+  font-weight: bold;
+}
+.start-places {
+  background: #d3e5fb;
+  border-left: 1px solid #a7c4e9;
+  padding: 8px 5px;
+  overflow: auto;
+}
+.start-places > button {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  width: 100%;
+  font:
+    12px Tahoma,
+    '宋体';
+  color: #133d77;
+  text-align: left;
+  padding: 8px 5px;
+  min-height: 31px;
+}
+.start-places > button:first-child,
+.start-places > button:nth-child(3) {
+  font-weight: bold;
+}
+.start-places hr {
+  border: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #9ebde3, transparent);
+  margin: 5px;
+}
+.era-2011 .launcher > footer {
+  background: linear-gradient(#4091f1, #2672db);
+  margin: 0;
+  padding: 5px 8px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 17px;
+  border-top: 1px solid #9ec8f6;
+}
+.era-2011 .launcher > footer > button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #fff;
+  font:
+    12px Tahoma,
+    '宋体';
+  padding: 2px 3px;
+}
+.era-2011 .launcher > footer > button:hover {
+  background: #ffffff22;
+}
+.desktop-context {
+  position: fixed;
+  z-index: 31000;
+  min-width: 195px;
+  padding: 2px;
+  background: #f9f8f0;
+  border: 1px solid #808080;
+  box-shadow: 2px 2px 2px #0006;
+}
+.desktop-context button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 5px 22px;
+  font-size: 12px;
+}
+.desktop-context button:hover:not(:disabled) {
+  background: #316ac5;
+  color: #fff;
+}
+.desktop-context button:disabled {
+  opacity: 1;
+  color: #aaa;
+}
+.desktop-context hr {
+  border: 0;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid white;
+  margin: 3px 0;
+}
+.era-2011 .modal-backdrop {
+  background: #001b4e3d;
+  backdrop-filter: none;
+  animation: none;
+  padding: 20px;
+}
+.era-2011 .modal {
+  border: 3px solid var(--xp-main);
+  border-radius: 7px 7px 0 0;
+  background: #ece9d8;
+  box-shadow: 2px 3px 8px #0006;
+  max-width: 550px;
+  overflow: hidden;
+  color: black;
+}
+.era-2011 .modal-wide {
+  max-width: 900px;
+}
+.era-2011 .modal > header {
+  height: 29px;
+  min-height: 29px;
+  padding: 2px 3px 2px 6px;
+  background: linear-gradient(
+    var(--xp-light),
+    var(--xp-main) 15%,
+    var(--xp-main) 75%,
+    var(--xp-dark)
+  );
+  color: white;
+  border: 0;
+}
+.era-2011 .modal > header h2 {
+  font:
+    bold 12px Tahoma,
+    '宋体';
+  color: white;
+  text-shadow: 1px 1px #1e3c87;
+}
+.era-2011 .modal > header button {
+  border: 1px solid white;
+  border-radius: 3px;
+  background: linear-gradient(130deg, #f6b291, #d45a36 40%, #b42a0c);
+  color: #fff;
+  width: 22px;
+  height: 22px;
+  padding: 1px;
+}
+.era-2011 .modal-content {
+  padding: 18px 20px;
+  color: black;
+  background: #ece9d8;
+}
+.era-2011 .new-game-intro {
+  padding: 0 0 16px;
+  gap: 17px;
+}
+.era-2011 .new-game-intro p {
+  font:
+    12px/2 SimSun,
+    serif;
+  color: black;
+}
+.era-2011 .difficulty-options button {
+  border: 1px solid #aaa;
+  border-radius: 0;
+  background: #f8f7ed;
+  padding: 10px;
+  color: black;
+}
+.era-2011 .difficulty-options button.selected {
+  border: 2px solid #316ac5;
+  padding: 9px;
+  background: #e6effd;
+  box-shadow: none;
+}
+.era-2011 .difficulty-options strong {
+  color: #000;
+  font-size: 12px;
+}
+.era-2011 .difficulty-options span {
+  color: #444;
+  font-size: 11px;
+  line-height: 1.6;
+}
+.era-2011 .form-grid label,
+.era-2011 .field-label {
+  color: black;
+  font-size: 12px;
+  gap: 5px;
+}
+.era-2011 .form-grid {
+  gap: 12px;
+}
+.era-2011 .field-label {
+  margin: 12px 0;
+}
+.era-2011 .form-footnote {
+  font:
+    11px/1.7 Tahoma,
+    '宋体';
+  color: #555;
+}
+.era-2011 .button {
+  font:
+    12px Tahoma,
+    '宋体',
+    sans-serif;
+  color: #000;
+  background: linear-gradient(#fff, #eeede5);
+  border: 1px solid #7f9db9;
+  border-radius: 3px;
+  box-shadow: inset 0 0 0 1px #fff;
+  min-height: 25px;
+  min-width: 70px;
+  padding: 4px 10px;
+  gap: 5px;
+}
+.era-2011 .button:hover:not(:disabled) {
+  border-color: #316ac5;
+  background: linear-gradient(#fff, #e2edfd);
+  box-shadow: inset 0 0 0 1px #fff;
+}
+.era-2011 .button:active:not(:disabled) {
+  background: #d9e4f3;
+  box-shadow: inset 1px 1px 2px #888;
+}
+.era-2011 .button.wide {
+  margin-top: 12px;
+  min-height: 28px;
+}
+.era-2011 .button.small-button {
+  min-height: 23px;
+  min-width: 45px;
+  padding: 3px 8px;
+  font-size: 11px;
+}
+.era-2011 .text-button {
+  font-size: 12px;
+  color: #0044a8;
+  padding: 2px;
+}
+.era-2011 .text-button:hover {
+  text-decoration: underline;
+}
+.era-2011 .icon-button {
+  border-radius: 0;
+  padding: 4px;
+  color: #333;
+}
+.era-2011 .icon-button:hover {
+  background: #dedbd0;
+}
+.era-2011 .save-manager-top {
+  color: #1d4e88;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+.era-2011 .save-manager-top strong {
+  font: bold 14px SimSun;
+  color: #000;
+}
+.era-2011 .save-manager-top p,
+.era-2011 .settings-info {
+  font-size: 11px;
+  line-height: 1.7;
+  color: #444;
+}
+.era-2011 .save-slot-list h3 {
+  color: #000;
+  font-size: 12px;
+}
+.era-2011 .save-slot-list p {
+  font-size: 11px;
+  color: #555;
+}
+.era-2011 .save-slot-list article {
+  border-bottom: 1px solid #ccc;
+  padding: 13px 0;
+}
+.era-2011 .save-slot-icon {
+  border: 1px solid #a9b9ca;
+  border-radius: 1px;
+  background: #e1e7ed;
+  color: #315d8f;
+}
+.era-2011 .settings-info {
+  border-top: 1px solid #bbb;
+}
+.xp-shutdown {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+.xp-shutdown h3 {
+  font-size: 14px;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+.xp-shutdown p {
+  font-size: 12px;
+  line-height: 1.9;
+  margin-bottom: 20px;
+}
+.properties-tabs {
+  display: flex;
+  border-bottom: 1px solid #aaa;
+  margin: -3px 0 18px;
+}
+.properties-tabs button {
+  padding: 5px 15px;
+  border: 1px solid #aaa;
+  border-bottom: 0;
+  background: #f8f7ee;
+  border-radius: 3px 3px 0 0;
+  margin-right: 3px;
+}
+.display-monitor {
+  margin: auto;
+  width: 170px;
+  height: 123px;
+  padding: 8px;
+  background: #bfc7cb;
+  border: 2px solid #7c868c;
+  box-shadow: inset 2px 2px white;
+  border-radius: 6px;
+}
+.mini-wallpaper {
+  height: 91px;
+  border: 3px solid #34444e;
+  background: #4f91d9 url('/wallpapers/bliss.jpg') center/cover;
+}
+.mini-wallpaper.blue {
+  background: #004e98;
+}
+.display-monitor > div:last-child {
+  margin: 7px auto 0;
+  width: 60px;
+  height: 8px;
+  border-radius: 2px;
+  background: #8d989e;
+}
+.run-description {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  font-size: 12px;
+  line-height: 1.8;
+}
+.era-2011 .help-letter h3 {
+  font: bold 15px SimSun;
+  color: #003c74;
+  margin-bottom: 16px;
+}
+.era-2011 .help-letter p {
+  color: #000;
+  font: 12px/1.9 SimSun;
+  margin-bottom: 13px;
+}
+.era-2011 .toast,
+.era-2011 .notification-panel {
+  position: absolute;
+  z-index: 29000;
+  left: auto;
+  top: auto;
+  right: 16px;
+  bottom: 45px;
+  transform: none;
+  background: #ffffe1;
+  border: 1px solid #000;
+  border-radius: 6px;
+  box-shadow: 2px 2px 3px #0004;
+  backdrop-filter: none;
+  animation: none;
+  color: black;
+  min-width: 270px;
+  max-width: 420px;
+  width: auto;
+  padding: 11px 13px;
+  gap: 10px;
+}
+.era-2011 .toast:after,
+.era-2011 .notification-panel:after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  right: 50px;
+  width: 16px;
+  height: 16px;
+  background: #ffffe1;
+  border-right: 1px solid #000;
+  transform: skewY(35deg);
+  border-bottom: 1px solid #000;
+}
+.era-2011 .toast > div {
+  flex: 1;
+}
+.era-2011 .toast strong {
+  font:
+    bold 12px Tahoma,
+    '宋体';
+}
+.era-2011 .toast p {
+  color: #000;
+  font:
+    12px/1.7 Tahoma,
+    '宋体';
+  margin-top: 4px;
+}
+.era-2011 .toast > button {
+  align-self: flex-start;
+  padding: 0;
+  color: #444;
+}
+.era-2011 .notification-panel {
+  width: 330px;
+  max-width: 90vw;
+  bottom: 44px;
+}
+.notification-panel > header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.notification-panel > header > button {
+  margin-left: auto;
+}
+.era-2011 .notification-panel > p {
+  font-size: 12px;
+  color: black;
+}
+.era-2011 .notification-panel > button {
+  border-color: #d3d0a6;
+  font-size: 12px;
+  width: 100%;
+}
+.era-2011 .notification-panel > button b {
+  color: #003c9b;
+  font-weight: normal;
+}
+.era-2011 .notification-panel > button span {
+  color: black;
+  font-size: 11px;
+}
+.xp-welcome {
+  position: fixed;
+  inset: 0;
+  z-index: 28000;
+  background: #5b7bd5;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+.xp-welcome > header {
+  height: 12%;
+  background: #003399;
+  border-bottom: 2px solid #a3c8ff;
+}
+.xp-welcome > main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 90px;
+  background: radial-gradient(ellipse at 20% 20%, #a4c8ff66, transparent 65%);
+}
+.xp-welcome > main > div {
+  padding: 30px 70px 30px 0;
+  border-right: 1px solid #a8c5f7;
+  text-align: right;
+}
+.xp-welcome h1 {
+  font: 13px Tahoma;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+.xp-welcome h1 strong {
+  font: 38px Tahoma;
+  color: white;
+}
+.xp-welcome h1 strong span {
+  font-size: 25px;
+  color: #f0a23a;
+  margin-left: 3px;
+  vertical-align: super;
+}
+.xp-welcome p {
+  margin-top: 15px;
+  font-size: 12px;
+}
+.xp-welcome > main > strong {
+  font-size: 32px;
+  font-weight: normal;
+}
+.xp-welcome > main > button {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 13px 20px;
+  border: 1px solid #91adf0;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #154aaf, #4774cd88);
+  color: white;
+  min-width: 230px;
+}
+.xp-welcome > main > button > span {
+  font-size: 20px;
+  text-align: left;
+}
+.xp-welcome small {
+  display: block;
+  font-size: 12px;
+  margin-top: 10px;
+}
+.xp-welcome > footer {
+  height: 13%;
+  background: #003399;
+  border-top: 2px solid #d68c30;
+  display: flex;
+  align-items: center;
+  padding: 20px 35px;
+  font-size: 12px;
+}
+.era-2011 .app-header {
+  margin: 0 0 14px;
+  gap: 10px;
+  border-bottom: 1px solid #b9c5d5;
+  padding-bottom: 9px;
+  align-items: center;
+}
+.era-2011 .app-header .eyebrow {
+  display: none;
+}
+.era-2011 .app-header h1 {
+  font:
+    bold 15px SimSun,
+    serif;
+  color: #153e75;
+  line-height: 1.6;
+  margin: 0 0 4px;
+}
+.era-2011 .app-header p {
+  font:
+    12px/1.6 SimSun,
+    serif;
+  color: #444;
+  max-width: none;
+}
+.era-2011 .app-header .button {
+  font-size: 12px;
+}
+.era-2011 .panel {
+  border: 1px solid #a3a3a3;
+  border-radius: 0;
+  box-shadow: inset 1px 1px #fff;
+  background: #f8f7ee;
+  padding: 13px;
+  margin-bottom: 13px;
+}
+.era-2011 .panel-heading {
+  margin-bottom: 12px;
+  gap: 8px;
+}
+.era-2011 .panel-heading h2 {
+  font: bold 13px SimSun;
+  color: #000;
+}
+.era-2011 .panel-heading > div > span {
+  font-size: 11px;
+  color: #555;
+  margin-top: 5px;
+}
+.era-2011 .panel-heading select {
+  font-size: 12px;
+  padding: 2px 4px;
+}
+.era-2011 .tag {
+  border: 1px solid #c2c2b5;
+  border-radius: 0;
+  background: #f2f1e8;
+  color: #333;
+  padding: 2px 4px;
+  font-size: 11px;
+}
+.era-2011 .tag.amber {
+  background: #ffffda;
+  color: #785b00;
+  border-color: #c9ba80;
+}
+.era-2011 .tag.green {
+  background: #e7f1e5;
+  color: #234e1f;
+  border-color: #99b094;
+}
+.era-2011 .info-note,
+.era-2011 .gentle-note {
+  background: #ffffe1;
+  color: #333;
+  border: 1px solid #c8c199;
+  border-radius: 0;
+  padding: 9px 10px;
+  font: 12px/1.7 SimSun;
+  margin: 12px 0;
+}
+.era-2011 .info-note svg {
+  color: #2c5ca7;
+}
+.era-2011 .muted,
+.era-2011 .table-note,
+.era-2011 .empty {
+  color: #555;
+  font-size: 11px;
+}
+.era-2011 .empty {
+  min-height: 115px;
+  padding: 17px;
+}
+.era-2011 .empty-mark {
+  color: #799bc4;
+  font-size: 21px;
+}
+.era-2011 .two-column {
+  gap: 13px;
+}
+.era-2011 .resource-large strong {
+  font: bold 28px Arial;
+  color: #143c78;
+}
+.era-2011 .resource-large span,
+.era-2011 .resource-large small {
+  color: #555;
+  font-size: 11px;
+}
+.era-2011 .cost-preview {
+  font-size: 11px;
+  color: #333;
+  border-color: #b4b09e;
+  margin-top: 12px;
+  padding: 10px 0;
+}
+.era-2011 .cost-preview b {
+  color: #1d487b;
+}
+.era-2011 .toolbar {
+  gap: 10px;
+  margin-bottom: 12px;
+}
+.era-2011 .toolbar label {
+  font-size: 11px;
+  color: #333;
+  gap: 4px;
+}
+.era-2011 .toolbar select {
+  font-size: 12px;
+  padding: 2px 4px;
+}
+.era-2011 .search-box {
+  border: 1px solid #7f9db9;
+  border-radius: 0;
+  padding: 3px 5px;
+  background: #fff;
+  color: #555;
+}
+.era-2011 .search-box input {
+  font-size: 12px;
+  min-height: 17px;
+  box-shadow: none;
+}
+.era-2011 .search-box input::placeholder {
+  color: #888;
+}
+.era-2011 .tab-row {
+  gap: 2px;
+  border-bottom: 1px solid #9f9f92;
+  margin-bottom: 15px;
+}
+.era-2011 .tab-row > button {
+  background: #ece9d8;
+  border: 1px solid #aaa;
+  border-bottom: 0;
+  border-radius: 3px 3px 0 0;
+  font-size: 12px;
+  padding: 6px 12px;
+  color: black;
+  position: relative;
+  top: 1px;
+}
+.era-2011 .tab-row > button.active {
+  background: #f8f7ee;
+  border-top: 2px solid #e8b955;
+  padding-top: 5px;
+  font-weight: bold;
+}
+.era-2011 .schedule-list > div,
+.era-2011 .schedule-list > button {
+  border-color: #d4d3c8;
+  padding: 8px 0;
+}
+.era-2011 .schedule-icon {
+  background: #e4eaf3;
+  color: #23578c;
+  border: 1px solid #b9c7d9;
+  border-radius: 1px;
+  width: 29px;
+  height: 29px;
+}
+.era-2011 .schedule-list strong {
+  font-size: 12px;
+}
+.era-2011 .schedule-list p {
+  font-size: 11px;
+  color: #555;
+}
+.era-2011 table {
+  font:
+    12px SimSun,
+    serif;
+  color: black;
+}
+.era-2011 th {
+  font: 12px SimSun;
+  color: black;
+  background: linear-gradient(#f9f9f6, #dfdfd7);
+  padding: 7px 8px;
+  border: 1px solid #c5c5bd;
+}
+.era-2011 td {
+  color: black;
+  border: 1px solid #d4d4ce;
+  padding: 7px 8px;
+}
+.era-2011 th button {
+  font: 12px SimSun;
+  color: black;
+  gap: 5px;
+}
+.era-2011 tbody tr:hover {
+  background: #e5effc;
+}
+.era-2011 .total-cell {
+  color: #000;
+  font-weight: bold;
+}
+.era-2011 .rank-cell {
+  color: #333;
+  font: 12px Arial;
+}
+.era-2011 .delta {
+  color: #246322;
+  font: 11px Tahoma;
+}
+.era-2011 .delta.negative {
+  color: #a51c15;
+}
+.era-2011 .avatar {
+  border-radius: 1px;
+  border: 1px solid #8fa8ba;
+  background: linear-gradient(#e8f1fc, #c0d6ea);
+  color: #416888;
+  font: 18px SimSun;
+  height: 51px;
+  width: 46px;
+}
+.era-2011 .avatar.small {
+  width: 24px;
+  height: 26px;
+  font-size: 10px;
+  border: 1px solid #a2b7c6;
+}
+.era-2011 .table-student {
+  color: black;
+  gap: 6px;
+}
+.era-2011 .archive-layout {
+  grid-template-columns: 205px 1fr;
+  gap: 12px;
+}
+.era-2011 .student-list-panel {
+  background: #fff;
+  padding: 0;
+}
+.era-2011 .student-list > button {
+  border-bottom: 0;
+  padding: 5px 10px;
+}
+.era-2011 .student-list > button.selected {
+  background: #316ac5;
+  color: white;
+}
+.era-2011 .student-list > button.selected b,
+.era-2011 .student-list > button.selected small {
+  color: #fff;
+}
+.era-2011 .student-list strong {
+  font-size: 12px;
+}
+.era-2011 .student-list small {
+  font-size: 10px;
+  color: #555;
+}
+.era-2011 .student-list b {
+  font: 12px Tahoma;
+  color: #333;
+}
+.era-2011 .list-controls {
+  padding: 10px;
+  border-color: #bbb;
+  background: #ece9d8;
+}
+.era-2011 .filter-row select {
+  background: #fff;
+  border: 1px solid #7f9db9;
+  padding: 2px 3px;
+  font-size: 11px;
+}
+.era-2011 .list-controls > small {
+  font-size: 10px;
+  color: #555;
+}
+.era-2011 .profile-heading h2 {
+  font: bold 18px SimSun;
+  color: black;
+}
+.era-2011 .profile-heading p {
+  font-size: 11px;
+  color: #555;
+}
+.era-2011 .profile-score {
+  font: 24px Arial;
+  color: #000;
+}
+.era-2011 .profile-score small {
+  font-size: 11px;
+  color: #555;
+}
+.era-2011 .profile-facts {
+  background: #e7e6da;
+  border: 1px solid #c9c7ba;
+  border-radius: 0;
+  margin: 15px 0;
+  padding: 11px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+.era-2011 .profile-facts span:not(.delta) {
+  font-size: 11px;
+  color: #444;
+}
+.era-2011 .profile-facts b {
+  font-size: 12px;
+  color: #143d72;
+}
+.era-2011 .student-detail > .panel {
+  padding: 13px;
+}
+.era-2011 .student-detail .button {
+  font-size: 11px;
+  padding: 4px 7px;
+}
+.era-2011 .subject-bars {
+  gap: 12px;
+}
+.era-2011 .subject-bars > div > span {
+  font-size: 12px;
+  color: #333;
+}
+.era-2011 .bar-track {
+  height: 10px;
+  border: 1px inset #aaa;
+  border-radius: 0;
+  background: #fff;
+}
+.era-2011 .bar-track i {
+  border-radius: 0;
+  background: repeating-linear-gradient(90deg, #2c9e2d 0, #68c444 8px, #fff 9px, #fff 10px);
+}
+.era-2011 .subject-bars b {
+  font: 12px Tahoma;
+  color: black;
+  width: 75px;
+}
+.era-2011 .subject-bars small {
+  font-size: 10px;
+  color: #666;
+}
+.era-2011 .observation-list small {
+  font-size: 11px;
+  color: #555;
+}
+.era-2011 .observation-list p {
+  font: 12px/1.8 SimSun;
+  color: black;
+  margin-top: 5px;
+}
+.era-2011 blockquote {
+  border-left: 2px solid #6387ad;
+  border-radius: 0;
+  background: #e5edf6;
+  color: #333;
+  font: 11px/1.7 SimSun;
+}
+.era-2011 .observation-dot {
+  background: #527bac;
+}
+.era-2011 .observation-list article:after {
+  background: #b9c7d9;
+}
+.era-2011 .question-block {
+  background: #fff;
+  border: 1px solid #c8c8bd;
+  border-radius: 0;
+  margin: 12px 0;
+  padding: 14px;
+}
+.era-2011 .question-block small {
+  font-size: 11px;
+  color: #555;
+}
+.era-2011 .question-block h3 {
+  font: bold 14px/1.8 SimSun;
+  color: black;
+}
+.era-2011 .question-block p {
+  font-size: 12px;
+  color: #333;
+}
+.era-2011 .answer-grid > div {
+  border-radius: 0;
+  border-color: #bbb;
+  background: #fff;
+}
+.era-2011 .answer-grid small {
+  font-size: 11px;
+  color: #555;
+}
+.era-2011 .answer-grid p {
+  font: 12px/1.8 SimSun;
+  color: black;
+}
+.era-2011 .submission-list {
+  background: white;
+  padding: 0;
+}
+.era-2011 .submission-list button {
+  padding: 7px 9px;
+  border-color: #e4e4dd;
+}
+.era-2011 .submission-list button.selected {
+  background: #dce9fc;
+}
+.era-2011 .submission-list strong {
+  font-size: 12px;
+}
+.era-2011 .submission-list span:not(.avatar) {
+  font-size: 11px;
+  color: #555;
+}
+.era-2011 .review-layout {
+  grid-template-columns: 190px 1fr;
+  gap: 13px;
+}
+.era-2011 .classroom-front > span {
+  background: #294d3b;
+  color: #fff;
+  border-color: #b89f77;
+  border-width: 4px;
+  font-size: 13px;
+  letter-spacing: 10px;
+}
+.era-2011 .classroom-front small {
+  font-size: 11px;
+  color: #555;
+}
+.era-2011 .seating-grid {
+  gap: 12px 4px;
+}
+.era-2011 .seat-card {
+  background: #e0d6b4;
+  border: 1px solid #a59a7e;
+  border-radius: 2px;
+  box-shadow: inset 1px 1px #fff;
+  gap: 5px;
+  padding: 4px 3px 7px;
+}
+.era-2011 .seat-card:hover {
+  border-color: #316ac5;
+  background: #d0e2f7;
+}
+.era-2011 .seat-card.selected {
+  background: #a8c5eb;
+  border-color: #1b4b93;
+  box-shadow: inset 0 0 0 1px #fff;
+}
+.era-2011 .seat-number {
+  font: 9px Tahoma;
+  color: #665b41;
+}
+.era-2011 .seat-card strong {
+  font: 12px SimSun;
+  color: #000;
+}
+.era-2011 .seat-card > small {
+  font-size: 11px;
+  color: #555;
+}
+.era-2011 .seat-monogram {
+  height: 24px;
+  width: 22px;
+  border-radius: 0;
+  border: 1px solid #7f9db9;
+  background: linear-gradient(#ecf5ff, #b9d3eb);
+  font-size: 12px;
+  color: #34577b;
+}
+.era-2011 .classroom-bottom {
+  color: #555;
+  font-size: 11px;
+}
+.era-2011 .calendar-grid > button {
+  border-radius: 0;
+  border: 1px solid #aaa;
+  background: #fff;
+  color: #666;
+  gap: 4px;
+}
+.era-2011 .calendar-grid strong {
+  font: 18px Tahoma;
+}
+.era-2011 .calendar-grid small {
+  font-size: 10px;
+}
+.era-2011 .calendar-grid > button.past {
+  background: #e9e9e2;
+  color: #555;
+}
+.era-2011 .calendar-grid > button.today {
+  background: #316ac5;
+  color: white;
+  border-color: #16439a;
+}
+.era-2011 .calendar-grid > button.exam-day {
+  background: #ffffcc;
+  color: #8c250c;
+  border-color: #c6a466;
+}
+.era-2011 .calendar-grid > button.selected {
+  box-shadow: inset 0 0 0 2px #316ac5;
+}
+.era-2011 .calendar-legend {
+  font-size: 12px;
+  color: #333;
+}
+.era-2011 .day-log p {
+  font: 12px/1.8 SimSun;
+  color: #000;
+}
+.era-2011 .software-word .app-content {
+  background: #909090;
+  padding: 14px 24px;
+  box-shadow: inset 1px 1px 2px #555;
+}
+.word-document {
+  background: #fff;
+  box-shadow: 1px 2px 4px #444;
+  min-height: 100%;
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 35px 36px 40px;
+  position: relative;
+  border: 1px solid #444;
+  color: black;
+}
+.era-2011 .software-word .app-header {
+  justify-content: center;
+  border-bottom: 1px solid #333;
+  padding-bottom: 18px;
+  margin-bottom: 21px;
+}
+.era-2011 .software-word .app-header h1 {
+  font: bold 22px/1.7 SimSun;
+  color: black;
+  text-align: center;
+}
+.era-2011 .software-word .app-header p {
+  font: 12px/1.8 SimSun;
+  color: #333;
+  text-align: center;
+}
+.era-2011 .software-word .panel {
+  background: #fff;
+  border-color: #aaa;
+  box-shadow: none;
+  padding: 13px;
+}
+.era-2011 .software-word .two-column {
+  grid-template-columns: 1fr;
+}
+.era-2011 .software-word .resource-large {
+  padding: 6px 0;
+}
+.era-2011 .software-word .panel-heading h2 {
+  font: bold 15px SimSun;
+}
+.era-2011 .software-word .report-banner {
+  border-radius: 0;
+  background: #fff;
+  border: 1px solid #333;
+  color: #000;
+  padding: 16px;
+  gap: 18px;
+}
+.era-2011 .report-banner h2 {
+  font: 46px Arial;
+  color: #000;
+}
+.era-2011 .report-banner p,
+.era-2011 .report-banner > div > span {
+  font: 12px/1.8 SimSun;
+  color: #000;
+}
+.era-2011 .report-banner-side > strong {
+  font: 25px Arial;
+  color: #000;
+}
+.era-2011 .metric {
+  border-radius: 0;
+  border-color: #aaa;
+  background: #fff;
+  padding: 11px;
+}
+.era-2011 .metric > span {
+  font: 12px SimSun;
+  color: #333;
+}
+.era-2011 .metric > strong {
+  font: 24px Arial;
+  color: #000;
+}
+.era-2011 .metric > strong small {
+  font-size: 11px;
+  color: #333;
+}
+.era-2011 .metric-detail {
+  font-size: 10px;
+  color: #555;
+}
+.era-2011 .metrics-grid {
+  gap: 8px;
+  margin-bottom: 15px;
+}
+.era-2011 .exam-timeline strong {
+  font-size: 12px;
+}
+.era-2011 .exam-timeline p {
+  font-size: 11px;
+  color: #444;
+}
+.era-2011 .exam-timeline > div > span {
+  background: #e5e5df;
+  border: 1px solid #aaa;
+  border-radius: 0;
+  color: #333;
+  font: 16px Tahoma;
+}
+.era-2011 .exam-timeline > div {
+  padding: 11px 0;
+  border-color: #ccc;
+}
+.era-2011 .topic-coverage > span {
+  border: 1px solid #ccc;
+  border-radius: 0;
+  background: #f4f4ed;
+  color: #333;
+  font-size: 12px;
+}
+.era-2011 .topic-coverage b {
+  color: #000;
+  font-size: 11px;
+}
+.era-2011 .growth-list > div {
+  border-color: #ccc;
+}
+.era-2011 .growth-list > div > strong {
+  font-size: 12px;
+}
+.era-2011 .growth-list > div > span:not(.avatar) {
+  font-size: 11px;
+  color: #333;
+}
+.era-2011 .growth-list > div > b {
+  color: #333;
+  font: 12px Tahoma;
+}
+.era-2011 .software-excel .app-content {
+  padding: 0;
+  background: white;
+}
+.era-2011 .software-excel .app-header {
+  padding: 7px;
+  margin: 0;
+  border: 0;
+  justify-content: center;
+  background: #fff;
+}
+.era-2011 .software-excel .app-header h1 {
+  font: bold 16px SimSun;
+  text-align: center;
+  color: #000;
+  margin: 0;
+}
+.era-2011 .software-excel .app-header p {
+  display: none;
+}
+.era-2011 .software-excel .panel {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  box-shadow: none;
+  background: #fff;
+}
+.era-2011 .software-excel .toolbar {
+  background: #ece9d8;
+  margin: 0;
+  padding: 5px;
+  gap: 8px;
+  border-top: 1px solid #c3c3b9;
+  border-bottom: 1px solid #aaa;
+}
+.era-2011 .software-excel .toolbar label {
+  flex-direction: row;
+  align-items: center;
+  font-size: 11px;
+  gap: 4px;
+}
+.era-2011 .software-excel .toolbar select {
+  height: 22px;
+  font-size: 11px;
+  max-width: 150px;
+}
+.era-2011 .software-excel .search-box {
+  max-width: 150px;
+  padding: 2px 4px;
+}
+.era-2011 .software-excel table {
+  width: 100%;
+  table-layout: auto;
+  font: 12px SimSun;
+  border-collapse: collapse;
+  background: white;
+}
+.era-2011 .software-excel td {
+  height: 25px;
+  padding: 3px 7px;
+  border: 1px solid #c0c0c0;
+  background: #fff;
+  min-width: 46px;
+  text-align: right;
+  color: black;
+}
+.era-2011 .software-excel tr:hover td {
+  background: #e7effd;
+}
+.era-2011 .software-excel th {
+  border: 1px solid #9e9e9e;
+  padding: 4px 7px;
+  height: 24px;
+  font: bold 12px SimSun;
+  background: #ffffd1;
+  text-align: center;
+  color: black;
+}
+.era-2011 .software-excel .excel-column-letters th {
+  font: 12px Arial;
+  background: linear-gradient(#fff, #dbdbdb);
+  height: 21px;
+  padding: 2px;
+  text-align: center;
+}
+.era-2011 .software-excel .excel-row-number {
+  font: 11px Arial;
+  width: 28px;
+  min-width: 28px;
+  background: linear-gradient(90deg, #f4f4f4, #dfdfdf);
+  color: #333;
+  text-align: center;
+  border: 1px solid #aaa;
+  padding: 2px;
+}
+.era-2011 .software-excel .table-student {
+  font: 12px SimSun;
+  white-space: nowrap;
+  justify-content: flex-start;
+}
+.era-2011 .software-excel .table-student .avatar {
+  display: none;
+}
+.era-2011 .software-excel td .tag {
+  border: 0;
+  background: none;
+  padding: 0;
+  color: #555;
+  font-size: 12px;
+}
+.era-2011 .software-excel td .delta {
+  color: #000;
+  font: 11px Arial;
+  gap: 1px;
+}
+.era-2011 .software-excel .table-note {
+  padding: 5px 10px;
+  color: #333;
+  background: #ece9d8;
+  font-size: 11px;
+  margin: 0;
+  border-top: 1px solid #aaa;
+}
+.excel-sheet-tabs {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  background: #d4d0c8;
+  border-top: 1px solid #888;
+  border-bottom: 1px solid #aaa;
+  min-height: 25px;
+  padding: 0 5px;
+  overflow-x: auto;
+}
+.excel-sheet-tabs > span {
+  font: 12px Arial;
+  white-space: nowrap;
+  margin-right: 5px;
+}
+.excel-sheet-tabs > button {
+  background: #d4d0c8;
+  border: 1px solid #999;
+  border-top: 0;
+  padding: 4px 12px;
+  font: 12px SimSun;
+  height: 24px;
+  white-space: nowrap;
+  transform: skew(-10deg);
+}
+.excel-sheet-tabs > button.active {
+  background: #fff;
+  border-bottom-color: #fff;
+  color: #005200;
+  font-weight: bold;
+}
+.excel-sheet-tabs > small {
+  margin-left: auto;
+  white-space: nowrap;
+  font-size: 11px;
+  color: #333;
+}
+.era-2011 .software-excel .panel-heading {
+  margin: 15px 15px 8px;
+}
+.era-2011 .software-excel .trend-chart {
+  max-width: 780px;
+  margin: 0 auto 16px;
+  padding: 10px;
+  background: #fff;
+}
+.era-2011 .software-excel .chart-label {
+  fill: #555;
+  font: 11px Arial;
+}
+.era-2011 .software-notepad .app-content {
+  background: white;
+  padding: 7px 10px;
+  font: 13px/1.8 SimSun;
+  color: black;
+}
+.era-2011 .software-notepad .app-header {
+  border: 0;
+  margin: 0 0 12px;
+  padding: 0;
+}
+.era-2011 .software-notepad .app-header h1 {
+  font: 14px SimSun;
+  color: #000;
+}
+.era-2011 .software-notepad .journal-list .panel {
+  border: 0;
+  border-bottom: 1px dashed #bbb;
+  box-shadow: none;
+  background: #fff;
+  padding: 10px 0;
+}
+.era-2011 .software-notepad .journal-list p {
+  font: 13px/1.8 SimSun;
+  color: black;
+}
+.era-2011 .software-notepad .journal-heading {
+  margin-bottom: 7px;
+  gap: 10px;
+}
+.era-2011 .software-notepad .journal-heading .avatar {
+  display: none;
+}
+.era-2011 .software-notepad .journal-heading .tag {
+  border: 0;
+  background: none;
+  color: #333;
+  font-size: 12px;
+}
+.era-2011 .software-notepad .journal-heading small {
+  font-size: 12px;
+  color: #444;
+}
+.era-2011 .software-notepad .toolbar {
+  padding: 6px;
+  background: #ece9d8;
+  border: 1px solid #bbb;
+}
+.era-2011 .software-qq {
+  background: #d9edff;
+  border-color: #5b9bcb;
+}
+.era-2011 .software-qq .window-titlebar {
+  background: linear-gradient(#effaff, #a6dbf8 30%, #75b5e2);
+  color: #19456e;
+}
+.era-2011 .software-qq .window-titlebar strong {
+  color: #1d486b;
+  text-shadow: 1px 1px #fff;
+}
+.era-2011 .software-qq .classic-menubar {
+  background: #d8efff;
+  border-color: #99bddd;
+}
+.era-2011 .software-qq .classic-toolbar {
+  display: none;
+}
+.era-2011 .software-qq .menubar-brand {
+  background: #d2e9f9;
+  color: #4c7798;
+  border-color: #9fbdd6;
+}
+.era-2011 .software-qq .app-content {
+  padding: 0;
+  background: #e9f5ff;
+}
+.qq-profile-strip {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 15px;
+  background: linear-gradient(#dff3ff, #bedef3);
+  border-bottom: 1px solid #91b7d5;
+  color: #275578;
+}
+.qq-profile-strip > div {
+  flex: 1;
+}
+.qq-profile-strip strong {
+  font:
+    bold 14px Tahoma,
+    '宋体';
+}
+.qq-profile-strip p {
+  font: 12px SimSun;
+  color: #557993;
+  margin-top: 5px;
+}
+.qq-status {
+  font: 11px Tahoma;
+  color: #277128;
+}
+.qq-layout {
+  display: grid;
+  grid-template-columns: 202px 1fr;
+  min-height: 400px;
+  height: 100%;
+}
+.qq-contacts {
+  background: #edf7ff;
+  border-right: 1px solid #9bbdd8;
+  padding: 8px;
+  max-height: 620px;
+  overflow: auto;
+}
+.qq-contacts > .search-box {
+  background: white;
+  margin-bottom: 10px;
+}
+.qq-group-heading {
+  font: bold 12px SimSun;
+  background: #dcecf9;
+  padding: 7px 4px;
+  border-top: 1px solid white;
+  border-bottom: 1px solid #bbd4e7;
+}
+.qq-contacts > button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 5px;
+  text-align: left;
+  border: 1px solid transparent;
+  min-height: 45px;
+}
+.qq-contacts > button:hover {
+  background: #e0f0fc;
+  border-color: #b2d2e9;
+}
+.qq-contacts > button.selected {
+  background: #cbe4f7;
+  border-color: #95bad7;
+}
+.qq-contacts > button > span:not(.avatar) {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 12px;
+}
+.qq-contacts small {
+  font-size: 10px;
+  color: #68849b;
+}
+.qq-conversation {
+  min-width: 0;
+  background: #f8fcff;
+  display: flex;
+  flex-direction: column;
+}
+.qq-conversation-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 13px;
+  background: linear-gradient(#f5fbff, #deeffa);
+  border-bottom: 1px solid #a4c4db;
+}
+.qq-conversation-title > div {
+  flex: 1;
+}
+.qq-conversation-title strong {
+  font: bold 14px SimSun;
+  color: #1e4c71;
+}
+.qq-conversation-title p {
+  font: 11px SimSun;
+  color: #7890a5;
+  margin-top: 5px;
+}
+.qq-history {
+  min-height: 240px;
+  max-height: 380px;
+  overflow: auto;
+  padding: 13px 17px;
+  flex: 1;
+  background: white;
+}
+.qq-chat-message {
+  font: 12px/1.8 SimSun;
+  color: black;
+  margin-bottom: 15px;
+}
+.qq-chat-message > header {
+  color: #07851c;
+  font: 12px Tahoma;
+  margin-bottom: 4px;
+}
+.qq-chat-message.teacher > header {
+  color: #184fc1;
+}
+.qq-chat-message > p {
+  padding-left: 10px;
+}
+.qq-chat-message > small {
+  font-size: 11px;
+  color: #888;
+  padding-left: 10px;
+  display: block;
+  margin-top: 5px;
+}
+.qq-chat-tools {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  min-height: 28px;
+  padding: 4px 9px;
+  border-top: 1px solid #a7c6db;
+  border-bottom: 1px solid #b7d0e2;
+  background: #e5f1f9;
+}
+.qq-chat-tools > span {
+  font: bold 15px Georgia;
+  color: #31558a;
+}
+.qq-chat-tools > button {
+  font: 12px SimSun;
+  color: #235981;
+  padding: 1px 4px;
+}
+.qq-chat-tools > button:hover {
+  text-decoration: underline;
+}
+.qq-chat-tools > small {
+  margin-left: auto;
+  color: #66869d;
+  font-size: 11px;
+}
+.qq-compose {
+  background: #f6fbff;
+  padding: 8px 11px;
+  border-top: 1px solid #fff;
+}
+.qq-compose > label {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font: 12px SimSun;
+}
+.qq-compose > label > select {
+  flex: 1;
+}
+.era-2011 .qq-compose textarea {
+  width: 100%;
+  resize: vertical;
+  min-height: 78px;
+  border: 0;
+  box-shadow: none;
+  background: white;
+  padding: 8px;
+  margin: 7px 0;
+  font: 13px/1.8 SimSun;
+}
+.qq-compose-footer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-between;
+}
+.qq-compose-footer > small {
+  font-size: 11px;
+  color: #668397;
+}
+.qq-compose-footer > .button {
+  background: linear-gradient(#f8fcff, #cce6f7);
+  border-color: #7aa7cb;
+  color: #164a72;
+  min-width: 95px;
+}
+.qq-event-list {
+  padding: 14px;
+  background: white;
+  min-height: 330px;
+  overflow: auto;
+  max-height: 600px;
+}
+.qq-event {
+  border: 1px solid #b4cddd;
+  background: #f5fbff;
+  padding: 12px;
+  margin-bottom: 13px;
+}
+.qq-event > header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+}
+.qq-event > p {
+  font: 12px/1.9 SimSun;
+  color: #222;
+  margin: 13px 0;
+}
+.qq-event > header > small {
+  margin-left: auto;
+  color: #7791a5;
+  font-size: 11px;
+}
+.qq-event .event-choices {
+  margin: 10px 0;
+  gap: 7px;
+}
+.qq-event .event-choices > small {
+  font-size: 11px;
+  color: #666;
+}
+.qq-event .event-choices .button {
+  font-size: 12px;
+}
+.qq-inbox-heading {
+  background: #e7f2fb;
+  border-bottom: 1px solid #b5cfe2;
+  padding: 12px 14px;
+  font: bold 14px SimSun;
+  color: #234c70;
+}
+.era-2011 .software-ie .app-content {
+  padding: 0;
+  background: #fff;
+}
+.school-portal {
+  font:
+    12px/1.6 SimSun,
+    serif;
+  color: #222;
+  background: #fff;
+  min-width: 570px;
+  min-height: 100%;
+}
+.portal-welcome {
+  background: #eef4fa;
+  border-bottom: 1px solid #c5d2df;
+  color: #456683;
+  padding: 3px 12px;
+  font-size: 11px;
+}
+.portal-banner {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  height: 103px;
+  background: linear-gradient(115deg, #d0e8ff, #edf8ff 52%, #98bee0);
+  padding: 15px 25px;
+  border-bottom: 1px solid #7eacd3;
+  position: relative;
+  overflow: hidden;
+}
+.portal-banner:after {
+  content: '';
+  position: absolute;
+  right: -80px;
+  bottom: -65px;
+  width: 380px;
+  height: 120px;
+  border-radius: 50%;
+  border: 20px solid #709fca22;
+  transform: rotate(-18deg);
+}
+.portal-banner h1 {
+  font:
+    bold 27px '宋体',
+    SimSun;
+  letter-spacing: 4px;
+  color: #174b80;
+  text-shadow: 1px 1px white;
+  margin-bottom: 8px;
+}
+.portal-banner p {
+  font: 11px Tahoma;
+  color: #7197ba;
+  letter-spacing: 1px;
+}
+.portal-banner > span {
+  margin-left: auto;
+  font: 14px/1.8 SimSun;
+  color: #466e93;
+  text-align: center;
+  z-index: 1;
+  white-space: nowrap;
+}
+.portal-banner > span > b {
+  font: 12px SimSun;
+}
+.portal-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: linear-gradient(#5692cc, #155592);
+  height: 32px;
+  border-top: 1px solid #c1e5ff;
+  border-bottom: 2px solid #0a447b;
+  padding: 0 12px;
+}
+.portal-navigation > button {
+  color: white;
+  font: bold 13px SimSun;
+  padding: 7px 18px;
+  border-left: 1px solid #ffffff33;
+  border-right: 1px solid #103d7d44;
+  white-space: nowrap;
+  flex: 1;
+  text-align: center;
+}
+.portal-navigation > button:hover {
+  background: #143e79;
+}
+.portal-marquee {
+  font: 12px SimSun;
+  padding: 7px 13px;
+  border-bottom: 1px solid #c5d4e3;
+  background: #fffef1;
+  color: #555;
+  line-height: 1.6;
+}
+.portal-marquee b {
+  color: #bc3526;
+}
+.portal-columns {
+  display: grid;
+  grid-template-columns: 174px 1fr;
+  gap: 12px;
+  padding: 12px;
+  background: #fff;
+}
+.portal-columns > aside {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.portal-columns > aside > section {
+  border: 1px solid #adc2d7;
+  background: #f2f7fb;
+}
+.portal-columns > aside h2,
+.portal-section > h2 {
+  font: bold 12px SimSun;
+  color: #174c7c;
+  padding: 7px 10px;
+  border-bottom: 1px solid #9fb8d0;
+  background: linear-gradient(#f4f9fd, #d4e5f4);
+  margin: 0;
+}
+.portal-columns > aside p {
+  padding: 3px 9px;
+  color: #455d74;
+  font-size: 12px;
+  line-height: 1.7;
+}
+.portal-columns > aside p:first-of-type {
+  padding-top: 10px;
+}
+.portal-columns > aside p:last-child {
+  padding-bottom: 9px;
+}
+.portal-columns > aside button {
+  font: 12px SimSun;
+  color: #285c91;
+  text-align: left;
+  display: block;
+  padding: 7px 10px;
+  width: 100%;
+  border-bottom: 1px dotted #becfdd;
+}
+.portal-columns > aside button:hover {
+  color: #c00;
+  text-decoration: underline;
+  background: #fff;
+}
+.portal-columns > main {
+  min-width: 0;
+}
+.portal-section {
+  border: 1px solid #aabfd3;
+  margin-bottom: 12px;
+  background: white;
+}
+.portal-section > h2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.portal-section > h2 > span,
+.portal-section > h2 > button {
+  margin-left: auto;
+  font: 11px SimSun;
+  color: #547797;
+}
+.portal-today {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 14px 16px;
+  background: #f9fcff;
+  border-bottom: 1px dotted #bfd1e1;
+}
+.portal-today strong {
+  color: #bd251f;
+  font: bold 16px SimSun;
+}
+.portal-today p {
+  font: 12px/1.9 SimSun;
+  color: #555;
+  margin-top: 5px;
+}
+.portal-today > p {
+  margin: 0;
+}
+.portal-today > p b {
+  color: #af3f19;
+}
+.portal-today > button {
+  font: 12px SimSun;
+  color: #174b8d;
+  margin-left: auto;
+  text-decoration: underline;
+}
+.portal-notices {
+  list-style: square;
+  margin: 6px 12px 7px 26px;
+  padding: 0;
+}
+.portal-notices > li {
+  padding: 6px 1px;
+  border-bottom: 1px dotted #ccd7e2;
+  font: 12px SimSun;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  line-height: 1.8;
+}
+.portal-notices button {
+  text-align: left;
+  color: #214d81;
+  font: 12px SimSun;
+  padding: 0;
+  line-height: 1.8;
+}
+.portal-notices button:hover {
+  color: #c00;
+  text-decoration: underline;
+}
+.portal-notices span {
+  font: 11px Tahoma;
+  color: #888;
+  margin-left: auto;
+  white-space: nowrap;
+}
+.era-2011 .portal-stats {
+  width: calc(100% - 20px);
+  margin: 10px;
+  font: 12px SimSun;
+}
+.era-2011 .portal-stats th {
+  font-weight: normal;
+  background: #edf4fa;
+  color: #355d80;
+  padding: 7px 8px;
+  width: 22%;
+}
+.era-2011 .portal-stats td {
+  background: #fff;
+  text-align: center;
+  border-color: #c0d0df;
+  width: 28%;
+  padding: 7px 8px;
+}
+.era-2011 .portal-stats b {
+  font: bold 15px Arial;
+  color: #c73a25;
+}
+.portal-more {
+  text-align: right;
+  padding: 0 13px 10px;
+}
+.portal-more > button {
+  font: 12px SimSun;
+  color: #215c96;
+  text-decoration: underline;
+}
+.era-2011 .portal-focus {
+  width: calc(100% - 18px);
+  margin: 9px;
+  font: 12px SimSun;
+}
+.era-2011 .portal-focus th {
+  font-size: 12px;
+  background: #e3edf6;
+  border-color: #bed0e0;
+  padding: 5px 6px;
+}
+.era-2011 .portal-focus td {
+  font-size: 12px;
+  background: #fff;
+  border-color: #ccd8e3;
+  padding: 5px 6px;
+  text-align: center;
+}
+.era-2011 .portal-focus td button {
+  font: 12px SimSun;
+  color: #0044a8;
+  text-decoration: underline;
+}
+.portal-empty {
+  padding: 17px 13px;
+  font: 12px/1.9 SimSun;
+  color: #666;
+}
+.portal-actions {
+  padding: 0 12px 0 27px;
+  font: 12px/1.8 SimSun;
+  margin: 10px 0;
+}
+.school-portal > footer {
+  text-align: center;
+  border-top: 1px solid #b6c8d9;
+  background: #eef4fa;
+  color: #64829b;
+  font: 11px/1.8 SimSun;
+  padding: 12px;
+}
+.era-2011 .software-explorer .app-content {
+  padding: 0;
+  background: white;
+}
+.file-explorer {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  color: black;
+  background: white;
+}
+.explorer-menu {
+  display: flex;
+  align-items: center;
+  background: #ece9d8;
+  min-height: 25px;
+  border-bottom: 1px solid #b8b5a8;
+  gap: 1px;
+  padding: 1px 4px;
+}
+.explorer-menu > button {
+  padding: 4px 9px;
+  font: 12px SimSun;
+}
+.explorer-menu > button:hover:not(:disabled) {
+  background: #c1d2ee;
+}
+.explorer-menu > span {
+  font: 11px SimSun;
+  color: #666;
+  margin-left: auto;
+  padding: 0 5px;
+}
+.explorer-tools {
+  background: linear-gradient(#fff, #e4e1d6);
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 5px 8px;
+  border-bottom: 1px solid #a9a59a;
+  min-height: 39px;
+}
+.explorer-tools > button {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font: 12px SimSun;
+  padding: 2px;
+}
+.explorer-tools > button:hover:not(:disabled) {
+  background: #c1d2ee;
+}
+.explorer-tools > label {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  flex: 1;
+  font: 12px SimSun;
+}
+.explorer-tools select {
+  flex: 1;
+}
+.explorer-main {
+  display: grid;
+  grid-template-columns: 185px 1fr;
+  min-height: 340px;
+  flex: 1;
+}
+.explorer-main > aside {
+  background: linear-gradient(#7ba1df, #6889cc);
+  padding: 13px;
+  color: #1c4b88;
+}
+.explorer-main > aside section {
+  background: #d6e1f5;
+  border: 1px solid white;
+  border-radius: 3px;
+  margin-bottom: 14px;
+  overflow: hidden;
+  padding-bottom: 8px;
+}
+.explorer-main > aside h3 {
+  padding: 7px 11px;
+  background: linear-gradient(90deg, #fff, #b7cbee);
+  font: bold 12px SimSun;
+  color: #174785;
+  margin-bottom: 4px;
+}
+.explorer-main > aside button {
+  display: block;
+  width: 100%;
+  font: 11px/1.5 SimSun;
+  color: #1e5099;
+  padding: 5px 10px;
+  text-align: left;
+}
+.explorer-main > aside button:hover {
+  text-decoration: underline;
+}
+.explorer-main > aside strong {
+  font: bold 12px SimSun;
+  display: block;
+  padding: 8px 10px 3px;
+}
+.explorer-main > aside p {
+  font: 11px/1.6 SimSun;
+  padding: 4px 10px;
+  color: #315884;
+}
+.explorer-main > main {
+  background: white;
+  padding: 16px;
+}
+.explorer-main > main > h2 {
+  font: bold 13px SimSun;
+  color: #333;
+  border-bottom: 1px solid #b4c5df;
+  padding: 6px 0;
+  margin-bottom: 10px;
+}
+.explorer-folders,
+.explorer-files {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px 12px;
+  margin-bottom: 18px;
+}
+.explorer-folders > button,
+.explorer-files > button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-align: left;
+  padding: 9px 5px;
+  border: 1px solid transparent;
+  font: 12px SimSun;
+  min-width: 0;
+}
+.explorer-files > button > span {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+.explorer-files strong {
+  font: 12px SimSun;
+}
+.explorer-files small {
+  font: 10px/1.4 Tahoma;
+  color: #888;
+}
+.explorer-folders > button:hover,
+.explorer-files > button:hover {
+  border-color: #b6d0f3;
+  background: #eaf2fd;
+}
+.file-explorer > footer {
+  padding: 4px 8px;
+  background: #ece9d8;
+  border-top: 1px solid #aaa;
+  font: 11px SimSun;
+}
+.recycle-view {
+  background: white;
+  min-height: 100%;
+}
+.recycle-empty {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  font: 13px SimSun;
+  color: #555;
+}
+.recycle-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px;
+  border-bottom: 1px solid #ccc;
+  font: 12px SimSun;
+}
+.recycle-item > strong {
+  font-weight: normal;
+  flex: 1;
+}
+.recycle-item > span {
+  font-size: 11px;
+  color: #777;
+}
+@media (max-width: 1100px) {
+  .portal-banner {
+    height: 90px;
+    padding: 12px 16px;
+    gap: 12px;
+  }
+  .portal-banner h1 {
+    font-size: 23px;
+    letter-spacing: 2px;
+  }
+  .portal-banner > span {
+    font-size: 12px;
+  }
+  .portal-columns {
+    grid-template-columns: 150px 1fr;
+    gap: 9px;
+    padding: 9px;
+  }
+  .portal-navigation > button {
+    padding: 7px 9px;
+    font-size: 12px;
+  }
+  .portal-today {
+    padding: 12px;
+    gap: 13px;
+  }
+  .portal-today strong {
+    font-size: 14px;
+  }
+  .portal-today > button {
+    font-size: 11px;
+  }
+  .portal-notices span {
+    display: none;
+  }
+  .era-2011 .word-document {
+    padding: 25px 27px;
+  }
+  .explorer-folders,
+  .explorer-files {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .qq-layout {
+    grid-template-columns: 180px 1fr;
+  }
+  .era-2011 .seating-grid {
+    overflow-x: auto;
+    grid-template-columns: repeat(10, minmax(53px, 1fr));
+    padding-bottom: 8px;
+  }
+}
+@media (max-width: 760px) {
+  .era-2011 .app-window {
+    left: 0 !important;
+    top: 0 !important;
+    width: 100vw !important;
+    height: calc(100dvh - 31px) !important;
+    min-width: 320px;
+    min-height: 320px;
+    border-width: 2px;
+    resize: none;
+    border-radius: 6px 6px 0 0;
+  }
+  .era-2011 .app-content {
+    padding: 10px;
+  }
+  .era-2011 .window-titlebar {
+    height: 28px;
+  }
+  .era-2011 .window-titlebar strong {
+    font-size: 11px;
+  }
+  .era-2011 .window-statusbar {
+    height: 20px;
+    font-size: 9px;
+    min-height: 20px;
+  }
+  .era-2011 .window-statusbar > span {
+    font-size: 9px;
+    padding: 2px 3px;
+    gap: 4px;
+  }
+  .classic-toolbar {
+    gap: 0;
+    padding: 1px 3px;
+  }
+  .classic-toolbar > button {
+    padding: 1px 3px;
+  }
+  .classic-menubar {
+    height: 23px;
+  }
+  .classic-menu > button {
+    padding: 1px 5px;
+    font-size: 11px;
+  }
+  .menubar-brand {
+    display: none;
+  }
+  .toolbar-separator {
+    margin: 0 3px;
+  }
+  .office-font-name {
+    font-size: 11px;
+    min-width: 50px;
+    padding: 2px 4px;
+  }
+  .ie-address {
+    gap: 4px;
+    font-size: 10px;
+  }
+  .ie-address > span:last-child {
+    display: none;
+  }
+  .era-2011 .ie-address input {
+    font-size: 11px;
+  }
+  .era-2011 .start-button {
+    min-width: 73px;
+    width: 73px;
+    font-size: 15px;
+    gap: 3px;
+    height: 30px;
+    padding: 0 4px;
+  }
+  .quick-launch {
+    padding: 0 3px;
+    margin-right: 4px;
+    gap: 0;
+  }
+  .quick-launch button {
+    width: 21px;
+  }
+  .quick-launch > button:nth-child(2) {
+    display: none;
+  }
+  .taskbar-apps {
+    gap: 2px;
+    padding-right: 2px;
+  }
+  .era-2011 .taskbar-app {
+    min-width: 31px;
+    padding: 1px 5px;
+    gap: 3px;
+    flex: 0 1 120px;
+    height: 25px;
+  }
+  .era-2011 .taskbar-app > span {
+    display: none !important;
+  }
+  .era-2011 .taskbar-app.active > span {
+    display: block !important;
+    font-size: 10px;
+  }
+  .era-2011 .end-day-button {
+    font-size: 10px;
+    padding: 3px 5px;
+    margin: 0 5px 0 3px;
+    min-width: 0;
+    height: 23px;
+  }
+  .system-tray {
+    gap: 6px;
+    padding: 0 5px;
+    box-shadow: none;
+  }
+  .system-tray > span,
+  .system-tray > svg {
+    display: none;
+  }
+  .system-tray .tray-clock {
+    font-size: 10px;
+    min-width: 31px;
+  }
+  .era-2011 .launcher {
+    width: min(412px, 100vw);
+    left: 0;
+    bottom: 31px;
+    padding: 0;
+  }
+  .start-menu-columns {
+    grid-template-columns: 58% 42%;
+    min-height: 300px;
+    max-height: calc(100dvh - 160px);
+  }
+  .start-programs > button {
+    min-height: 44px;
+    padding: 5px 3px;
+    gap: 6px;
+  }
+  .start-programs > button .legacy-icon {
+    width: 28px;
+    height: 28px;
+  }
+  .start-programs strong {
+    font-size: 11px;
+  }
+  .start-programs small {
+    font-size: 9px;
+  }
+  .start-places > button {
+    font-size: 11px;
+    padding: 7px 3px;
+    gap: 5px;
+  }
+  .start-places .legacy-icon {
+    width: 20px;
+    height: 20px;
+  }
+  .era-2011 .launcher > header {
+    height: 54px;
+  }
+  .era-2011 .desktop-icons {
+    grid-template-rows: repeat(7, 76px);
+    grid-auto-columns: 78px;
+    left: 4px;
+    top: 5px;
+    gap: 2px 0;
+  }
+  .era-2011 .desktop-icons > button {
+    font-size: 11px;
+  }
+  .desktop-watermark {
+    right: 15px;
+    bottom: 20px;
+  }
+  .desktop-watermark h1 {
+    font-size: 19px;
+  }
+  .desktop-watermark h1 > span {
+    font-size: 21px;
+  }
+  .desktop-watermark p {
+    font-size: 11px;
+  }
+  .desktop-countdown {
+    right: 16px;
+    top: 20px;
+  }
+  .desktop-countdown > strong {
+    font-size: 12px;
+  }
+  .desktop-countdown b {
+    font-size: 27px;
+  }
+  .desktop-countdown > span {
+    font-size: 10px;
+  }
+  .era-2011 .modal {
+    max-height: calc(100dvh - 45px);
+    min-width: 0;
+    max-width: 100%;
+  }
+  .era-2011 .modal-content {
+    padding: 14px 13px;
+  }
+  .era-2011 .modal > header h2 {
+    font-size: 11px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 90%;
+  }
+  .era-2011 .new-game-intro p {
+    font-size: 11px;
+  }
+  .era-2011 .difficulty-options strong {
+    font-size: 11px;
+  }
+  .era-2011 .difficulty-options span {
+    font-size: 10px;
+  }
+  .era-2011 .panel {
+    padding: 10px;
+  }
+  .era-2011 .panel-heading h2 {
+    font-size: 12px;
+  }
+  .era-2011 .app-header h1 {
+    font-size: 14px;
+  }
+  .era-2011 .app-header p {
+    font-size: 11px;
+  }
+  .era-2011 .archive-layout,
+  .era-2011 .review-layout {
+    grid-template-columns: 1fr;
+  }
+  .era-2011 .student-list-panel {
+    max-height: 220px;
+  }
+  .era-2011 .profile-heading h2 {
+    font-size: 17px;
+  }
+  .era-2011 .profile-facts {
+    grid-template-columns: 1fr 1fr;
+  }
+  .era-2011 .word-document {
+    padding: 20px 16px;
+  }
+  .era-2011 .software-word .app-content {
+    padding: 9px;
+    background: #aaa;
+  }
+  .era-2011 .software-word .app-header h1 {
+    font-size: 19px;
+  }
+  .era-2011 .software-excel .toolbar {
+    gap: 7px;
+    padding: 5px;
+  }
+  .era-2011 .software-excel .toolbar label {
+    font-size: 11px;
+  }
+  .era-2011 .software-excel .toolbar select {
+    max-width: 140px;
+  }
+  .era-2011 .software-excel .toolbar .search-box {
+    max-width: 100%;
+  }
+  .era-2011 .software-excel .table-scroll {
+    overflow: auto;
+  }
+  .era-2011 .software-excel table {
+    width: max-content;
+    min-width: 100%;
+  }
+  .era-2011 .software-excel .panel-heading {
+    padding: 0 9px;
+  }
+  .era-2011 .software-excel .excel-sheet-tabs small {
+    display: none;
+  }
+  .qq-layout {
+    grid-template-columns: 130px 1fr;
+  }
+  .qq-profile-strip {
+    padding: 8px 10px;
+  }
+  .qq-profile-strip strong {
+    font-size: 12px;
+  }
+  .qq-profile-strip p {
+    font-size: 10px;
+  }
+  .qq-contacts {
+    padding: 5px;
+    max-height: 550px;
+  }
+  .qq-contacts > button {
+    gap: 5px;
+    padding: 5px 2px;
+  }
+  .qq-contacts > button .avatar {
+    width: 21px;
+    height: 24px;
+    font-size: 9px;
+  }
+  .qq-contacts > button > span:not(.avatar) {
+    font-size: 11px;
+  }
+  .qq-contacts small {
+    font-size: 9px;
+  }
+  .qq-contacts > .search-box input {
+    font-size: 10px;
+    width: 65px;
+  }
+  .qq-group-heading {
+    font-size: 11px;
+    padding: 6px 2px;
+  }
+  .qq-conversation-title {
+    padding: 8px;
+    gap: 6px;
+  }
+  .qq-conversation-title strong {
+    font-size: 12px;
+  }
+  .qq-conversation-title p {
+    font-size: 10px;
+  }
+  .qq-history {
+    padding: 10px;
+    min-height: 210px;
+    max-height: 330px;
+  }
+  .qq-chat-message {
+    font-size: 12px;
+  }
+  .qq-chat-message > header {
+    font-size: 11px;
+  }
+  .qq-chat-message > p {
+    padding-left: 2px;
+  }
+  .qq-chat-tools {
+    gap: 7px;
+    padding: 4px 7px;
+  }
+  .qq-chat-tools > button {
+    font-size: 11px;
+  }
+  .qq-chat-tools > small {
+    display: none;
+  }
+  .qq-compose {
+    padding: 7px;
+  }
+  .qq-compose > label {
+    font-size: 11px;
+    gap: 5px;
+    flex-wrap: wrap;
+  }
+  .qq-compose > label > select {
+    max-width: 100%;
+    font-size: 11px;
+  }
+  .qq-compose-footer {
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+  .qq-compose-footer > small {
+    font-size: 10px;
+  }
+  .qq-compose-footer > .button {
+    min-width: 70px;
+    margin-left: auto;
+  }
+  .qq-event-list {
+    padding: 9px;
+  }
+  .qq-event {
+    padding: 9px;
+  }
+  .qq-event > header {
+    font-size: 11px;
+  }
+  .qq-event > p {
+    font-size: 12px;
+  }
+  .qq-event .event-choices .button {
+    font-size: 11px;
+  }
+  .portal-columns {
+    grid-template-columns: 125px 1fr;
+    gap: 7px;
+    padding: 7px;
+  }
+  .portal-banner {
+    height: 85px;
+    padding: 10px 13px;
+    gap: 10px;
+  }
+  .portal-banner .legacy-icon {
+    width: 43px;
+    height: 43px;
+  }
+  .portal-banner h1 {
+    font-size: 23px;
+    letter-spacing: 2px;
+  }
+  .portal-banner p {
+    font-size: 9px;
+  }
+  .portal-banner > span {
+    font-size: 11px;
+  }
+  .portal-welcome {
+    font-size: 10px;
+  }
+  .portal-columns > aside p {
+    font-size: 11px;
+    padding-left: 7px;
+    padding-right: 6px;
+  }
+  .portal-columns > aside button {
+    font-size: 11px;
+    padding: 7px;
+  }
+  .portal-today {
+    gap: 8px;
+    padding: 10px;
+    flex-wrap: wrap;
+  }
+  .portal-today strong {
+    font-size: 13px;
+  }
+  .portal-today > p {
+    font-size: 11px;
+  }
+  .portal-today > button {
+    margin-left: 0;
+    font-size: 11px;
+  }
+  .school-portal {
+    min-width: 570px;
+  }
+  .era-2011 .portal-stats th,
+  .era-2011 .portal-stats td {
+    padding: 6px 4px;
+  }
+  .portal-banner > span {
+    display: none;
+  }
+  .explorer-main {
+    grid-template-columns: 135px 1fr;
+  }
+  .explorer-main > aside {
+    padding: 8px;
+  }
+  .explorer-main > main {
+    padding: 10px;
+  }
+  .explorer-folders,
+  .explorer-files {
+    grid-template-columns: 1fr;
+  }
+  .explorer-tools {
+    gap: 6px;
+    padding: 4px;
+  }
+  .explorer-tools > button {
+    font-size: 11px;
+    gap: 0;
+  }
+  .explorer-tools > label {
+    font-size: 11px;
+    gap: 3px;
+  }
+  .explorer-tools select {
+    max-width: 150px;
+    font-size: 11px;
+  }
+  .era-2011 .toast,
+  .era-2011 .notification-panel {
+    bottom: 43px;
+    right: 8px;
+    max-width: calc(100vw - 16px);
+    min-width: 250px;
+    left: auto;
+    transform: none;
+  }
+  .era-2011 .toast p {
+    font-size: 11px;
+  }
+  .xp-welcome > main {
+    gap: 25px;
+    flex-direction: column;
+  }
+  .xp-welcome > main > div {
+    border: 0;
+    padding: 0;
+    text-align: center;
+  }
+  .xp-welcome > main > button {
+    min-width: 220px;
+  }
+  .xp-welcome > main > div > h1 {
+    font-size: 12px;
+  }
+  .xp-welcome h1 strong {
+    font-size: 32px;
+  }
+}
+@media screen {
+  .era-2011 .software-excel .app-content {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .era-2011 .software-excel .app-header {
+    flex-shrink: 0;
+    order: 0;
+  }
+  .era-2011 .software-excel .excel-data-panel {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-height: 0;
+    order: 1;
+  }
+  .era-2011 .software-excel .excel-data-panel.hidden-sheet {
+    display: none;
+  }
+  .era-2011 .software-excel .excel-data-panel > .toolbar,
+  .era-2011 .software-excel .table-note {
+    flex-shrink: 0;
+  }
+  .era-2011 .software-excel .table-scroll {
+    flex: 1;
+    min-height: 0;
+    overflow: auto;
+  }
+  .era-2011 .software-excel thead {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+  .era-2011 .software-excel .excel-sheet-tabs {
+    flex-shrink: 0;
+    order: 2;
+    min-height: 26px;
+  }
+  .era-2011 .software-excel .excel-trend-panel {
+    order: 1;
+    flex: 1;
+    min-height: 0;
+    overflow: auto;
+  }
+}
+@media print {
+  body {
+    overflow: visible !important;
+    background: white !important;
+  }
+  .desktop-space,
+  .desktop-icons,
+  .taskbar,
+  .toast,
+  .launcher,
+  .classic-chrome,
+  .window-titlebar,
+  .window-statusbar,
+  .modal-backdrop,
+  .desktop-context {
+    display: none !important;
+  }
+  .era-2011 .app-window:not(.focused) {
+    display: none !important;
+  }
+  .desktop,
+  .windows-area,
+  .era-2011 .app-window.focused,
+  .window-layout,
+  .era-2011 .app-content {
+    position: static !important;
+    display: block !important;
+    overflow: visible !important;
+    width: auto !important;
+    height: auto !important;
+    max-height: none !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    background: #fff !important;
+    padding: 0 !important;
+  }
+  .word-document {
+    border: 0 !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+  }
+  .table-scroll {
+    overflow: visible !important;
+  }
+}
+
+.properties-tabs button.active {
+  background: #fff;
+  border-top: 2px solid #e8b955;
+  padding-top: 4px;
+}
