@@ -1299,28 +1299,64 @@
       ]
     },
     "word": {
-      "sourceSha256": "21ccd6ee59f7cc66efd4ae8fc8c23f230dcdcfc36a4a2c09f547415d4315c9c2",
       "frames": [
+        {
+          "file": "word-16.png",
+          "width": 16,
+          "height": 16,
+          "sha256": "f318e27e8e92a0050175ad65ebb2a1c633ac7e5111c0f0b6ca93d370a2b05192",
+          "sourceSha256": "f318e27e8e92a0050175ad65ebb2a1c633ac7e5111c0f0b6ca93d370a2b05192",
+          "source": "https://raw.githubusercontent.com/B00merang-Artwork/LinXP/cad371e66533abd3c5e5086efdd44551d9b665e8/icon-build/mimetypes/application-msword.png/16.png",
+          "resource": "XP年代DOC文件类型/16像素"
+        },
+        {
+          "file": "word-32.png",
+          "width": 32,
+          "height": 32,
+          "sha256": "f8f92c04b4d3cd3c6ce9443f3509ea4da5ab7ac25acfd6231f2230cc9b0b8e31",
+          "sourceSha256": "f8f92c04b4d3cd3c6ce9443f3509ea4da5ab7ac25acfd6231f2230cc9b0b8e31",
+          "source": "https://raw.githubusercontent.com/B00merang-Artwork/LinXP/cad371e66533abd3c5e5086efdd44551d9b665e8/icon-build/mimetypes/application-msword.png/32.png",
+          "resource": "XP年代DOC文件类型/32像素"
+        },
         {
           "file": "word-48.png",
           "width": 48,
           "height": 48,
-          "sha256": "a9d216cafa7657f9a8d4a44da32404ace1e52835fdaccbf8b823018800fd2c9e",
-          "source": "https://www.rw-designer.com/icon-downloadset/msoff03.zip",
-          "resource": "Office 2003/word.ico"
+          "sha256": "258301bc3d56e57b61b2f343844f8654fe0610675f386de567bac932aa032c22",
+          "sourceSha256": "258301bc3d56e57b61b2f343844f8654fe0610675f386de567bac932aa032c22",
+          "source": "https://raw.githubusercontent.com/B00merang-Artwork/LinXP/cad371e66533abd3c5e5086efdd44551d9b665e8/icon-build/mimetypes/application-msword.png/48.png",
+          "resource": "XP年代DOC文件类型/48像素"
         }
       ]
     },
     "excel": {
-      "sourceSha256": "f0cd411eaa727e3904cd98b580006ad573c5ce2f2a4816fb952407d10ddb8bd0",
       "frames": [
         {
           "file": "excel-16.png",
           "width": 16,
           "height": 16,
-          "sha256": "c7d4c71e1b36befaef32b97608fd13347559f204be89ba2d70422d338427cf20",
-          "source": "https://1214119.sites.myregisteredsite.com/lessons/numbers/icon-excel2003.gif",
-          "resource": "Excel 2003原始教学图标/16像素"
+          "sha256": "870fd58c86f27b98555f6d048a68da862e138c1522c93150b861a407147592ef",
+          "sourceSha256": "870fd58c86f27b98555f6d048a68da862e138c1522c93150b861a407147592ef",
+          "source": "https://raw.githubusercontent.com/B00merang-Artwork/LinXP/cad371e66533abd3c5e5086efdd44551d9b665e8/icon-build/mimetypes/application-vnd.ms-excel.png/16.png",
+          "resource": "XP年代XLS文件类型/16像素"
+        },
+        {
+          "file": "excel-32.png",
+          "width": 32,
+          "height": 32,
+          "sha256": "45de2c0ed9d5fe6a249e6162cfe268d3702ab3283005ae221e56bd564dc462b2",
+          "sourceSha256": "45de2c0ed9d5fe6a249e6162cfe268d3702ab3283005ae221e56bd564dc462b2",
+          "source": "https://raw.githubusercontent.com/B00merang-Artwork/LinXP/cad371e66533abd3c5e5086efdd44551d9b665e8/icon-build/mimetypes/application-vnd.ms-excel.png/32.png",
+          "resource": "XP年代XLS文件类型/32像素"
+        },
+        {
+          "file": "excel-48.png",
+          "width": 48,
+          "height": 48,
+          "sha256": "63c4096172e0ee3208e1e6c3292d19bd4bac1a7dd91b4daeb15274bd125f682a",
+          "sourceSha256": "20529a51035932571a308b4b3d436061616e5f8ff3e4338e32067d696d3b2384",
+          "source": "https://raw.githubusercontent.com/B00merang-Artwork/LinXP/cad371e66533abd3c5e5086efdd44551d9b665e8/icon-build/mimetypes/application-vnd.ms-excel.png/48.ico",
+          "resource": "XP年代XLS文件类型/48像素"
         }
       ]
     },

@@ -10,6 +10,15 @@ const manifest = JSON.parse(
 );
 const files = new Set();
 let frames = 0;
+// 桌面Office图标必须具有真正的32像素帧，不能退回16像素后放大。
+for (const app of ['word', 'excel']) {
+  for (const size of [16, 32, 48]) {
+    assert.ok(
+      manifest.icons[app].frames.some((frame) => frame.width === size && frame.height === size),
+      app + '缺少' + size + '像素原始帧',
+    );
+  }
+}
 for (const [name, icon] of Object.entries(manifest.icons)) {
   assert.ok(icon.frames.length, name + '没有原始图像帧');
   for (const frame of icon.frames) {

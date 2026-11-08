@@ -21,6 +21,7 @@ import { DebugPanel } from './DebugPanel';
 import { Modal, NewGame, SaveManager } from './Settings';
 import { ClassicFrame, type SheetCommand } from './ClassicFrame';
 import { FileExplorer } from './FileExplorer';
+import { TrayBalloon } from './TrayBalloon';
 
 type WindowId = BusinessAppId | 'computer' | 'recycle';
 interface AppWindow {
@@ -92,6 +93,8 @@ function readPreference<T>(key: string, fallback: T): T {
 }
 
 export function Desktop() {
+  const taskbarRef = useRef<HTMLElement>(null);
+  const notificationsRef = useRef<HTMLButtonElement>(null);
   const { game, start, restore, dispatch, notice, notify, saved, save } = useGame();
   const [windows, setWindows] = useState<AppWindow[]>([
     { id: 'dashboard', ...defaultSize(), z: 1, minimized: false, maximized: false },
@@ -800,20 +803,24 @@ export function Desktop() {
         </div>
       )}
       {notifications && (
-        <div className="notification-panel">
-          <header>
-            <LegacyIcon name="qq" size={23} />
-            <strong>QQ 消息提醒</strong>
-            <button aria-label="关闭消息提醒" onClick={() => setNotifications(false)}>
-              <ClassicGlyph name="close" size={15} />
-            </button>
-          </header>
+        <TrayBalloon
+          id="qq-message-panel"
+          title="QQ 消息提醒"
+          icon="qq"
+          anchor={notificationsRef}
+          taskbar={taskbarRef}
+          role="dialog"
+          className="notification-panel"
+          closeLabel="关闭消息提醒"
+          close={() => setNotifications(false)}
+        >
           <p>{pending ? `您有 ${pending} 条班级事务需要处理。` : '暂时没有待处理的新消息。'}</p>
           {game?.events
             .filter((event) => !event.resolved)
             .slice(-3)
             .map((event) => (
               <button
+                className="balloon-message-item"
                 key={event.id}
                 onClick={() => {
                   open('parents');
@@ -824,9 +831,9 @@ export function Desktop() {
                 <span>{event.text}</span>
               </button>
             ))}
-        </div>
+        </TrayBalloon>
       )}
-      <footer className="taskbar">
+      <footer className="taskbar" ref={taskbarRef}>
         <button
           className={`start-button ${launcher ? 'active' : ''}`}
           aria-label="打开应用菜单"
@@ -893,7 +900,11 @@ export function Desktop() {
           <LegacyIcon name="volume-tray" size={14} aria-label="音量" />
           <LegacyIcon name="network-tray" size={15} aria-label="本地连接" />
           <button
+            ref={notificationsRef}
             aria-label="系统通知"
+            aria-expanded={notifications}
+            aria-controls="qq-message-panel"
+            aria-haspopup="dialog"
             title="QQ 消息提醒"
             className={pending ? 'has-messages' : ''}
             onClick={() => setNotifications(!notifications)}
@@ -911,17 +922,18 @@ export function Desktop() {
           </button>
         </div>
       </footer>
-      {notice && (
-        <div role="status" className={`toast ${notice.error ? 'error' : ''}`}>
-          <LegacyIcon name={notice.error ? 'error' : 'info'} size={16} />
-          <div>
-            <strong>{notice.error ? '操作提示' : '春山中学教务系统'}</strong>
-            <p>{notice.text}</p>
-          </div>
-          <button aria-label="关闭通知" onClick={() => useGame.getState().clearNotice()}>
-            <ClassicGlyph name="close" size={13} />
-          </button>
-        </div>
+      {notice && !notifications && (
+        <TrayBalloon
+          title={notice.error ? '操作提示' : '春山中学教务系统'}
+          icon={notice.error ? 'error' : 'info'}
+          anchor={notificationsRef}
+          taskbar={taskbarRef}
+          className={`toast ${notice.error ? 'error' : ''}`}
+          closeLabel="关闭通知"
+          close={() => useGame.getState().clearNotice()}
+        >
+          <p>{notice.text}</p>
+        </TrayBalloon>
       )}
       {(booting || locked) && (
         <div className="xp-welcome">

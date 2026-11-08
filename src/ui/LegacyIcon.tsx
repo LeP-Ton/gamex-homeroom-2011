@@ -35,9 +35,15 @@ export function LegacyIcon({
 }) {
   const pixels = nativeIconSize(size);
   const frame = iconFrame(name, pixels);
+  const sourceSet = NATIVE_ICONS[name].frames
+    .slice()
+    .sort((a, b) => a.width - b.width)
+    .map((candidate) => bitmapUrl(candidate.file) + ' ' + candidate.width / pixels + 'x')
+    .join(', ');
   const icon = (
     <img
       src={bitmapUrl(frame.file)}
+      srcSet={sourceSet}
       width={pixels}
       height={Math.round((pixels * frame.height) / frame.width)}
       className={
@@ -47,7 +53,8 @@ export function LegacyIcon({
         className
       }
       data-icon={name}
-      data-source-size={frame.width + 'x' + frame.height}
+      data-fallback-size={frame.width + 'x' + frame.height}
+      data-native-sizes={NATIVE_ICONS[name].frames.map((candidate) => candidate.width).join(',')}
       alt={label ?? ''}
       aria-hidden={label ? undefined : true}
       draggable={false}

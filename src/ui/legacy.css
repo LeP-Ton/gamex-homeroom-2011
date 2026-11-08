@@ -1325,90 +1325,121 @@
   font: 12px/1.9 SimSun;
   margin-bottom: 13px;
 }
-.era-2011 .toast,
-.era-2011 .notification-panel {
-  position: absolute;
+.era-2011 .tray-balloon {
+  position: fixed;
   z-index: 29000;
   left: auto;
   top: auto;
   right: 16px;
-  bottom: 45px;
+  bottom: 48px;
   transform: none;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 8px;
+  width: min(330px, calc(100vw - 16px));
+  min-width: 0;
+  max-width: none;
+  max-height: calc(100dvh - 64px);
+  padding: 10px 12px;
   background: #ffffe1;
   border: 1px solid #000;
   border-radius: 6px;
-  box-shadow: 2px 2px 3px #0004;
+  box-shadow: 1px 2px 3px #0003;
   backdrop-filter: none;
   animation: none;
-  color: black;
-  min-width: 270px;
-  max-width: 420px;
-  width: auto;
-  padding: 11px 13px;
-  gap: 10px;
-}
-.era-2011 .toast:after,
-.era-2011 .notification-panel:after {
-  content: '';
-  position: absolute;
-  bottom: -12px;
-  right: 50px;
-  width: 16px;
-  height: 16px;
-  background: #ffffe1;
-  border-right: 1px solid #000;
-  transform: skewY(35deg);
-  border-bottom: 1px solid #000;
-}
-.era-2011 .toast > div {
-  flex: 1;
-}
-.era-2011 .toast strong {
-  font:
-    bold 12px Tahoma,
-    '宋体';
-}
-.era-2011 .toast p {
   color: #000;
   font:
-    12px/1.7 Tahoma,
-    '宋体';
-  margin-top: 4px;
+    12px/1.6 Tahoma,
+    '宋体',
+    SimSun,
+    sans-serif;
 }
-.era-2011 .toast > button {
-  align-self: flex-start;
-  padding: 0;
-  color: #444;
-}
-.era-2011 .notification-panel {
-  width: 330px;
-  max-width: 90vw;
-  bottom: 44px;
-}
-.notification-panel > header {
+.tray-balloon-header {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
+  min-height: 18px;
+  flex-shrink: 0;
 }
-.notification-panel > header > button {
+.era-2011 .tray-balloon-header strong {
+  min-width: 0;
+  flex: 1;
+  color: #000;
+  font:
+    bold 12px/1.4 Tahoma,
+    '宋体',
+    SimSun,
+    sans-serif;
+}
+.era-2011 .tray-balloon-header > button {
+  width: 18px;
+  height: 18px;
+  padding: 0;
   margin-left: auto;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #555;
+  border: 1px solid transparent;
 }
-.era-2011 .notification-panel > p {
-  font-size: 12px;
-  color: black;
+.era-2011 .tray-balloon-header > button:hover {
+  border-color: #bbbba5;
+  color: #000;
 }
-.era-2011 .notification-panel > button {
-  border-color: #d3d0a6;
-  font-size: 12px;
+.tray-balloon-body {
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  overflow-wrap: anywhere;
+}
+.era-2011 .tray-balloon-body > p {
+  color: #000;
+  font: inherit;
+  line-height: 1.6;
+  margin: 0;
+}
+.era-2011 .balloon-message-item {
+  display: block;
   width: 100%;
+  margin-top: 6px;
+  padding: 6px 0;
+  text-align: left;
+  border-top: 1px solid #d3d0a6;
 }
-.era-2011 .notification-panel > button b {
+.balloon-message-item b,
+.balloon-message-item span {
+  display: block;
+}
+.balloon-message-item b {
   color: #003c9b;
+  font-size: 12px;
   font-weight: normal;
 }
-.era-2011 .notification-panel > button span {
-  color: black;
+.era-2011 .balloon-message-item span {
+  color: #000;
   font-size: 11px;
+}
+.tray-balloon-tail {
+  position: absolute;
+  top: calc(100% - 1px);
+  left: calc(var(--balloon-tail-x, 280px) - 20px);
+  width: 20px;
+  height: 12px;
+  pointer-events: none;
+}
+.tray-balloon-tail::before,
+.tray-balloon-tail::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: #000;
+  clip-path: polygon(0 0, 100% 0, 100% 100%);
+}
+.tray-balloon-tail::after {
+  background: #ffffe1;
+  clip-path: polygon(1px 0, 19px 0, 19px 10px);
 }
 .xp-welcome {
   position: fixed;
@@ -3690,18 +3721,6 @@
   }
   .explorer-tools select {
     max-width: 150px;
-    font-size: 11px;
-  }
-  .era-2011 .toast,
-  .era-2011 .notification-panel {
-    bottom: 43px;
-    right: 8px;
-    max-width: calc(100vw - 16px);
-    min-width: 250px;
-    left: auto;
-    transform: none;
-  }
-  .era-2011 .toast p {
     font-size: 11px;
   }
   .xp-welcome > main {
