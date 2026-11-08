@@ -111,15 +111,19 @@ describe('开局文理科选择', () => {
     expect(game.rng).toBe(3126901920);
     expect(
       hashSeed(
-        JSON.stringify({
-          students: game.students,
-          seats: game.seats,
-          exams: game.exams,
-          traces: game.traces,
-          rng: game.rng,
-        }),
+        // 幂运算末位可能随平台变化；基准统一保留9位小数，随机状态仍精确校验。
+        JSON.stringify(
+          {
+            students: game.students,
+            seats: game.seats,
+            exams: game.exams,
+            traces: game.traces,
+            rng: game.rng,
+          },
+          (_, value) => (typeof value === 'number' ? Number(value.toFixed(9)) : value),
+        ),
       ),
-    ).toBe(1536512182);
+    ).toBe(378990715);
   });
 
   it('无科类旧档先校验再按理科读取，保留标识、知识、历史与随机状态', () => {
