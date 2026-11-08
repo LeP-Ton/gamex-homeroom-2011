@@ -2,7 +2,7 @@ import { EXAM_CALENDAR, GAME_DAYS, SUBJECT_MAP } from '../config/game';
 import { createGame, DEFAULT_SETTINGS } from './generate';
 import { execute } from './engine';
 import { classAnalysis, studentAnalysis } from './analytics';
-import type { Difficulty, Game, GameCommand } from './types';
+import type { Difficulty, Game, GameCommand, GameSettings } from './types';
 
 export type Strategy = 'observe' | 'balanced' | 'cram' | 'borderline';
 export const STRATEGY_LABELS: Record<Strategy, string> = {
@@ -74,8 +74,9 @@ export function simulateRun(
   difficulty: Difficulty,
   strategy: Strategy,
   debug = true,
+  settings: Partial<Pick<GameSettings, 'track' | 'subject' | 'cutoff'>> = {},
 ) {
-  let game = createGame({ ...DEFAULT_SETTINGS, seed, difficulty }, debug);
+  let game = createGame({ ...DEFAULT_SETTINGS, ...settings, seed, difficulty }, debug);
   for (let day = 0; day < GAME_DAYS && !game.ended; day++) game = playStrategyDay(game, strategy);
   const analysis = classAnalysis(game);
   return {
@@ -83,6 +84,7 @@ export function simulateRun(
     summary: {
       seed,
       difficulty,
+      track: game.settings.track,
       strategy,
       average: analysis.average,
       rate: analysis.rate,

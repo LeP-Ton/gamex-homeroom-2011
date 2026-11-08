@@ -5,7 +5,8 @@ import {
   ERROR_LABELS,
   EVENT_CONFIG,
   GAME_DAYS,
-  SUBJECTS,
+  getSubjects,
+  isClassTrack,
   TOTAL_MAX,
 } from '../config/game';
 import { hashSeed } from './random';
@@ -18,9 +19,12 @@ export function validateGame(value: unknown): asserts value is Game {
     game.version !== 1 ||
     !game.settings ||
     !DIFFICULTIES[game.settings.difficulty] ||
-    !SUBJECTS.some((subject) => subject.teachable && subject.id === game.settings.subject)
+    (game.settings.track !== undefined && !isClassTrack(game.settings.track))
   )
     throw new Error('存档版本或规则不兼容。');
+  const subjects = getSubjects(game.settings);
+  if (!subjects.some((subject) => subject.teachable && subject.id === game.settings.subject))
+    throw new Error('存档任教学科不兼容。');
   if (
     typeof game.settings.seed !== 'string' ||
     typeof game.settings.teacher !== 'string' ||
@@ -86,7 +90,9 @@ export function validateGame(value: unknown): asserts value is Game {
       if (keys.some((key) => !Number.isFinite(values[key]) || values[key] < 0 || values[key] > 1))
         throw new Error('学生状态缺失或超出范围。');
     }
-    for (const subject of SUBJECTS)
+    if (Object.keys(student.knowledge).length !== subjects.length)
+      throw new Error('学生学科与班级科类不一致。');
+    for (const subject of subjects)
       for (const topic of subject.topics) {
         const node = student.knowledge[subject.id]?.[topic.id];
         if (
@@ -176,14 +182,15 @@ export function validateGame(value: unknown): asserts value is Game {
           (result) =>
             !ids.has(result.studentId) ||
             !Number.isFinite(result.total) ||
-            SUBJECTS.some(
+            Object.keys(result.scores ?? {}).length !== subjects.length ||
+            subjects.some(
               (subject) =>
                 !Number.isFinite(result.scores?.[subject.id]) ||
                 result.scores[subject.id] < 0 ||
                 result.scores[subject.id] > subject.max,
             ) ||
             Math.abs(
-              result.total - SUBJECTS.reduce((sum, subject) => sum + result.scores[subject.id], 0),
+              result.total - subjects.reduce((sum, subject) => sum + result.scores[subject.id], 0),
             ) > 0.11,
         ),
     )
@@ -196,10 +203,10 @@ export function validateGame(value: unknown): asserts value is Game {
       exam.day < 0 ||
       exam.day > game.day ||
       !Array.isArray(exam.papers) ||
-      exam.papers.length !== SUBJECTS.length
+      exam.papers.length !== subjects.length
     )
       throw new Error('试卷档案损坏。');
-    for (const subject of SUBJECTS) {
+    for (const subject of subjects) {
       const paper = exam.papers.find((paper) => paper.subject === subject.id);
       if (
         !paper ||
@@ -224,7 +231,7 @@ export function validateGame(value: unknown): asserts value is Game {
     new Set(targets).size === targets.length &&
     targets.every((id) => ids.has(id));
   const validTopic = (subjectId: string, topicId: string) =>
-    SUBJECTS.some(
+    subjects.some(
       (subject) => subject.id === subjectId && subject.topics.some((topic) => topic.id === topicId),
     );
   const validCause = (cause: unknown) =>
@@ -236,7 +243,7 @@ export function validateGame(value: unknown): asserts value is Game {
     throw new Error('作业档案编号重复。');
   for (const assignment of game.assignments)
     if (
-      !SUBJECTS.some(
+      !subjects.some(
         (subject) =>
           subject.id === assignment.subject &&
           subject.topics.some((topic) => topic.id === assignment.topic),
@@ -333,5 +340,7 @@ export function deserializeGame(text: string, allowDebug = false): Game {
     throw new Error('存档格式或校验不正确。');
   validateGame(envelope.game);
   if (envelope.game.debug && !allowDebug) throw new Error('调试副本不能导入普通存档。');
+  // 先验证原始文件的校验和，再补齐旧档设置，避免修改历史成绩或随机序列。
+  envelope.game.settings.track ??= 'science';
   return envelope.game;
 }

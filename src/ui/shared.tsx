@@ -1,6 +1,6 @@
 import { LegacyIcon, ClassicGlyph } from './LegacyIcon';
 import type { ReactNode } from 'react';
-import { SUBJECTS } from '../config/game';
+import { ALL_SUBJECTS } from '../config/game';
 import { gameDate } from '../config/desktop';
 import { studentAnalysis } from '../sim/analytics';
 import type { Game, Student } from '../sim/types';
@@ -283,7 +283,7 @@ export function MiniTrend({
 export function SubjectBars({ scores }: { scores: Record<string, number> }) {
   return (
     <div className="subject-bars">
-      {SUBJECTS.map((subject) => (
+      {ALL_SUBJECTS.filter((subject) => Object.hasOwn(scores, subject.id)).map((subject) => (
         <div key={subject.id}>
           <span>{subject.name}</span>
           <div className="bar-track">

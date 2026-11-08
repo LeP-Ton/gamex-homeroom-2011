@@ -1163,6 +1163,11 @@
 .era-2011 .field-label {
   margin: 12px 0;
 }
+.era-2011 .class-track-summary {
+  margin: -3px 0 14px;
+  color: #444;
+  font: 12px/1.7 SimSun, serif;
+}
 .era-2011 .form-footnote {
   font:
     11px/1.7 Tahoma,

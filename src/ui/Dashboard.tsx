@@ -1,4 +1,4 @@
-import { EXAM_CALENDAR, SUBJECT_MAP } from '../config/game';
+import { EXAM_CALENDAR, getTrackName, SUBJECT_MAP } from '../config/game';
 import { shortGameDate } from '../config/desktop';
 import { classAnalysis, studentAnalysis } from '../sim/analytics';
 import type { Game } from '../sim/types';
@@ -55,6 +55,7 @@ export function Dashboard({ game, open }: { game: Game; open: OpenApp }) {
             <p>姓　名：{game.settings.teacher}</p>
             <p>任教学科：{SUBJECT_MAP[game.settings.subject].name}</p>
             <p>班　级：{game.settings.className}</p>
+            <p>科　类：{getTrackName(game.settings)}</p>
             <p>班级人数：50 人</p>
             <p>教学日：{game.day} / 100</p>
           </section>

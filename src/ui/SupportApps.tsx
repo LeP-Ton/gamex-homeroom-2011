@@ -6,7 +6,8 @@ import {
   EXAM_CALENDAR,
   GAME_DAYS,
   PARENT_STYLES,
-  SUBJECTS,
+  getSubjects,
+  getTrackName,
   TALK_STYLES,
 } from '../config/game';
 import { classAnalysis, reportCsv, studentAnalysis } from '../sim/analytics';
@@ -30,10 +31,11 @@ import {
 } from './shared';
 
 export function ExamsApp({ game, open }: { game: Game; open: OpenApp }) {
+  const subjects = getSubjects(game.settings);
   const dispatch = useGame((state) => state.dispatch);
   const [difficulty, setDifficulty] = useState(0.55);
   const [examIndex, setExamIndex] = useState(game.exams.length - 1);
-  const [subject, setSubject] = useState(SUBJECTS[0].id);
+  const [subject, setSubject] = useState(subjects[0].id);
   const exam = game.exams[Math.min(examIndex, game.exams.length - 1)];
   const paper = exam.papers.find((item) => item.subject === subject)!;
   const stats = examStats(exam, game.settings.cutoff);
@@ -88,7 +90,8 @@ export function ExamsApp({ game, open }: { game: Game; open: OpenApp }) {
             </select>
           </label>
           <p className="muted body-text">
-            覆盖全部六科与配置知识点，分值共 750 分；同一天最多一次，统一考试日不额外安排。
+            {getTrackName(game.settings)}：{subjects.map((subject) => subject.name).join('、')}，
+            分值共750分；同一天最多一次，统一考试日不额外安排。
           </p>
           <div className="cost-preview">
             <span>
@@ -130,7 +133,7 @@ export function ExamsApp({ game, open }: { game: Game; open: OpenApp }) {
               value={subject}
               onChange={(event) => setSubject(event.target.value)}
             >
-              {SUBJECTS.map((item) => (
+              {subjects.map((item) => (
                 <option key={item.id} value={item.id}>
                   {item.name}
                 </option>
@@ -141,24 +144,26 @@ export function ExamsApp({ game, open }: { game: Game; open: OpenApp }) {
       >
         <div className="paper-summary">
           <Tag tone="green">
-            {SUBJECTS.find((item) => item.id === subject)!.name} ·{' '}
-            {SUBJECTS.find((item) => item.id === subject)!.max} 分
+            {subjects.find((item) => item.id === subject)!.name} ·{' '}
+            {subjects.find((item) => item.id === subject)!.max} 分
           </Tag>
           <Tag>实际难度 {percent(paper.difficulty)}</Tag>
           <Tag>{paper.type}</Tag>
         </div>
         <div className="topic-coverage">
-          {SUBJECTS.find((item) => item.id === subject)!.topics.map((topic) => (
-            <span key={topic.id}>
-              {topic.name}
-              <b>
-                {percent(
-                  paper.topicWeights[topic.id] /
-                    Object.values(paper.topicWeights).reduce((sum, value) => sum + value, 0),
-                )}
-              </b>
-            </span>
-          ))}
+          {subjects
+            .find((item) => item.id === subject)!
+            .topics.map((topic) => (
+              <span key={topic.id}>
+                {topic.name}
+                <b>
+                  {percent(
+                    paper.topicWeights[topic.id] /
+                      Object.values(paper.topicWeights).reduce((sum, value) => sum + value, 0),
+                  )}
+                </b>
+              </span>
+            ))}
         </div>
         <div className="question-block">
           <small>试卷代表题 · 评分基于全部知识点覆盖</small>
@@ -292,8 +297,8 @@ export function ReportApp({
         title={game.ended ? '2011年高考成绩报告' : '2011届高三阶段成绩分析'}
         description={
           game.ended
-            ? `种子 ${game.settings.seed} · ${DIFFICULTIES[game.settings.difficulty].name}难度 · 百日高考报告`
-            : '当前为阶段报告，最终高考将在第 100 天结束后进行。'
+            ? `${getTrackName(game.settings)} · 种子 ${game.settings.seed} · ${DIFFICULTIES[game.settings.difficulty].name}难度 · 百日高考报告`
+            : `${getTrackName(game.settings)} · 当前为阶段报告，最终高考将在第100天结束后进行。`
         }
         action={
           <button
@@ -386,6 +391,7 @@ export function ReportApp({
                 <tr>
                   <th>排名</th>
                   <th>班级 / 教师</th>
+                  <th>科类</th>
                   <th>难度</th>
                   <th>种子 / 参考线</th>
                   <th>上线率</th>
@@ -400,6 +406,7 @@ export function ReportApp({
                     <td>
                       {record.className} / {record.teacher}
                     </td>
+                    <td>{getTrackName(record)}</td>
                     <td>{DIFFICULTIES[record.difficulty].name}</td>
                     <td>
                       {record.seed} / {record.cutoff}

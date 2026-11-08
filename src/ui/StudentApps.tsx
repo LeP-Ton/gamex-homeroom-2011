@@ -1,7 +1,7 @@
 import { LegacyIcon, ClassicGlyph } from './LegacyIcon';
 import { useEffect, useState } from 'react';
 import type { SheetCommand } from './ClassicFrame';
-import { SUBJECTS } from '../config/game';
+import { getSubjects, getTrackName } from '../config/game';
 import { studentAnalysis } from '../sim/analytics';
 import type { Game } from '../sim/types';
 import {
@@ -208,6 +208,7 @@ export function ScoresApp({
   open: OpenApp;
   command?: SheetCommand;
 }) {
+  const subjects = getSubjects(game.settings);
   const [examIndex, setExamIndex] = useState(game.exams.length - 1);
   const [compareIndex, setCompareIndex] = useState(0);
   const [subject, setSubject] = useState('total');
@@ -248,8 +249,8 @@ export function ScoresApp({
           (filter === 'border' && Math.abs(result.total - game.settings.cutoff) <= 35) ||
           (filter === 'risk' && result.total < game.settings.cutoff) ||
           (filter === 'uneven' &&
-            Math.max(...SUBJECTS.map((s) => result.scores[s.id] / s.max)) -
-              Math.min(...SUBJECTS.map((s) => result.scores[s.id] / s.max)) >
+            Math.max(...subjects.map((s) => result.scores[s.id] / s.max)) -
+              Math.min(...subjects.map((s) => result.scores[s.id] / s.max)) >
               0.23))
       );
     })
@@ -271,7 +272,7 @@ export function ScoresApp({
     <>
       <AppHeader
         title={`${game.settings.className} 2011届成绩统计表`}
-        description="成绩数据只读。单击表头排序，单击学生查看档案。"
+        description={`${getTrackName(game.settings)} · 成绩数据只读。单击表头排序，单击学生查看档案。`}
       />
       <Panel className={`excel-data-panel ${showTrend ? 'hidden-sheet' : ''}`}>
         <div className="toolbar wrap">
@@ -310,7 +311,7 @@ export function ScoresApp({
                 setSort(event.target.value);
               }}
             >
-              {[['total', '总分'], ...SUBJECTS.map((s) => [s.id, s.name])].map(([id, name]) => (
+              {[['total', '总分'], ...subjects.map((s) => [s.id, s.name])].map(([id, name]) => (
                 <option key={id} value={id}>
                   {name}
                 </option>
@@ -342,8 +343,8 @@ export function ScoresApp({
                 <th>排名</th>
                 <th>学生</th>
                 {(subject === 'total'
-                  ? SUBJECTS
-                  : SUBJECTS.filter((item) => item.id === subject)
+                  ? subjects
+                  : subjects.filter((item) => item.id === subject)
                 ).map((item) => (
                   <th key={item.id}>
                     <button onClick={() => sortBy(item.id)}>
@@ -391,8 +392,8 @@ export function ScoresApp({
                       </span>
                     </td>
                     {(subject === 'total'
-                      ? SUBJECTS
-                      : SUBJECTS.filter((item) => item.id === subject)
+                      ? subjects
+                      : subjects.filter((item) => item.id === subject)
                     ).map((item) => (
                       <td key={item.id}>{result.scores[item.id].toFixed(1)}</td>
                     ))}

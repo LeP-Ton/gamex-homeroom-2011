@@ -1,4 +1,4 @@
-import type { ActionKind, Difficulty, ErrorKind, SubjectConfig } from '../sim/types';
+import type { ActionKind, ClassTrack, Difficulty, ErrorKind, SubjectConfig } from '../sim/types';
 
 const topics = (subject: string, group: string, names: string[]) =>
   names.map((name, index) => ({
@@ -8,7 +8,7 @@ const topics = (subject: string, group: string, names: string[]) =>
     difficulty: 0.32 + index * 0.065,
     weight: index === names.length - 1 ? 1.25 : 1,
   }));
-export const SUBJECTS: SubjectConfig[] = [
+export const SCIENCE_SUBJECTS: SubjectConfig[] = [
   {
     id: 'chinese',
     name: '语文',
@@ -87,8 +87,58 @@ export const SUBJECTS: SubjectConfig[] = [
     topics: topics('biology', '生命科学', ['细胞与代谢', '遗传与进化', '稳态与调节', '生态系统']),
   },
 ];
-export const SUBJECT_MAP = Object.fromEntries(SUBJECTS.map((subject) => [subject.id, subject]));
-export const TOTAL_MAX = SUBJECTS.reduce((sum, subject) => sum + subject.max, 0);
+export const ARTS_SUBJECTS: SubjectConfig[] = [
+  ...SCIENCE_SUBJECTS.slice(0, 3),
+  {
+    id: 'politics',
+    name: '政治',
+    short: '政',
+    max: 100,
+    teachable: false,
+    ability: 'memory',
+    topics: topics('politics', '思想政治', ['经济生活', '政治生活', '文化生活', '生活与哲学']),
+  },
+  {
+    id: 'history',
+    name: '历史',
+    short: '史',
+    max: 100,
+    teachable: false,
+    ability: 'memory',
+    topics: topics('history', '历史脉络', [
+      '古代中国政治',
+      '近代中国探索',
+      '世界近代变革',
+      '当代世界格局',
+    ]),
+  },
+  {
+    id: 'geography',
+    name: '地理',
+    short: '地',
+    max: 100,
+    teachable: false,
+    ability: 'logic',
+    topics: topics('geography', '地理环境', ['地球运动', '自然环境', '区位因素', '区域发展']),
+  },
+];
+// 全学科字典只用于查找；整局遍历必须取本局科类，防止把九科同时加入模拟。
+export const ALL_SUBJECTS = [...SCIENCE_SUBJECTS, ...ARTS_SUBJECTS.slice(3)];
+export const SUBJECT_MAP = Object.fromEntries(ALL_SUBJECTS.map((subject) => [subject.id, subject]));
+export const CLASS_TRACKS = {
+  science: { name: '理科班', subjects: SCIENCE_SUBJECTS },
+  arts: { name: '文科班', subjects: ARTS_SUBJECTS },
+} satisfies Record<ClassTrack, { name: string; subjects: SubjectConfig[] }>;
+export function isClassTrack(value: unknown): value is ClassTrack {
+  return value === 'science' || value === 'arts';
+}
+export function getSubjects(settings: { track?: ClassTrack }) {
+  return CLASS_TRACKS[settings.track ?? 'science'].subjects;
+}
+export function getTrackName(settings: { track?: ClassTrack }) {
+  return CLASS_TRACKS[settings.track ?? 'science'].name;
+}
+export const TOTAL_MAX = SCIENCE_SUBJECTS.reduce((sum, subject) => sum + subject.max, 0);
 export const GAME_DAYS = 100;
 export const CLASS_SIZE = 50;
 export const STUDY_MINUTES = 240;

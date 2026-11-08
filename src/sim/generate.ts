@@ -2,7 +2,8 @@ import {
   CLASS_SIZE,
   DIFFICULTIES,
   GIVEN_NAMES,
-  SUBJECTS,
+  getSubjects,
+  isClassTrack,
   SURNAMES,
   TOTAL_MAX,
 } from '../config/game';
@@ -13,13 +14,17 @@ import type { Game, GameSettings, Student } from './types';
 export const DEFAULT_SETTINGS: GameSettings = {
   teacher: '林老师',
   subject: 'math',
+  track: 'science',
   className: '高三（3）班',
   difficulty: 'normal',
   seed: '春山2011',
   cutoff: 450,
 };
 export function createGame(input: GameSettings, debug = false): Game {
-  if (!SUBJECTS.some((subject) => subject.id === input.subject && subject.teachable))
+  if (input.track !== undefined && !isClassTrack(input.track))
+    throw new Error('请选择文科班或理科班。');
+  const subjects = getSubjects(input);
+  if (!subjects.some((subject) => subject.id === input.subject && subject.teachable))
     throw new Error('请选择配置允许的任教学科。');
   if (
     !DIFFICULTIES[input.difficulty] ||
@@ -30,6 +35,7 @@ export function createGame(input: GameSettings, debug = false): Game {
     throw new Error('开局设置不合法。');
   const settings = {
     ...input,
+    track: input.track ?? 'science',
     teacher: input.teacher.trim().slice(0, 20) || '林老师',
     className: input.className.trim().slice(0, 30) || '高三（3）班',
     seed: input.seed.trim().slice(0, 80) || '春山2011',
@@ -123,7 +129,7 @@ export function createGame(input: GameSettings, debug = false): Game {
       lastParent: -20,
       missed: 0,
     };
-    for (const subject of SUBJECTS) {
+    for (const subject of subjects) {
       const subjectBase = clamp(base + rng.range(-0.17, 0.17));
       student.knowledge[subject.id] = Object.fromEntries(
         subject.topics.map((topic) => [

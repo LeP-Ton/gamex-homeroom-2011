@@ -1,4 +1,4 @@
-import { SUBJECTS } from '../config/game';
+import { getSubjects, SUBJECT_MAP } from '../config/game';
 import { clamp, mean, Random, round } from './random';
 import { makeQuestion } from './questions';
 import type { Exam, Game, Paper } from './types';
@@ -10,7 +10,7 @@ export function sitExam(
   difficulty: number,
   final = false,
 ): Exam {
-  const papers: Paper[] = SUBJECTS.map((subject) => ({
+  const papers: Paper[] = getSubjects(game.settings).map((subject) => ({
     subject: subject.id,
     difficulty: clamp(difficulty + rng.range(-0.035, 0.035), 0.3, 0.8),
     topicWeights: Object.fromEntries(
@@ -31,7 +31,7 @@ export function sitExam(
     const scores: Record<string, number> = {};
     const breakdown: Exam['results'][number]['breakdown'] = {};
     for (const paper of papers) {
-      const subject = SUBJECTS.find((item) => item.id === paper.subject)!;
+      const subject = SUBJECT_MAP[paper.subject];
       const weight = Object.values(paper.topicWeights).reduce((sum, value) => sum + value, 0);
       const mastery =
         subject.topics.reduce((sum, topic) => {
@@ -84,9 +84,9 @@ export function examStats(exam: Exam, cutoff: number) {
     rate: qualified / exam.results.length,
     high: exam.results.filter((result) => result.total >= 600).length,
     subjects: Object.fromEntries(
-      SUBJECTS.map((subject) => [
-        subject.id,
-        round(mean(exam.results.map((result) => result.scores[subject.id]))),
+      exam.papers.map((paper) => [
+        paper.subject,
+        round(mean(exam.results.map((result) => result.scores[paper.subject]))),
       ]),
     ),
   };

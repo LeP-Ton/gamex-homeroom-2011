@@ -1,6 +1,6 @@
 import { LegacyIcon } from './LegacyIcon';
 import { useMemo, useState } from 'react';
-import { DIFFICULTIES, SUBJECTS } from '../config/game';
+import { DIFFICULTIES, getSubjects } from '../config/game';
 import { classAnalysis } from '../sim/analytics';
 import { createGame } from '../sim/generate';
 import { playStrategyDay, simulateRun, STRATEGY_LABELS, type Strategy } from '../sim/strategies';
@@ -52,6 +52,7 @@ export function DebugPanel({ source, close }: { source: Game; close: () => void 
             game.settings.difficulty,
             strategy,
             false,
+            game.settings,
           ).summary,
         );
         setBatch([...results]);
@@ -163,7 +164,7 @@ export function DebugPanel({ source, close }: { source: Game; close: () => void 
                   </tr>
                 </thead>
                 <tbody>
-                  {SUBJECTS.flatMap((subject) =>
+                  {getSubjects(game.settings).flatMap((subject) =>
                     subject.topics.map((topic) => {
                       const node = student.knowledge[subject.id][topic.id];
                       return (

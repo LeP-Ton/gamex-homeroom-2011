@@ -5,7 +5,7 @@ import {
   DIFFICULTIES,
   GAME_DAYS,
   STUDY_MINUTES,
-  SUBJECTS,
+  SCIENCE_SUBJECTS as SUBJECTS,
 } from '../config/game';
 import { classAnalysis, makeRecord, studentAnalysis } from './analytics';
 import { createGame, DEFAULT_SETTINGS } from './generate';

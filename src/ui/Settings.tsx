@@ -1,10 +1,10 @@
 import { LegacyIcon, ClassicGlyph } from './LegacyIcon';
 import { useEffect, useRef, useState } from 'react';
-import { DIFFICULTIES, SUBJECTS } from '../config/game';
+import { CLASS_TRACKS, DIFFICULTIES, getSubjects, getTrackName } from '../config/game';
 import { GAME_TITLE, shortGameDate } from '../config/desktop';
 import { DEFAULT_SETTINGS } from '../sim/generate';
 import { deserializeGame, serializeGame } from '../sim/save';
-import type { Game, GameSettings } from '../sim/types';
+import type { ClassTrack, Game, GameSettings } from '../sim/types';
 import { useGame } from '../state/store';
 import {
   deleteSave,
@@ -62,7 +62,10 @@ export function NewGame({
   close: () => void;
   existing?: boolean;
 }) {
-  const [settings, setSettings] = useState(initial ?? DEFAULT_SETTINGS);
+  const [settings, setSettings] = useState(() => ({
+    ...(initial ?? DEFAULT_SETTINGS),
+    track: initial?.track ?? DEFAULT_SETTINGS.track,
+  }));
   const [error, setError] = useState('');
   const update = <K extends keyof GameSettings>(key: K, value: GameSettings[K]) =>
     setSettings({ ...settings, [key]: value });
@@ -86,6 +89,27 @@ export function NewGame({
           }
         }}
       >
+        <label className="field-label">
+          班级科类
+          <select
+            required
+            value={settings.track}
+            onChange={(event) => update('track', event.target.value as ClassTrack)}
+          >
+            {Object.entries(CLASS_TRACKS).map(([id, track]) => (
+              <option key={id} value={id}>
+                {track.name}
+              </option>
+            ))}
+          </select>
+        </label>
+        <p className="class-track-summary" aria-live="polite">
+          {getTrackName(settings)}：
+          {getSubjects(settings)
+            .map((subject) => subject.name)
+            .join('、')}
+          。 语数外各150分，其余三科各100分，总分750分。
+        </p>
         <div className="form-grid two">
           <label>
             班主任姓名
@@ -102,11 +126,13 @@ export function NewGame({
               value={settings.subject}
               onChange={(event) => update('subject', event.target.value)}
             >
-              {SUBJECTS.filter((subject) => subject.teachable).map((subject) => (
-                <option key={subject.id} value={subject.id}>
-                  {subject.name}
-                </option>
-              ))}
+              {getSubjects(settings)
+                .filter((subject) => subject.teachable)
+                .map((subject) => (
+                  <option key={subject.id} value={subject.id}>
+                    {subject.name}
+                  </option>
+                ))}
             </select>
           </label>
           <label>
@@ -156,7 +182,7 @@ export function NewGame({
           />
         </label>
         <p className="form-footnote">
-          这是虚构考试规则，不代表任何省份录取政策。同种子、同难度、相同行动可复现整局结果。
+          这是虚构考试规则，不代表任何省份录取政策。同种子、同科类、同难度、相同行动可复现整局结果。
           {existing ? '新建会替换自动存档，请先将当前进度保存到手动槽。' : ''}
         </p>
         {error && <p className="error-text">{error}</p>}

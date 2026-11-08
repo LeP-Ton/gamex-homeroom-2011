@@ -1,4 +1,5 @@
 export type Difficulty = 'normal' | 'challenge' | 'hard';
+export type ClassTrack = 'science' | 'arts';
 export type ErrorKind = 'concept' | 'method' | 'calculation' | 'reading' | 'state';
 export type ActionKind =
   | 'lesson'
@@ -29,6 +30,7 @@ export interface SubjectConfig {
 export interface GameSettings {
   teacher: string;
   subject: string;
+  track: ClassTrack;
   className: string;
   difficulty: Difficulty;
   seed: string;
@@ -238,6 +240,7 @@ export interface RecordEntry {
   seed: string;
   teacher: string;
   className: string;
+  track?: ClassTrack;
   difficulty: Difficulty;
   cutoff: number;
   average: number;

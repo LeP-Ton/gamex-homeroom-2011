@@ -1,4 +1,4 @@
-import { STUDY_MINUTES, SUBJECTS } from '../config/game';
+import { STUDY_MINUTES, getSubjects } from '../config/game';
 import { completeHomework } from './homework';
 import { forget, learn, subjectMastery, weakestTopic } from './knowledge';
 import { clamp, mean, Random } from './random';
@@ -11,8 +11,9 @@ export function simulateStudent(
   gains: GainTrace[],
 ): StudyLedger {
   forget(student, game.day);
+  const subjects = getSubjects(game.settings);
   const own = game.settings.subject;
-  const bySubject = Object.fromEntries(SUBJECTS.map((subject) => [subject.id, 0]));
+  const bySubject = Object.fromEntries(subjects.map((subject) => [subject.id, 0]));
   let remaining = STUDY_MINUTES;
   const ledger: StudyLedger = {
     studentId: student.id,
@@ -73,9 +74,9 @@ export function simulateStudent(
     (sum, action) => sum + minutesByKind[action.kind as keyof typeof minutesByKind],
     0,
   );
-  const baseDemand = SUBJECTS.length * 23;
+  const baseDemand = subjects.length * 23;
   const scale = Math.min(1, remaining / (baseDemand + totalExtra));
-  for (const subject of SUBJECTS) {
+  for (const subject of subjects) {
     const minutes = 23 * scale;
     const index = Math.floor((game.day - 1) / 2) % subject.topics.length;
     const topic =
@@ -140,7 +141,7 @@ export function simulateStudent(
   const selfTime = remaining * investment;
   const stressed = student.psyche.anxiety > 0.65 && student.psyche.stress > 0.6;
   const subject = rng.weighted(
-    SUBJECTS.map((subject) => ({
+    subjects.map((subject) => ({
       value: subject,
       weight:
         0.12 +
